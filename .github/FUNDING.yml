@@ -1,5 +1,4 @@
 # Shown under the "Sponsor" button on the repository page.
-# Add the handles once the accounts exist; GitHub ignores empty entries.
-# github: MXF-Apps   # only once a GitHub Sponsors profile is approved
-ko_fi: # handle
-liberapay: # handle
+liberapay: MXF-Apps
+# ko_fi: handle         # add once the Ko-fi page exists
+# github: MXF-Apps      # only once a GitHub Sponsors profile is approved
