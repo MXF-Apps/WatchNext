@@ -32,7 +32,7 @@ Before the first upload:
 
 - [ ] Replace the placeholder identifiers everywhere (`com.example.WatchNext`, `com.example.WatchNext.Widget`, `group.com.example.WatchNext`, `com.example.WatchNext.shared`): both targets' bundle IDs, both `.entitlements`, `WatchNextConstants.swift`, and the App Group + Keychain Sharing capabilities registered in the developer portal.
 - [ ] Set `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` (currently 1.0 / 1).
-- [ ] Add `ITSAppUsesNonExemptEncryption = NO` to both Info.plists.
+- [x] Add `ITSAppUsesNonExemptEncryption = NO` to both Info.plists.
 - [ ] Archive with Release configuration and upload with Xcode Organizer or `xcodebuild -exportArchive`.
 - [ ] Create the app record in App Store Connect with the name, bundle ID and SKU; fill in `Metadata/en-US.md`.
 - [ ] Upload 6.9-inch screenshots from `Screenshots/` (App Store Connect scales them for smaller iPhones).
