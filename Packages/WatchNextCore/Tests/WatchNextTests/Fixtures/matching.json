@@ -1,0 +1,82 @@
+{
+  "sonarrEpisodes": [
+    {
+      "id": 105,
+      "seriesID": 10,
+      "seriesTitle": "Severance",
+      "episodeTitle": "The After Hours",
+      "seasonNumber": 3,
+      "episodeNumber": 5,
+      "monitored": true,
+      "hasFile": true,
+      "airDate": "2026-08-31T18:00:00Z",
+      "importedDate": "2026-09-02T18:00:00Z",
+      "quality": "1080p",
+      "tvdbSeriesID": "371980",
+      "tvdbEpisodeID": "11000005",
+      "tmdbSeriesID": "95396"
+    },
+    {
+      "id": 106,
+      "seriesID": 10,
+      "seriesTitle": "Severance",
+      "episodeTitle": "Next Week",
+      "seasonNumber": 3,
+      "episodeNumber": 6,
+      "monitored": true,
+      "hasFile": false,
+      "airDate": "2026-09-10T18:00:00Z",
+      "tvdbSeriesID": "371980",
+      "tvdbEpisodeID": "11000006",
+      "tmdbSeriesID": "95396"
+    }
+  ],
+  "radarrMovies": [
+    {
+      "id": 20,
+      "title": "Dune: Part Two",
+      "year": 2024,
+      "monitored": true,
+      "hasFile": true,
+      "releaseDate": "2024-03-01T00:00:00Z",
+      "importedDate": "2026-09-03T12:00:00Z",
+      "quality": "2160p",
+      "tmdbID": "693134",
+      "imdbID": "tt15239678"
+    },
+    {
+      "id": 21,
+      "title": "Project Hail Mary",
+      "year": 2026,
+      "monitored": true,
+      "hasFile": false,
+      "releaseDate": "2026-09-12T00:00:00Z",
+      "tmdbID": "7451",
+      "imdbID": "tt12042730"
+    }
+  ],
+  "jellyfinItems": [
+    {
+      "id": "jf-movie-dune",
+      "kind": "movie",
+      "name": "Dune: Part Two",
+      "productionYear": 2024,
+      "isPlayed": false,
+      "playbackProgress": 0.42,
+      "providerIDs": { "Tmdb": "693134", "Imdb": "tt15239678" },
+      "seriesProviderIDs": {}
+    },
+    {
+      "id": "jf-episode-305",
+      "kind": "episode",
+      "name": "The After Hours",
+      "seriesName": "Severance",
+      "productionYear": 2026,
+      "seasonNumber": 3,
+      "episodeNumber": 5,
+      "isPlayed": false,
+      "providerIDs": { "Tvdb": "11000005" },
+      "seriesProviderIDs": { "Tvdb": "371980", "Tmdb": "95396" }
+    }
+  ]
+}

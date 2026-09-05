@@ -1,0 +1,6 @@
+.DS_Store
+DerivedData/
+.build/
+Packages/WatchNextCore/.build/
+*.xcuserstate
+xcuserdata/
