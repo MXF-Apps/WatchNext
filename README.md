@@ -53,14 +53,14 @@ See [PRIVACY.md](PRIVACY.md). Short version: the app talks only to the servers y
 
 ## Identifiers
 
-The checked-in identifiers are placeholders. Replace them before signing for a device or the App Store:
+The checked-in identifiers belong to the App Store build. To sign your own build, replace them with identifiers registered to your team:
 
-- App: `com.example.WatchNext`
-- Widget: `com.example.WatchNext.Widget`
-- App Group: `group.com.example.WatchNext`
-- Shared Keychain group suffix: `com.example.WatchNext.shared`
+- App: `com.mxfapps.WatchNext`
+- Widget: `com.mxfapps.WatchNext.Widget`
+- App Group: `group.com.mxfapps.WatchNext`
+- Shared Keychain group suffix: `com.mxfapps.WatchNext.shared`
 
-Update them consistently in the Xcode project, both entitlement files, and `WatchNextConstants.swift`.
+Update them consistently in the Xcode project, both entitlement files, both Info.plists, and `WatchNextConstants.swift`, then set your team under Signing & Capabilities for both targets.
 
 ## Architecture
 

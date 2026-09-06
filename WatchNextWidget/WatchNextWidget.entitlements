@@ -4,11 +4,11 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.example.WatchNext</string>
+		<string>group.com.mxfapps.WatchNext</string>
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)com.example.WatchNext.shared</string>
+		<string>$(AppIdentifierPrefix)com.mxfapps.WatchNext.shared</string>
 	</array>
 </dict>
 </plist>

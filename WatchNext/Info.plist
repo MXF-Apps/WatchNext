@@ -45,6 +45,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>WatchNextKeychainAccessGroup</key>
-	<string>$(AppIdentifierPrefix)com.example.WatchNext.shared</string>
+	<string>$(AppIdentifierPrefix)com.mxfapps.WatchNext.shared</string>
 </dict>
 </plist>
