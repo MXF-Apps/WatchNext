@@ -19,9 +19,12 @@ struct WelcomeView: View {
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
             Button(action: onTryDemo) {
-                Label("Try with sample data", systemImage: "sparkles")
-                    // List rows drop a Label's icon by default; keep both.
-                    .labelStyle(.titleAndIcon)
+                // Not a Label: List rows drop its icon by default, and its
+                // title-and-icon style pads the icon too far from the text.
+                HStack(spacing: 6) {
+                    Image(systemName: "sparkles")
+                    Text("Try with sample data")
+                }
             }
             .buttonStyle(.borderedProminent)
             .padding(.top, 4)
