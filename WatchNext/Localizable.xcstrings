@@ -1253,6 +1253,24 @@
         }
       }
     },
+    "settings.banner.dismiss.accessibilityHint": {
+      "comment": "VoiceOver hint on the Settings status banner; a tap hides it.",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dismisses the message."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Masque le message."
+          }
+        }
+      },
+      "extractionState": "manual"
+    },
     "settings.banner.error.accessibilityLabel": {
       "comment": "VoiceOver announcement of a settings status banner. Message is the detailed result.",
       "extractionState": "manual",

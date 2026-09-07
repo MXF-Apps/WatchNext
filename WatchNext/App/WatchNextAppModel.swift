@@ -53,6 +53,12 @@ final class WatchNextAppModel: ObservableObject {
     /// outcome so Settings does not flash the permission gate on every launch.
     @Published private(set) var localNetworkAccess: LocalNetworkAccess = WatchNextAppModel.storedLocalNetworkAccess()
 
+    /// Pending auto-dismissal of a success confirmation.
+    private var settingsMessageDismissal: Task<Void, Never>?
+    /// Success confirmations disappear on their own; errors stay until the
+    /// user dismisses them or the next save replaces them.
+    private static let settingsConfirmationDuration: Duration = .seconds(4)
+
     private let dependencies: WatchNextDependencies
     private static let kindFilterKey = "WatchNext.FeedKindFilter"
     private static let localNetworkAccessKey = "WatchNext.LocalNetwork.access"
@@ -102,8 +108,7 @@ final class WatchNextAppModel: ObservableObject {
                 jellyfinUsers = try await dependencies.connectionService.fetchJellyfinUsers(baseURL: url)
             } catch {
                 logger.error("Could not restore Jellyfin users.", error: error, category: "App")
-                settingsMessage = String(localized: .settingsJellyfinRestoreError(error: error.localizedDescription))
-                settingsMessageIsError = true
+                showSettingsMessage(String(localized: .settingsJellyfinRestoreError(error: error.localizedDescription)), isError: true)
             }
         }
         logger.info(
@@ -174,6 +179,26 @@ final class WatchNextAppModel: ObservableObject {
         await refresh()
     }
 
+    /// Hides the Settings banner right away, for a tap on it.
+    func dismissSettingsMessage() {
+        settingsMessageDismissal?.cancel()
+        settingsMessageDismissal = nil
+        settingsMessage = nil
+    }
+
+    private func showSettingsMessage(_ message: String, isError: Bool) {
+        settingsMessageDismissal?.cancel()
+        settingsMessageDismissal = nil
+        settingsMessage = message
+        settingsMessageIsError = isError
+        guard isError == false else { return }
+        settingsMessageDismissal = Task { [weak self] in
+            try? await Task.sleep(for: Self.settingsConfirmationDuration)
+            guard Task.isCancelled == false else { return }
+            self?.settingsMessage = nil
+        }
+    }
+
     func saveSettingsFromUI() async {
         guard isSavingSettings == false else { return }
         isSavingSettings = true
@@ -181,8 +206,7 @@ final class WatchNextAppModel: ObservableObject {
         do {
             try await saveSettings()
         } catch {
-            settingsMessage = error.localizedDescription
-            settingsMessageIsError = true
+            showSettingsMessage(error.localizedDescription, isError: true)
             logger.error("Settings save failed.", error: error, category: "Settings")
         }
         await reloadLogs()
@@ -208,8 +232,7 @@ final class WatchNextAppModel: ObservableObject {
         }
         logger.info("Non-sensitive settings and supplied credentials were saved.", category: "Settings")
         if showConfirmation {
-            settingsMessage = String(localized: .settingsSaveSuccessMessage)
-            settingsMessageIsError = false
+            showSettingsMessage(String(localized: .settingsSaveSuccessMessage), isError: false)
         }
     }
 
@@ -395,8 +418,7 @@ final class WatchNextAppModel: ObservableObject {
         } catch {
             logger.error("Could not restore credential \(key.rawValue).", error: error, category: "Keychain")
             if settingsMessage == nil {
-                settingsMessage = String(localized: .settingsCredentialsReadError(error: error.localizedDescription))
-                settingsMessageIsError = true
+                showSettingsMessage(String(localized: .settingsCredentialsReadError(error: error.localizedDescription)), isError: true)
             }
             return nil
         }

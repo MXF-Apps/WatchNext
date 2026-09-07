@@ -66,7 +66,7 @@ struct SettingsScreen: View {
             .navigationTitle(String(localized: .settingsTitle))
             .overlay(alignment: .top) {
                 if let message = model.settingsMessage {
-                    SettingsStatusBanner(message: message, isError: model.settingsMessageIsError)
+                    SettingsStatusBanner(message: message, isError: model.settingsMessageIsError, onDismiss: model.dismissSettingsMessage)
                         .padding(.horizontal)
                         .transition(.move(edge: .top).combined(with: .opacity))
                 }
