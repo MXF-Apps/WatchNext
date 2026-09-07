@@ -18,9 +18,13 @@ struct WelcomeView: View {
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
-            Button("Try with sample data", systemImage: "sparkles", action: onTryDemo)
-                .buttonStyle(.borderedProminent)
-                .padding(.top, 4)
+            Button(action: onTryDemo) {
+                Label("Try with sample data", systemImage: "sparkles")
+                    // List rows drop a Label's icon by default; keep both.
+                    .labelStyle(.titleAndIcon)
+            }
+            .buttonStyle(.borderedProminent)
+            .padding(.top, 4)
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 40)
