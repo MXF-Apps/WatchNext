@@ -3,6 +3,7 @@ import SwiftUI
 struct SettingsScreen: View {
     @EnvironmentObject private var model: WatchNextAppModel
     @Environment(\.scenePhase) private var scenePhase
+    @AppStorage(BackgroundTexture.storageKey) private var backgroundTexture = BackgroundTexture.subtle.rawValue
 
     var body: some View {
         NavigationStack {
@@ -42,6 +43,18 @@ struct SettingsScreen: View {
                     Text(String(localized: .settingsWindowsTitle))
                 } footer: {
                     Text(String(localized: .settingsWindowsFooter))
+                }
+                Section {
+                    Picker(String(localized: .settingsAppearanceTextureLabel), selection: $backgroundTexture) {
+                        ForEach(BackgroundTexture.allCases) { texture in
+                            Text(texture.localizedName).tag(texture.rawValue)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                } header: {
+                    Text(String(localized: .settingsAppearanceTitle))
+                } footer: {
+                    Text(String(localized: .settingsAppearanceFooter))
                 }
                 Section {
                     Toggle(String(localized: .settingsDemoToggle), systemImage: "sparkles", isOn: Binding(

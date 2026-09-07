@@ -1253,6 +1253,114 @@
         }
       }
     },
+    "settings.appearance.footer": {
+      "comment": "Footer under the Appearance section explaining the background texture picker.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A soft accent gradient and film grain behind the lists. Rows keep their contrast."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un léger dégradé et un grain de pellicule derrière les listes. Les lignes gardent leur contraste."
+          }
+        }
+      }
+    },
+    "settings.appearance.texture.label": {
+      "comment": "Picker label for the strength of the gradient and grain drawn behind the lists.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Background texture"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Texture du fond"
+          }
+        }
+      }
+    },
+    "settings.appearance.texture.off": {
+      "comment": "Picker option: plain system background, no gradient or grain.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Off"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucune"
+          }
+        }
+      }
+    },
+    "settings.appearance.texture.strong": {
+      "comment": "Picker option: more visible gradient and grain behind the lists.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Strong"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marquée"
+          }
+        }
+      }
+    },
+    "settings.appearance.texture.subtle": {
+      "comment": "Picker option: faint gradient and grain behind the lists.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Subtle"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Légère"
+          }
+        }
+      }
+    },
+    "settings.appearance.title": {
+      "comment": "Settings section header for visual options.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Appearance"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apparence"
+          }
+        }
+      }
+    },
     "settings.banner.dismiss.accessibilityHint": {
       "comment": "VoiceOver hint on the Settings status banner; a tap hides it.",
       "localizations": {
