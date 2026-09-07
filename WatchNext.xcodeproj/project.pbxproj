@@ -12,6 +12,8 @@
 		A00000000000000000000003 /* WatchNextWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A00000000000000000000012 /* WatchNextWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A00000000000000000000004 /* WatchNextLogging in Frameworks */ = {isa = PBXBuildFile; productRef = A00000000000000000000033 /* WatchNextLogging */; };
 		A00000000000000000000005 /* WatchNextLogging in Frameworks */ = {isa = PBXBuildFile; productRef = A00000000000000000000034 /* WatchNextLogging */; };
+		A00000000000000000000006 /* WatchNextAppearance in Frameworks */ = {isa = PBXBuildFile; productRef = A00000000000000000000035 /* WatchNextAppearance */; };
+		A00000000000000000000007 /* WatchNextAppearance in Frameworks */ = {isa = PBXBuildFile; productRef = A00000000000000000000036 /* WatchNextAppearance */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,7 @@
 			files = (
 				A00000000000000000000001 /* WatchNextCore in Frameworks */,
 				A00000000000000000000004 /* WatchNextLogging in Frameworks */,
+				A00000000000000000000006 /* WatchNextAppearance in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +98,7 @@
 			files = (
 				A00000000000000000000002 /* WatchNextCore in Frameworks */,
 				A00000000000000000000005 /* WatchNextLogging in Frameworks */,
+				A00000000000000000000007 /* WatchNextAppearance in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +147,7 @@
 			packageProductDependencies = (
 				A00000000000000000000031 /* WatchNextCore */,
 				A00000000000000000000033 /* WatchNextLogging */,
+				A00000000000000000000035 /* WatchNextAppearance */,
 			);
 			productName = WatchNext;
 			productReference = A00000000000000000000011 /* WatchNext.app */;
@@ -167,6 +172,7 @@
 			packageProductDependencies = (
 				A00000000000000000000032 /* WatchNextCore */,
 				A00000000000000000000034 /* WatchNextLogging */,
+				A00000000000000000000036 /* WatchNextAppearance */,
 			);
 			productName = WatchNextWidget;
 			productReference = A00000000000000000000012 /* WatchNextWidget.appex */;
@@ -439,6 +445,14 @@
 		A00000000000000000000034 /* WatchNextLogging */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WatchNextLogging;
+		};
+		A00000000000000000000035 /* WatchNextAppearance */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WatchNextAppearance;
+		};
+		A00000000000000000000036 /* WatchNextAppearance */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WatchNextAppearance;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

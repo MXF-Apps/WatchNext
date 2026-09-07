@@ -10,4 +10,7 @@
    <FileRef
       location = "group:Packages/WatchNextLogging">
    </FileRef>
+   <FileRef
+      location = "group:Packages/WatchNextAppearance">
+   </FileRef>
 </Workspace>

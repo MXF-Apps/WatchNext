@@ -1260,13 +1260,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "A soft accent gradient and film grain behind the lists. Rows keep their contrast."
+            "value": "A soft accent gradient and film grain behind the lists and widgets. Rows keep their contrast."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Un léger dégradé et un grain de pellicule derrière les listes. Les lignes gardent leur contraste."
+            "value": "Un léger dégradé et un grain de pellicule derrière les listes et les widgets. Les lignes gardent leur contraste."
           }
         }
       }

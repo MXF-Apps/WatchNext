@@ -1,5 +1,6 @@
 import SwiftUI
 import WidgetKit
+import WatchNextAppearance
 import WatchNextCore
 
 struct WatchNextWidgetView: View {
@@ -32,7 +33,9 @@ struct WatchNextWidgetView: View {
             }
         }
         .padding(margins)
-        .containerBackground(.background, for: .widget)
+        .containerBackground(for: .widget) {
+            WidgetBackground()
+        }
     }
 
     /// The HIG's tighter 11 pt margin where width is scarce; the system's otherwise.
@@ -45,6 +48,24 @@ struct WatchNextWidgetView: View {
         case .all: String(localized: .widgetEmptyAllMessage)
         case .movies: String(localized: .widgetEmptyMoviesMessage)
         case .shows: String(localized: .widgetEmptyShowsMessage)
+        }
+    }
+}
+
+
+/// The widget background follows Settings › Appearance through the App Group.
+/// `.background` is the system widget surface; the textured variant builds on
+/// the matching elevated color so text contrast is unchanged.
+private struct WidgetBackground: View {
+    private let settings = AppearanceSettings.load(
+        from: UserDefaults(suiteName: WatchNextConstants.appGroupIdentifier) ?? .standard
+    )
+
+    var body: some View {
+        if settings.texture == .off {
+            Rectangle().fill(.background)
+        } else {
+            AppBackground(settings: settings, base: Color(.secondarySystemGroupedBackground))
         }
     }
 }

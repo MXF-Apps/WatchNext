@@ -1,9 +1,12 @@
 import SwiftUI
+import WatchNextAppearance
+import WatchNextCore
+import WidgetKit
 
 struct SettingsScreen: View {
     @EnvironmentObject private var model: WatchNextAppModel
     @Environment(\.scenePhase) private var scenePhase
-    @AppStorage(BackgroundTexture.storageKey) private var backgroundTexture = BackgroundTexture.subtle.rawValue
+    @AppStorage(AppearanceSettings.textureKey, store: .appGroup) private var backgroundTexture = AppearanceSettings.default.texture.rawValue
 
     var body: some View {
         NavigationStack {
@@ -88,6 +91,7 @@ struct SettingsScreen: View {
             }
             .animation(.default, value: model.settingsMessage)
             .animation(.default, value: model.localNetworkAccess)
+            .onChange(of: backgroundTexture) { reloadWidgets() }
             .onChange(of: scenePhase) { _, phase in
                 // Coming back from the iOS Settings app after flipping the switch.
                 if phase == .active { Task { await model.refreshLocalNetworkAccess() } }
@@ -128,6 +132,11 @@ struct SettingsScreen: View {
         Task { await model.saveSettingsFromUI() }
     }
 
+    /// Widgets read the appearance from the App Group only when they re-render.
+    private func reloadWidgets() {
+        WidgetCenter.shared.reloadTimelines(ofKind: WatchNextConstants.widgetKind)
+    }
+
     /// The fields live in separate sections with their own bindings, so the
     /// keyboard is dismissed through the window instead of a focus state.
     private func hideKeyboard() {
@@ -137,3 +146,4 @@ struct SettingsScreen: View {
             .forEach { $0.endEditing(true) }
     }
 }
+
