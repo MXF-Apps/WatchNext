@@ -11,17 +11,17 @@ public enum NetworkError: LocalizedError, Equatable, Sendable {
     public var errorDescription: String? {
         switch self {
         case .invalidURL:
-            "The service URL is invalid."
+            String(localized: "network.error.invalidURL.message", defaultValue: "The service URL is invalid.", bundle: .module)
         case .invalidResponse:
-            "The service returned an invalid response."
+            String(localized: "network.error.invalidResponse.message", defaultValue: "The service returned an invalid response.", bundle: .module)
         case .unauthorized:
-            "Authentication failed. Check the configured credentials."
+            String(localized: "network.error.unauthorized.message", defaultValue: "Authentication failed. Check the configured credentials.", bundle: .module)
         case .server(let statusCode):
-            "The service returned HTTP \(statusCode)."
+            String(localized: "network.error.server.message", defaultValue: "The service returned HTTP \(statusCode).", bundle: .module)
         case .decoding:
-            "The service response was not understood. Check that the server version is supported."
+            String(localized: "network.error.decoding.message", defaultValue: "The service response was not understood. Check that the server version is supported.", bundle: .module)
         case .missingConfiguration(let field):
-            "Configure \(field) before refreshing."
+            String(localized: "network.error.configuration.message", defaultValue: "Configure \(field) before refreshing.", bundle: .module)
         }
     }
 }

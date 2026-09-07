@@ -9,6 +9,6 @@ public struct KeychainError: LocalizedError, Sendable {
     }
 
     public var errorDescription: String? {
-        SecCopyErrorMessageString(status, nil) as String? ?? "Keychain error \(status)."
+        SecCopyErrorMessageString(status, nil) as String? ?? String(localized: "security.keychain.error.message", defaultValue: "Keychain error \(status).", bundle: .module)
     }
 }

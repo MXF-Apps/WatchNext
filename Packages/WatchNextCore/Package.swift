@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "WatchNextCore",
+    defaultLocalization: "en",
     platforms: [.iOS(.v18), .macOS(.v15)],
     products: [
         .library(name: "WatchNextCore", targets: ["WatchNextCore"])

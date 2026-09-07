@@ -26,12 +26,12 @@ public actor WatchNextConnectionService {
     }
 
     public func testSonarr(baseURL: URL, apiKey: String?) async throws -> ServiceHealth {
-        let key = try await resolved(apiKey, key: .sonarrAPIKey, label: "the Sonarr API key")
+        let key = try await resolved(apiKey, key: .sonarrAPIKey, label: String(localized: "settings.missing.sonarrKey.label", defaultValue: "the Sonarr API key", bundle: .module))
         return try await SonarrClient(baseURL: baseURL, apiKey: key, transport: transport).testConnection()
     }
 
     public func testRadarr(baseURL: URL, apiKey: String?) async throws -> ServiceHealth {
-        let key = try await resolved(apiKey, key: .radarrAPIKey, label: "the Radarr API key")
+        let key = try await resolved(apiKey, key: .radarrAPIKey, label: String(localized: "settings.missing.radarrKey.label", defaultValue: "the Radarr API key", bundle: .module))
         return try await RadarrClient(baseURL: baseURL, apiKey: key, transport: transport).testConnection()
     }
 
@@ -51,7 +51,7 @@ public actor WatchNextConnectionService {
         let resolvedToken = try await resolved(
             token,
             key: .jellyfinAccessToken,
-            label: "the Jellyfin token"
+            label: String(localized: "settings.missing.jellyfinToken.label", defaultValue: "the Jellyfin token", bundle: .module)
         )
         if let token, token.isEmpty == false {
             try await credentialStore.set(token, for: .jellyfinAccessToken)
@@ -67,7 +67,7 @@ public actor WatchNextConnectionService {
         let resolvedToken = try await resolved(
             token,
             key: .jellyfinAccessToken,
-            label: "the Jellyfin token"
+            label: String(localized: "settings.missing.jellyfinToken.label", defaultValue: "the Jellyfin token", bundle: .module)
         )
         return try await JellyfinClient(
             baseURL: baseURL,

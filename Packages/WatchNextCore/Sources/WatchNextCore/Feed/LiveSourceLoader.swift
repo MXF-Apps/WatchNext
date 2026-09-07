@@ -15,26 +15,26 @@ public struct LiveSourceLoader: SourceLoading {
     public func load(configuration: ServiceConfiguration) async throws -> SourceSnapshot {
         logger.info("Loading source data.", category: "Refresh")
         guard let sonarrURL = configuration.sonarrBaseURL else {
-            throw NetworkError.missingConfiguration("the Sonarr URL")
+            throw NetworkError.missingConfiguration(String(localized: "settings.missing.sonarrURL.label", defaultValue: "the Sonarr URL", bundle: .module))
         }
         guard let radarrURL = configuration.radarrBaseURL else {
-            throw NetworkError.missingConfiguration("the Radarr URL")
+            throw NetworkError.missingConfiguration(String(localized: "settings.missing.radarrURL.label", defaultValue: "the Radarr URL", bundle: .module))
         }
         guard let jellyfinURL = configuration.jellyfinBaseURL else {
-            throw NetworkError.missingConfiguration("the Jellyfin URL")
+            throw NetworkError.missingConfiguration(String(localized: "settings.missing.jellyfinURL.label", defaultValue: "the Jellyfin URL", bundle: .module))
         }
         guard let userID = configuration.jellyfinUserID, userID.isEmpty == false else {
-            throw NetworkError.missingConfiguration("a Jellyfin user")
+            throw NetworkError.missingConfiguration(String(localized: "settings.missing.jellyfinUser.label", defaultValue: "a Jellyfin user", bundle: .module))
         }
         let secrets = try await credentials()
         guard let sonarrKey = secrets[.sonarrAPIKey], sonarrKey.isEmpty == false else {
-            throw NetworkError.missingConfiguration("the Sonarr API key")
+            throw NetworkError.missingConfiguration(String(localized: "settings.missing.sonarrKey.label", defaultValue: "the Sonarr API key", bundle: .module))
         }
         guard let radarrKey = secrets[.radarrAPIKey], radarrKey.isEmpty == false else {
-            throw NetworkError.missingConfiguration("the Radarr API key")
+            throw NetworkError.missingConfiguration(String(localized: "settings.missing.radarrKey.label", defaultValue: "the Radarr API key", bundle: .module))
         }
         guard let jellyfinToken = secrets[.jellyfinAccessToken], jellyfinToken.isEmpty == false else {
-            throw NetworkError.missingConfiguration("the Jellyfin token")
+            throw NetworkError.missingConfiguration(String(localized: "settings.missing.jellyfinToken.label", defaultValue: "the Jellyfin token", bundle: .module))
         }
         logger.debug(
             "Resolved Sonarr, Radarr, and Jellyfin credentials without exposing their values.",

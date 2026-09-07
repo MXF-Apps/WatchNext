@@ -22,7 +22,7 @@ public extension MediaFeedItem {
 
     /// "and 4 more" when this row stands in for later episodes, else nil.
     var collapsedEpisodesDescription: String? {
-        collapsedEpisodeCount.map { "and \($0) more" }
+        collapsedEpisodeCount.map { String(localized: "media.season.additionalEpisodes", defaultValue: "and \($0) more", bundle: .module) }
     }
 
     /// "×5" when this row stands in for later episodes: the total number of

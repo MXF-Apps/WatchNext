@@ -92,7 +92,7 @@ public struct SonarrClient: SonarrServicing {
         return SonarrEpisode(
             id: episode.id,
             seriesID: episode.seriesId,
-            seriesTitle: series?.title ?? "Unknown Series",
+            seriesTitle: series?.title ?? String(localized: "media.series.unknown.title", defaultValue: "Unknown Series", bundle: .module),
             episodeTitle: episode.title,
             seasonNumber: episode.seasonNumber,
             episodeNumber: episode.episodeNumber,
