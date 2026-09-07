@@ -27,8 +27,12 @@ struct FeedScreen: View {
                         }
                     }
                     ToolbarItem(placement: .topBarTrailing) {
-                        Button(String(localized: .feedActionsRefreshButton), systemImage: "arrow.clockwise", action: refresh)
+                        // Red with a warning glyph while the last refresh failed,
+                        // so the state is visible without opening the list.
+                        Button(String(localized: .feedActionsRefreshButton), systemImage: refreshFailed ? "exclamationmark.arrow.circlepath" : "arrow.clockwise", action: refresh)
+                            .tint(refreshFailed ? .red : nil)
                             .disabled(model.isRefreshing)
+                            .accessibilityValue(refreshFailed ? String(localized: .feedRefreshErrorTitle) : "")
                     }
                 }
             }
@@ -41,6 +45,10 @@ struct FeedScreen: View {
                 }
             }
         }
+    }
+
+    private var refreshFailed: Bool {
+        model.refreshError != nil || model.feed.lastRefreshError != nil
     }
 
     private func refresh() {

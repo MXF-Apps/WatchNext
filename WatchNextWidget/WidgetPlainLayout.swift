@@ -32,7 +32,7 @@ struct WidgetPlainLayout: View {
                     Button(intent: WatchNextRefreshIntent()) {
                         Image(systemName: "arrow.clockwise")
                             .font(.caption2.weight(.semibold))
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(entry.feed.lastRefreshError == nil ? AnyShapeStyle(.secondary) : AnyShapeStyle(.red))
                             .accessibilityLabel(String(localized: .widgetRefreshButtonAccessibilityLabel))
                     }
                     .buttonStyle(.plain)

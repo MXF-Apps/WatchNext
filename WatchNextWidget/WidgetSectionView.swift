@@ -58,13 +58,13 @@ struct WidgetSectionAccessories: View {
         if feed.lastRefreshError != nil {
             Image(systemName: "wifi.exclamationmark")
                 .font(.caption2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(.red)
                 .accessibilityLabel(String(localized: .widgetRefreshErrorAccessibilityLabel))
         }
         Button(intent: WatchNextRefreshIntent()) {
             Image(systemName: "arrow.clockwise")
                 .font(.caption2.weight(.semibold))
-                .foregroundStyle(.secondary)
+                .foregroundStyle(feed.lastRefreshError == nil ? AnyShapeStyle(.secondary) : AnyShapeStyle(.red))
                 .accessibilityLabel(String(localized: .widgetRefreshButtonAccessibilityLabel))
         }
         .buttonStyle(.plain)
