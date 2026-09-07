@@ -49,9 +49,13 @@ final class WatchNextAppModel: ObservableObject {
     @Published var settingsMessage: String?
     @Published var settingsMessageIsError = false
     @Published var isSavingSettings = false
+    /// Local network permission as last observed. Starts from the persisted
+    /// outcome so Settings does not flash the permission gate on every launch.
+    @Published private(set) var localNetworkAccess: LocalNetworkAccess = WatchNextAppModel.storedLocalNetworkAccess()
 
     private let dependencies: WatchNextDependencies
     private static let kindFilterKey = "WatchNext.FeedKindFilter"
+    private static let localNetworkAccessKey = "WatchNext.LocalNetwork.access"
 
     init(dependencies: WatchNextDependencies = .live) {
         self.dependencies = dependencies
@@ -107,6 +111,33 @@ final class WatchNextAppModel: ObservableObject {
             category: "App"
         )
         await reloadLogs()
+        Task { await refreshLocalNetworkAccess() }
+    }
+
+    /// True once the user has been through the Local Network prompt, whatever
+    /// the answer; later launches re-check silently instead of showing the gate.
+    var hasRequestedLocalNetworkAccess: Bool {
+        UserDefaults.standard.string(forKey: Self.localNetworkAccessKey) != nil
+    }
+
+    /// Shows the iOS Local Network prompt (the first time) and records the outcome.
+    func requestLocalNetworkAccess() async {
+        guard localNetworkAccess != .checking else { return }
+        localNetworkAccess = .checking
+        let outcome = await LocalNetworkAuthorization.check()
+        localNetworkAccess = outcome
+        UserDefaults.standard.set(outcome.rawValue, forKey: Self.localNetworkAccessKey)
+    }
+
+    /// Re-checks a permission the user already answered. iOS shows no prompt
+    /// then, and the published state only changes once the result is in, so a
+    /// granted permission never hides the server fields while checking.
+    func refreshLocalNetworkAccess() async {
+        guard hasRequestedLocalNetworkAccess, localNetworkAccess != .checking else { return }
+        let outcome = await LocalNetworkAuthorization.check(timeout: 10)
+        guard outcome != .unknown else { return }
+        localNetworkAccess = outcome
+        UserDefaults.standard.set(outcome.rawValue, forKey: Self.localNetworkAccessKey)
     }
 
     func refresh() async {
@@ -347,6 +378,11 @@ final class WatchNextAppModel: ObservableObject {
             url.host() != nil
         else { throw AppConfigurationError.invalidURL(service) }
         return url
+    }
+
+    private static func storedLocalNetworkAccess() -> LocalNetworkAccess {
+        let stored = UserDefaults.standard.string(forKey: localNetworkAccessKey).flatMap(LocalNetworkAccess.init(rawValue:))
+        return stored == .checking ? .unknown : (stored ?? .unknown)
     }
 
     private static func storedKindFilter() -> FeedKindFilter {

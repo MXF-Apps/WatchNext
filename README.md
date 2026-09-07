@@ -132,6 +132,7 @@ They also include `NSLocalNetworkUsageDescription`. There is no global `NSAllows
 
 Open the app's **Settings** tab.
 
+0. Allow **Local Network** access when the Settings tab asks for it. iOS needs this permission before an app can reach servers on your home network, so the server fields stay hidden until you have answered. If you decline, the fields come back with a warning and only servers reachable over the internet will work; the permission can be turned on later in the iOS Settings app.
 1. Enter the Sonarr base URL and an API key, then use **Test Connection**.
 2. Enter the Radarr base URL and an API key, then use **Test Connection**.
 3. Enter the Jellyfin base URL and either:

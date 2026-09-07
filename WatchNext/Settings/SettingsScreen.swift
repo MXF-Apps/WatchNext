@@ -2,13 +2,25 @@ import SwiftUI
 
 struct SettingsScreen: View {
     @EnvironmentObject private var model: WatchNextAppModel
+    @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
         NavigationStack {
             Form {
-                SonarrSettingsSection(model: model)
-                RadarrSettingsSection(model: model)
-                JellyfinSettingsSection(model: model)
+                // The server fields need the Local Network permission for LAN
+                // hosts, so they stay hidden until the user has answered the
+                // prompt. After a refusal they come back, with the warning on
+                // top, because servers reachable over the internet still work.
+                if model.localNetworkAccess != .granted {
+                    LocalNetworkAccessSection(access: model.localNetworkAccess) {
+                        Task { await model.requestLocalNetworkAccess() }
+                    }
+                }
+                if model.localNetworkAccess == .granted || model.localNetworkAccess == .denied {
+                    SonarrSettingsSection(model: model)
+                    RadarrSettingsSection(model: model)
+                    JellyfinSettingsSection(model: model)
+                }
                 Section {
                     Stepper(value: $model.recentLookbackDays, in: 0...60) {
                         VStack(alignment: .leading, spacing: 2) {
@@ -60,6 +72,11 @@ struct SettingsScreen: View {
                 }
             }
             .animation(.default, value: model.settingsMessage)
+            .animation(.default, value: model.localNetworkAccess)
+            .onChange(of: scenePhase) { _, phase in
+                // Coming back from the iOS Settings app after flipping the switch.
+                if phase == .active { Task { await model.refreshLocalNetworkAccess() } }
+            }
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     if model.isSavingSettings {
