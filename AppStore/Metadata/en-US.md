@@ -5,7 +5,9 @@ given so edits stay legal.
 
 ## Name (30 max)
 
-WatchNext
+WatchNext Widgets
+
+(17 characters; "WatchNext" alone is taken on the App Store. The Home Screen label stays "WatchNext" via CFBundleDisplayName.)
 
 ## Subtitle (30 max)
 
