@@ -12,9 +12,9 @@ struct SelectionActionBar: View {
 
     var body: some View {
         HStack(spacing: 8) {
-            action("Hide", count: hideCount, systemImage: "eye.slash", role: .destructive, onHide)
-            action("Hide Series", count: hideSeriesCount, systemImage: "tv.slash", role: .destructive, onHideSeries)
-            action("Unhide", count: unhideCount, systemImage: "eye", role: nil, onUnhide)
+            action(String(localized: .feedActionsHideButton), count: hideCount, systemImage: "eye.slash", role: .destructive, onHide)
+            action(String(localized: .feedActionsHideSeriesButton), count: hideSeriesCount, systemImage: "tv.slash", role: .destructive, onHideSeries)
+            action(String(localized: .feedActionsUnhideButton), count: unhideCount, systemImage: "eye", role: nil, onUnhide)
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 10)
@@ -33,7 +33,7 @@ struct SelectionActionBar: View {
             VStack(spacing: 3) {
                 Image(systemName: systemImage)
                     .font(.title3)
-                Text("\(title) (\(count))")
+                Text(String(localized: .feedSelectionActionLabel(title: title, count: count)))
                     .font(.caption)
                     .lineLimit(1)
                     .minimumScaleFactor(0.8)
@@ -43,6 +43,6 @@ struct SelectionActionBar: View {
         }
         .buttonStyle(.bordered)
         .disabled(count == 0)
-        .accessibilityLabel("\(title), \(count) selected")
+        .accessibilityLabel(String(localized: .feedSelectionActionAccessibilityLabel(title: title, count: count)))
     }
 }

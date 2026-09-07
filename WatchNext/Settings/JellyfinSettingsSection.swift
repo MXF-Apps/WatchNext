@@ -4,31 +4,31 @@ struct JellyfinSettingsSection: View {
     @ObservedObject var model: WatchNextAppModel
 
     var body: some View {
-        Section("Jellyfin") {
-            TextField("Base URL", text: $model.jellyfinURL)
+        Section(String(localized: .settingsJellyfinTitle)) {
+            TextField(String(localized: .settingsServerUrlPlaceholder), text: $model.jellyfinURL)
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
                 .keyboardType(.URL)
 
-            TextField("Username", text: $model.jellyfinUsername)
+            TextField(String(localized: .settingsJellyfinUsernamePlaceholder), text: $model.jellyfinUsername)
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
-            SecureField("Password (not stored)", text: $model.jellyfinPassword)
-            Button("Sign In", systemImage: "person.badge.key", action: login)
+            SecureField(String(localized: .settingsJellyfinPasswordPlaceholder), text: $model.jellyfinPassword)
+            Button(String(localized: .settingsJellyfinSignInButton), systemImage: "person.badge.key", action: login)
                 .disabled(model.jellyfinUsername.isEmpty || model.jellyfinPassword.isEmpty)
 
             SecureField(
-                model.hasStoredJellyfinToken ? "API token (stored)" : "API token",
+                model.hasStoredJellyfinToken ? String(localized: .settingsJellyfinStoredTokenPlaceholder) : String(localized: .settingsJellyfinTokenPlaceholder),
                 text: $model.jellyfinToken
             )
             .textInputAutocapitalization(.never)
             .autocorrectionDisabled()
-            Button("Test Token", systemImage: "network", action: testToken)
+            Button(String(localized: .settingsJellyfinTestTokenButton), systemImage: "network", action: testToken)
                 .disabled(model.jellyfinStatus == .testing)
 
             if model.jellyfinUsers.isEmpty == false {
-                Picker("Watched-state user", selection: $model.selectedJellyfinUserID) {
-                    Text("Select a user").tag("")
+                Picker(String(localized: .settingsJellyfinUserLabel), selection: $model.selectedJellyfinUserID) {
+                    Text(String(localized: .settingsJellyfinUserPlaceholder)).tag("")
                     ForEach(model.jellyfinUsers) { user in
                         Text(user.name).tag(user.id)
                     }

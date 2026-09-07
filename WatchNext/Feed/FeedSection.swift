@@ -27,7 +27,7 @@ struct FeedSection<Actions: View>: View {
     @ViewBuilder
     private var rows: some View {
         if items.isEmpty {
-            Text("No items")
+            Text(String(localized: .feedSectionEmptyMessage))
                 .foregroundStyle(.secondary)
         } else {
             ForEach(items) { item in
@@ -58,7 +58,7 @@ struct CollapsibleSectionHeader: View {
         } label: {
             HStack(spacing: 6) {
                 Text(title)
-                Text("(\(count))")
+                Text(verbatim: "(\(count.formatted()))")
                     .foregroundStyle(.secondary)
                 Spacer()
                 Image(systemName: "chevron.down")
@@ -69,8 +69,8 @@ struct CollapsibleSectionHeader: View {
             .contentShape(.rect)
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("\(title), \(count) items")
-        .accessibilityValue(isExpanded ? "Expanded" : "Collapsed")
-        .accessibilityHint(isExpanded ? "Collapses the section" : "Expands the section")
+        .accessibilityLabel(String(localized: .feedSectionCountAccessibilityLabel(title: title, count: count)))
+        .accessibilityValue(isExpanded ? String(localized: .feedSectionExpandedAccessibilityValue) : String(localized: .feedSectionCollapsedAccessibilityValue))
+        .accessibilityHint(isExpanded ? String(localized: .feedSectionCollapseAccessibilityHint) : String(localized: .feedSectionExpandAccessibilityHint))
     }
 }

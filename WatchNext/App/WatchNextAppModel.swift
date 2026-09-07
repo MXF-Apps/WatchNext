@@ -102,7 +102,7 @@ final class WatchNextAppModel: ObservableObject {
                 jellyfinUsers = try await dependencies.connectionService.fetchJellyfinUsers(baseURL: url)
             } catch {
                 logger.error("Could not restore Jellyfin users.", error: error, category: "App")
-                settingsMessage = "Stored Jellyfin credentials could not load users: \(error.localizedDescription)"
+                settingsMessage = String(localized: .settingsJellyfinRestoreError(error: error.localizedDescription))
                 settingsMessageIsError = true
             }
         }
@@ -208,7 +208,7 @@ final class WatchNextAppModel: ObservableObject {
         }
         logger.info("Non-sensitive settings and supplied credentials were saved.", category: "Settings")
         if showConfirmation {
-            settingsMessage = "Settings saved securely."
+            settingsMessage = String(localized: .settingsSaveSuccessMessage)
             settingsMessageIsError = false
         }
     }
@@ -226,7 +226,7 @@ final class WatchNextAppModel: ObservableObject {
                 sonarrAPIKey = ""
                 hasStoredSonarrKey = true
             }
-            sonarrStatus = .connected(health.version.map { "Connected • \($0)" } ?? "Connected")
+            sonarrStatus = .connected(health.version.map { String(localized: .settingsConnectionVersionLabel(version: $0)) } ?? String(localized: .settingsConnectionSuccessLabel))
         } catch {
             sonarrStatus = .failed(error.localizedDescription)
             logger.error("Sonarr connection test failed.", error: error, category: "Sonarr")
@@ -247,7 +247,7 @@ final class WatchNextAppModel: ObservableObject {
                 radarrAPIKey = ""
                 hasStoredRadarrKey = true
             }
-            radarrStatus = .connected(health.version.map { "Connected • \($0)" } ?? "Connected")
+            radarrStatus = .connected(health.version.map { String(localized: .settingsConnectionVersionLabel(version: $0)) } ?? String(localized: .settingsConnectionSuccessLabel))
         } catch {
             radarrStatus = .failed(error.localizedDescription)
             logger.error("Radarr connection test failed.", error: error, category: "Radarr")
@@ -269,7 +269,7 @@ final class WatchNextAppModel: ObservableObject {
             selectedJellyfinUserID = authentication.user.id
             jellyfinUsers = try await dependencies.connectionService.fetchJellyfinUsers(baseURL: url)
             try await saveSettings(showConfirmation: false)
-            jellyfinStatus = .connected("Signed in as \(authentication.user.name)")
+            jellyfinStatus = .connected(String(localized: .settingsJellyfinSignedInMessage(username: authentication.user.name)))
         } catch {
             jellyfinStatus = .failed(error.localizedDescription)
             logger.error("Jellyfin sign-in failed.", error: error, category: "Jellyfin")
@@ -288,7 +288,7 @@ final class WatchNextAppModel: ObservableObject {
             hasStoredJellyfinToken = true
             jellyfinToken = ""
             jellyfinUsers = try await dependencies.connectionService.fetchJellyfinUsers(baseURL: url)
-            jellyfinStatus = .connected(health.version.map { "Connected • \($0)" } ?? "Connected")
+            jellyfinStatus = .connected(health.version.map { String(localized: .settingsConnectionVersionLabel(version: $0)) } ?? String(localized: .settingsConnectionSuccessLabel))
         } catch {
             jellyfinStatus = .failed(error.localizedDescription)
             logger.error("Jellyfin token test failed.", error: error, category: "Jellyfin")
@@ -395,7 +395,7 @@ final class WatchNextAppModel: ObservableObject {
         } catch {
             logger.error("Could not restore credential \(key.rawValue).", error: error, category: "Keychain")
             if settingsMessage == nil {
-                settingsMessage = "Secure credentials could not be read: \(error.localizedDescription)"
+                settingsMessage = String(localized: .settingsCredentialsReadError(error: error.localizedDescription))
                 settingsMessageIsError = true
             }
             return nil

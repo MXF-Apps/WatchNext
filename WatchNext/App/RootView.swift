@@ -5,10 +5,10 @@ struct RootView: View {
 
     var body: some View {
         TabView(selection: $selection) {
-            Tab("WatchNext", systemImage: "play.rectangle.on.rectangle", value: .feed) {
+            Tab(String(localized: .appName), systemImage: "play.rectangle.on.rectangle", value: .feed) {
                 FeedScreen()
             }
-            Tab("Settings", systemImage: "gearshape", value: .settings) {
+            Tab(String(localized: .settingsTitle), systemImage: "gearshape", value: .settings) {
                 SettingsScreen()
             }
         }

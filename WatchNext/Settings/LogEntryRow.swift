@@ -8,7 +8,7 @@ struct LogEntryRow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             HStack {
-                Text(entry.level.displayName.uppercased())
+                Text(entry.level.localizedDisplayName.uppercased())
                     .font(.caption2.weight(.bold))
                     .foregroundStyle(levelColor)
                 Text(entry.category)
@@ -24,7 +24,7 @@ struct LogEntryRow: View {
                     .textSelection(.enabled)
             }
             if let error = entry.error {
-                Text("\(error.domain) (\(error.code)): \(error.description)")
+                Text(verbatim: "\(error.domain) (\(error.code)): \(error.description)")
                     .font(.caption)
                     .foregroundStyle(.secondary)
                     .textSelection(.enabled)

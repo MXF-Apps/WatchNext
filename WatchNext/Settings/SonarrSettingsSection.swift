@@ -4,15 +4,15 @@ struct SonarrSettingsSection: View {
     @ObservedObject var model: WatchNextAppModel
 
     var body: some View {
-        Section("Sonarr") {
-            TextField("Base URL", text: $model.sonarrURL)
+        Section(String(localized: .settingsSonarrTitle)) {
+            TextField(String(localized: .settingsServerUrlPlaceholder), text: $model.sonarrURL)
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
                 .keyboardType(.URL)
-            SecureField(model.hasStoredSonarrKey ? "API key (stored)" : "API key", text: $model.sonarrAPIKey)
+            SecureField(model.hasStoredSonarrKey ? String(localized: .settingsCredentialsStoredApiKeyPlaceholder) : String(localized: .settingsCredentialsApiKeyPlaceholder), text: $model.sonarrAPIKey)
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
-            Button("Test Connection", systemImage: "network", action: test)
+            Button(String(localized: .settingsConnectionTestButton), systemImage: "network", action: test)
                 .disabled(model.sonarrStatus == .testing)
             ConnectionStatusView(status: model.sonarrStatus)
         }

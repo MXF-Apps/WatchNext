@@ -11,10 +11,11 @@ struct WelcomeView: View {
         VStack(spacing: 12) {
             Image(systemName: "play.rectangle.on.rectangle")
                 .font(.system(size: 44))
+                .accessibilityHidden(true)
                 .foregroundStyle(.secondary)
-            Text("Welcome to WatchNext")
+            Text(String(localized: .feedWelcomeTitle))
                 .font(.title2.weight(.semibold))
-            Text("Add your Sonarr, Radarr and Jellyfin servers in Settings, or look around with a fictional library first.")
+            Text(String(localized: .feedWelcomeMessage))
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
@@ -23,7 +24,7 @@ struct WelcomeView: View {
                 // title-and-icon style pads the icon too far from the text.
                 HStack(spacing: 6) {
                     Image(systemName: "sparkles")
-                    Text("Try with sample data")
+                    Text(String(localized: .feedWelcomeDemoButton))
                 }
             }
             .buttonStyle(.borderedProminent)

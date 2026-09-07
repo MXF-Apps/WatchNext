@@ -7,16 +7,20 @@ struct FeedItemDetail: View {
     var body: some View {
         HStack {
             if item.availability == .ready {
-                Label("Ready", systemImage: "checkmark.circle.fill")
+                Label(String(localized: .mediaAvailabilityReadyLabel), systemImage: "checkmark.circle.fill")
                     .foregroundStyle(.green)
             } else if item.isAwaitingDownload, let releaseDate = item.releaseDate {
                 Label {
-                    Text("\(item.kind == .movie ? "Released" : "Aired") \(releaseDate, format: .relative(presentation: .named))")
+                    Text(item.kind == .movie
+                        ? LocalizedStringResource.mediaReleaseMovieLabel(time: releaseDate.formatted(.relative(presentation: .named)))
+                        : .mediaReleaseEpisodeLabel(time: releaseDate.formatted(.relative(presentation: .named))))
                 } icon: {
                     Image(systemName: "magnifyingglass")
                 }
                 .foregroundStyle(.orange)
-                .accessibilityLabel("\(item.kind == .movie ? "Released" : "Aired") \(releaseDate.formatted(.relative(presentation: .named))), not downloaded yet")
+                .accessibilityLabel(String(localized: item.kind == .movie
+                    ? .mediaReleaseMovieAccessibilityLabel(time: releaseDate.formatted(.relative(presentation: .named)))
+                    : .mediaReleaseEpisodeAccessibilityLabel(time: releaseDate.formatted(.relative(presentation: .named)))))
             } else if let releaseDate = item.releaseDate {
                 Label {
                     Text(releaseDate, format: .dateTime.weekday(.wide).month().day())

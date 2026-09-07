@@ -22,15 +22,15 @@ struct FeedList: View {
                     Label(message, systemImage: "wifi.exclamationmark")
                         .font(.callout)
                         .foregroundStyle(.red)
-                        .accessibilityLabel("Refresh failed. \(message)")
+                        .accessibilityLabel(String(localized: .feedRefreshErrorAccessibilityLabel(message: message)))
                 } header: {
-                    Text("Refresh Failed")
+                    Text(String(localized: .feedRefreshErrorTitle))
                 }
             }
             if model.demoMode {
                 Section {
                     Label {
-                        Text("Demo data. This is a fictional library; turn it off in Settings › Demo.")
+                        Text(String(localized: .feedDemoMessage))
                     } icon: {
                         Image(systemName: "sparkles")
                     }
@@ -39,7 +39,7 @@ struct FeedList: View {
                 }
             }
             Section {
-                Picker("Show", selection: $model.kindFilter) {
+                Picker(String(localized: .feedFilterTitle), selection: $model.kindFilter) {
                     ForEach(FeedKindFilter.allCases, id: \.self) { filter in
                         Text(filter.displayName).tag(filter)
                     }
@@ -57,28 +57,28 @@ struct FeedList: View {
                     .listRowSeparator(.hidden)
                 } else if model.hasLoadedFeed {
                     ContentUnavailableView(
-                        "Nothing to Show Yet",
+                        String(localized: .feedEmptyTitle),
                         systemImage: "play.rectangle.on.rectangle",
                         description: Text(emptyDescription(hiddenCount: hidden.count))
                     )
                     .listRowBackground(Color.clear)
                 }
             } else {
-                FeedSection(title: "Ready to Watch", items: visible.ready, isExpanded: $readyExpanded) { item in
+                FeedSection(title: String(localized: .feedSectionReadyTitle), items: visible.ready, isExpanded: $readyExpanded) { item in
                     HideActions(item: item) { scope in hide(item, scope: scope) }
                 }
-                FeedSection(title: "Coming Soon", items: visible.comingSoon, isExpanded: $comingSoonExpanded) { item in
+                FeedSection(title: String(localized: .feedSectionUpcomingTitle), items: visible.comingSoon, isExpanded: $comingSoonExpanded) { item in
                     HideActions(item: item) { scope in hide(item, scope: scope) }
                 }
             }
             if model.showsHiddenItems || model.isSelectingItems {
-                FeedSection(title: "Hidden", items: hidden, dimmed: true) { item in
+                FeedSection(title: String(localized: .feedSectionHiddenTitle), items: hidden, dimmed: true) { item in
                     UnhideAction { unhide(item) }
                 }
             }
             if let updated = model.feed.lastSuccessfulRefresh {
                 Section {
-                    LabeledContent("Last updated") {
+                    LabeledContent(String(localized: .feedUpdatedLabel)) {
                         Text(updated, format: .relative(presentation: .named))
                     }
                     .font(.footnote)
@@ -122,12 +122,12 @@ struct FeedList: View {
     private func emptyDescription(hiddenCount: Int) -> String {
         var parts: [String] = []
         switch model.kindFilter {
-        case .all: parts.append("Pull to refresh, or review Settings and Diagnostics for details.")
-        case .movies: parts.append("No movies right now. Switch to All or Shows, or pull to refresh.")
-        case .shows: parts.append("No shows right now. Switch to All or Movies, or pull to refresh.")
+        case .all: parts.append(String(localized: .feedEmptyAllMessage))
+        case .movies: parts.append(String(localized: .feedEmptyMoviesMessage))
+        case .shows: parts.append(String(localized: .feedEmptyShowsMessage))
         }
         if hiddenCount > 0 {
-            parts.append("\(hiddenCount) hidden item\(hiddenCount == 1 ? "" : "s") can be shown from the toolbar menu.")
+            parts.append(String(localized: .feedEmptyHiddenMessage(count: hiddenCount)))
         }
         return parts.joined(separator: " ")
     }

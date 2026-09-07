@@ -24,7 +24,7 @@ struct SettingsScreen: View {
                 Section {
                     Stepper(value: $model.recentLookbackDays, in: 0...60) {
                         VStack(alignment: .leading, spacing: 2) {
-                            Text(model.recentLookbackDays == 0 ? "Recent imports: no limit" : "Recent imports: \(model.recentLookbackDays) days")
+                            Text(model.recentLookbackDays == 0 ? String(localized: .settingsWindowsRecentUnlimitedLabel) : String(localized: .settingsWindowsRecentLabel(days: model.recentLookbackDays)))
                             Text(recentImportsDescription)
                                 .font(.footnote)
                                 .foregroundStyle(.secondary)
@@ -32,38 +32,38 @@ struct SettingsScreen: View {
                     }
                     Stepper(value: $model.futureWindowDays, in: 0...90) {
                         VStack(alignment: .leading, spacing: 2) {
-                            Text(model.futureWindowDays == 0 ? "Coming soon: no limit" : "Coming soon: \(model.futureWindowDays) days")
+                            Text(model.futureWindowDays == 0 ? String(localized: .settingsWindowsUpcomingUnlimitedLabel) : String(localized: .settingsWindowsUpcomingLabel(days: model.futureWindowDays)))
                             Text(comingSoonDescription)
                                 .font(.footnote)
                                 .foregroundStyle(.secondary)
                         }
                     }
                 } header: {
-                    Text("Feed Windows")
+                    Text(String(localized: .settingsWindowsTitle))
                 } footer: {
-                    Text("Step a window down to 0 to remove its limit.")
+                    Text(String(localized: .settingsWindowsFooter))
                 }
                 Section {
-                    Toggle("Demo mode", systemImage: "sparkles", isOn: Binding(
+                    Toggle(String(localized: .settingsDemoToggle), systemImage: "sparkles", isOn: Binding(
                         get: { model.demoMode },
                         set: { enabled in Task { await model.setDemoMode(enabled) } }
                     ))
                 } header: {
-                    Text("Demo")
+                    Text(String(localized: .settingsDemoTitle))
                 } footer: {
-                    Text("Shows a fictional library in the app and the widgets so you can try WatchNext without servers. Your server settings are kept and used again when this is off.")
+                    Text(String(localized: .settingsDemoFooter))
                 }
-                Section("Diagnostics") {
+                Section(String(localized: .settingsDiagnosticsTitle)) {
                     NavigationLink {
                         DiagnosticsScreen()
                     } label: {
-                        LabeledContent("Logs") {
+                        LabeledContent(String(localized: .settingsDiagnosticsLogsLabel)) {
                             Text(model.logEntries.count, format: .number)
                         }
                     }
                 }
             }
-            .navigationTitle("Settings")
+            .navigationTitle(String(localized: .settingsTitle))
             .overlay(alignment: .top) {
                 if let message = model.settingsMessage {
                     SettingsStatusBanner(message: message, isError: model.settingsMessageIsError)
@@ -81,9 +81,9 @@ struct SettingsScreen: View {
                 ToolbarItem(placement: .confirmationAction) {
                     if model.isSavingSettings {
                         ProgressView()
-                            .accessibilityLabel("Saving settings")
+                            .accessibilityLabel(String(localized: .settingsSaveAccessibilityLabel))
                     } else {
-                        Button("Save", action: save)
+                        Button(String(localized: .settingsSaveButton), action: save)
                     }
                 }
             }
@@ -92,16 +92,16 @@ struct SettingsScreen: View {
 
     private var recentImportsDescription: String {
         if model.recentLookbackDays == 0 {
-            return "Ready to Watch lists everything Sonarr and Radarr imported that you have not watched in Jellyfin, up to the newest 250 imports per service."
+            return String(localized: .settingsWindowsRecentUnlimitedMessage)
         }
-        return "Ready to Watch lists what Sonarr and Radarr imported in the last \(model.recentLookbackDays) days and you have not watched in Jellyfin. Older imports drop off even if unwatched."
+        return String(localized: .settingsWindowsRecentMessage(days: model.recentLookbackDays))
     }
 
     private var comingSoonDescription: String {
         if model.futureWindowDays == 0 {
-            return "Coming Soon lists every monitored episode and movie with a release date in the next year."
+            return String(localized: .settingsWindowsUpcomingUnlimitedMessage)
         }
-        return "Coming Soon lists monitored episodes and movies that release within the next \(model.futureWindowDays) days."
+        return String(localized: .settingsWindowsUpcomingMessage(days: model.futureWindowDays))
     }
 
     private func save() {

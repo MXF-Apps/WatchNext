@@ -12,38 +12,38 @@ struct LocalNetworkAccessSection: View {
             switch access {
             case .denied:
                 Label {
-                    Text("Local network access is turned off, so servers on your home network cannot be reached.")
+                    Text(String(localized: .settingsNetworkDeniedMessage))
                 } icon: {
                     Image(systemName: "wifi.exclamationmark")
                         .foregroundStyle(.orange)
                 }
-                Button("Open Settings", systemImage: "gear") {
+                Button(String(localized: .settingsNetworkOpenSettingsButton), systemImage: "gear") {
                     if let url = URL(string: UIApplication.openSettingsURLString) {
                         openURL(url)
                     }
                 }
             case .unknown, .checking, .granted:
-                Text("WatchNext talks to Sonarr, Radarr and Jellyfin on your home network. iOS asks once before an app may reach devices on the local network. Allow it, then add your servers.")
+                Text(String(localized: .settingsNetworkExplanationMessage))
                 Button(action: request) {
                     if access == .checking {
                         HStack {
                             ProgressView()
-                            Text("Waiting for permission…")
+                            Text(String(localized: .settingsNetworkWaitingLabel))
                         }
                     } else {
-                        Label("Allow Local Network Access", systemImage: "network")
+                        Label(String(localized: .settingsNetworkAllowButton), systemImage: "network")
                     }
                 }
                 .disabled(access == .checking)
             }
         } header: {
-            Text("Local Network")
+            Text(String(localized: .settingsNetworkTitle))
         } footer: {
             switch access {
             case .denied:
-                Text("Turn on Local Network for WatchNext under Settings › Apps › WatchNext, or Privacy & Security › Local Network. The server fields below stay usable for servers reachable over the internet.")
+                Text(String(localized: .settingsNetworkDeniedFooter))
             case .unknown, .checking, .granted:
-                Text("If you decline, WatchNext only reaches servers over the internet, and you can change your mind later in the iOS Settings app.")
+                Text(String(localized: .settingsNetworkFooter))
             }
         }
     }

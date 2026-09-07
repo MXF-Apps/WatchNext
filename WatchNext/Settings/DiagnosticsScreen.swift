@@ -7,10 +7,10 @@ struct DiagnosticsScreen: View {
 
     var body: some View {
         List {
-            Section("Logging") {
-                Picker("Minimum level", selection: $model.minimumLogLevel) {
+            Section(String(localized: .diagnosticsLoggingTitle)) {
+                Picker(String(localized: .diagnosticsLoggingLevelLabel), selection: $model.minimumLogLevel) {
                     ForEach(WatchNextLogLevel.allCases, id: \.self) { level in
-                        Text(level.displayName).tag(level)
+                        Text(level.localizedDisplayName).tag(level)
                     }
                 }
                 .onChange(of: model.minimumLogLevel) { _, level in
@@ -18,38 +18,38 @@ struct DiagnosticsScreen: View {
                 }
             }
 
-            Section("Credential Status") {
-                CredentialStatusRow(name: "Sonarr API key", isStored: model.hasStoredSonarrKey)
-                CredentialStatusRow(name: "Radarr API key", isStored: model.hasStoredRadarrKey)
-                CredentialStatusRow(name: "Jellyfin token", isStored: model.hasStoredJellyfinToken)
+            Section(String(localized: .diagnosticsCredentialsTitle)) {
+                CredentialStatusRow(name: String(localized: .diagnosticsCredentialsSonarrLabel), isStored: model.hasStoredSonarrKey)
+                CredentialStatusRow(name: String(localized: .diagnosticsCredentialsRadarrLabel), isStored: model.hasStoredRadarrKey)
+                CredentialStatusRow(name: String(localized: .diagnosticsCredentialsJellyfinLabel), isStored: model.hasStoredJellyfinToken)
             }
 
-            Section("Refresh") {
+            Section(String(localized: .diagnosticsRefreshTitle)) {
                 if let error = model.refreshError ?? model.feed.lastRefreshError {
                     Label(error, systemImage: "exclamationmark.triangle.fill")
                         .foregroundStyle(.red)
                 } else {
-                    Label("No refresh error recorded", systemImage: "checkmark.circle")
+                    Label(String(localized: .diagnosticsRefreshSuccessMessage), systemImage: "checkmark.circle")
                         .foregroundStyle(.secondary)
                 }
                 if let attempt = model.feed.lastRefreshAttempt {
-                    LabeledContent("Last attempt") {
+                    LabeledContent(String(localized: .diagnosticsRefreshAttemptLabel)) {
                         Text(attempt, format: .relative(presentation: .named))
                     }
                 }
                 if let success = model.feed.lastSuccessfulRefresh {
-                    LabeledContent("Last success") {
+                    LabeledContent(String(localized: .diagnosticsRefreshSuccessLabel)) {
                         Text(success, format: .relative(presentation: .named))
                     }
                 }
             }
 
-            Section("App Logs") {
+            Section(String(localized: .diagnosticsLogsTitle)) {
                 if model.logEntries.isEmpty {
                     ContentUnavailableView(
-                        "No Logs Yet",
+                        String(localized: .diagnosticsLogsEmptyTitle),
                         systemImage: "doc.text.magnifyingglass",
-                        description: Text("Run a connection test or refresh the feed.")
+                        description: Text(String(localized: .diagnosticsLogsEmptyMessage))
                     )
                 } else {
                     ForEach(model.logEntries.reversed()) { entry in
@@ -58,10 +58,10 @@ struct DiagnosticsScreen: View {
                 }
             }
         }
-        .navigationTitle("Diagnostics")
+        .navigationTitle(String(localized: .settingsDiagnosticsTitle))
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button("Clear", systemImage: "trash", action: clear)
+                Button(String(localized: .diagnosticsLogsClearButton), systemImage: "trash", action: clear)
                     .disabled(model.logEntries.isEmpty)
             }
         }

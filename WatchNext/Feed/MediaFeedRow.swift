@@ -19,7 +19,7 @@ struct MediaFeedRow: View {
                 FeedItemDetail(item: item)
                 if let progress = item.playbackProgress, progress > 0, progress < 1 {
                     ProgressView(value: progress)
-                        .accessibilityLabel("Playback progress")
+                        .accessibilityLabel(String(localized: .mediaPlaybackProgressAccessibilityLabel))
                         .accessibilityValue(Text(progress, format: .percent))
                 }
             }
@@ -30,10 +30,10 @@ struct MediaFeedRow: View {
     /// Episode code and title in gray, plus a bold tinted "and N more" when the
     /// row stands in for a season, so the folded count stands apart.
     private var subtitle: Text? {
-        let base = item.subtitle.map { Text($0).foregroundStyle(.secondary) }
+        let base = item.localizedSubtitle.map { Text($0).foregroundStyle(.secondary) }
         let more = item.collapsedEpisodesDescription.map { Text($0).bold().foregroundStyle(.tint) }
         switch (base, more) {
-        case let (base?, more?): return base + Text(" · ").foregroundStyle(.secondary) + more
+        case let (base?, more?): return base + Text(verbatim: " · ").foregroundStyle(.secondary) + more
         case let (base?, nil): return base
         case let (nil, more?): return more
         case (nil, nil): return nil

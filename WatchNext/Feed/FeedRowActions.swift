@@ -7,12 +7,12 @@ struct HideActions: View {
     let onHide: (HideScope) -> Void
 
     var body: some View {
-        Button("Hide", systemImage: "eye.slash") {
+        Button(String(localized: .feedActionsHideButton), systemImage: "eye.slash") {
             onHide(.item)
         }
         .tint(.orange)
         if item.seriesHideKey != nil {
-            Button("Hide Series", systemImage: "tv.slash") {
+            Button(String(localized: .feedActionsHideSeriesButton), systemImage: "tv.slash") {
                 onHide(.series)
             }
             .tint(.red)
@@ -25,7 +25,7 @@ struct UnhideAction: View {
     let onUnhide: () -> Void
 
     var body: some View {
-        Button("Unhide", systemImage: "eye", action: onUnhide)
+        Button(String(localized: .feedActionsUnhideButton), systemImage: "eye", action: onUnhide)
             .tint(.green)
     }
 }

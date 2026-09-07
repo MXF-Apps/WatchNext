@@ -9,7 +9,7 @@ struct ConnectionStatusView: View {
         case .idle:
             EmptyView()
         case .testing:
-            Label("Testing…", systemImage: "hourglass")
+            Label(String(localized: .settingsConnectionTestingLabel), systemImage: "hourglass")
                 .foregroundStyle(.secondary)
         case .connected(let message):
             Label(message, systemImage: "checkmark.circle.fill")
