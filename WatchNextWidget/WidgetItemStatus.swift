@@ -11,7 +11,7 @@ struct WidgetItemStatus: View {
         if item.availability == .ready {
             HStack(spacing: 4) {
                 Image(systemName: "checkmark.circle.fill")
-                joined(item.qualityDescription.map { "\($0) • Ready" } ?? "Ready")
+                joined(item.qualityDescription.map { String(localized: .mediaAvailabilityQualityLabel(quality: $0)) } ?? String(localized: .mediaAvailabilityReadyLabel))
             }
             .font(font)
             .foregroundStyle(.secondary)
@@ -19,12 +19,12 @@ struct WidgetItemStatus: View {
         } else if item.isAwaitingDownload, let text = item.relativeReleaseText(hintFormat) {
             HStack(spacing: 4) {
                 Image(systemName: "magnifyingglass")
-                joined(hintFormat == .full ? "\(item.kind == .movie ? "Released" : "Aired") \(text)" : text)
+                joined(hintFormat == .full ? String(localized: item.kind == .movie ? .mediaReleaseMovieLabel(time: text) : .mediaReleaseEpisodeLabel(time: text)) : text)
             }
             .font(font)
             .foregroundStyle(WidgetItemRow.timeColor)
             .lineLimit(1)
-            .accessibilityLabel("\(item.kind == .movie ? "Released" : "Aired") \(text), not downloaded yet")
+            .accessibilityLabel(String(localized: item.kind == .movie ? .mediaReleaseMovieAccessibilityLabel(time: text) : .mediaReleaseEpisodeAccessibilityLabel(time: text)))
         } else if let text = item.relativeReleaseText(hintFormat) {
             joined(text)
                 .font(font)
@@ -36,7 +36,7 @@ struct WidgetItemStatus: View {
     /// Appends a bold, tinted "and N more" when the row stands in for a whole season.
     private func joined(_ text: String) -> Text {
         guard let more = item.collapsedEpisodesDescription else { return Text(text) }
-        return Text(text) + Text(" · ") + Text(more).bold().foregroundStyle(.tint)
+        return Text(text) + Text(verbatim: " · ") + Text(more).bold().foregroundStyle(.tint)
     }
 }
 
@@ -57,12 +57,12 @@ extension MediaFeedItem {
             )
         case .short:
             let seconds = abs(releaseDate.timeIntervalSince(now))
-            guard seconds >= 30 else { return "now" }
+            guard seconds >= 30 else { return String(localized: .mediaReleaseNowLabel) }
             let minutes = (seconds / 60).rounded()
-            if minutes < 60 { return "\(Int(minutes))m" }
+            if minutes < 60 { return Duration.seconds(minutes * 60).formatted(.units(allowed: [.minutes], width: .narrow)) }
             let hours = (seconds / 3600).rounded()
-            if hours < 24 { return "\(Int(hours))h" }
-            return "\(Int((seconds / 86400).rounded()))d"
+            if hours < 24 { return Duration.seconds(hours * 3600).formatted(.units(allowed: [.hours], width: .narrow)) }
+            return Duration.seconds((seconds / 86400).rounded() * 86400).formatted(.units(allowed: [.days], width: .narrow))
         }
     }
 

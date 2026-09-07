@@ -2,8 +2,7 @@ import Foundation
 
 /// How tightly a widget packs its rows. Configured per widget via Edit Widget.
 enum RowDensity: String, CaseIterable {
-    // Raw values double as the text the Edit Widget sheet shows for the
-    // current choice, so they are display titles rather than identifiers.
+    // Legacy storage identifiers. Never translate these values; use title for display.
     case comfortable = "Comfortable"
     case compact = "Compact"
     case smart = "Smart"
@@ -18,11 +17,19 @@ enum RowDensity: String, CaseIterable {
         self = match
     }
 
+    var title: LocalizedStringResource {
+        switch self {
+        case .comfortable: .widgetDensityComfortableTitle
+        case .compact: .widgetDensityCompactTitle
+        case .smart: .widgetDensitySmartTitle
+        }
+    }
+
     var subtitle: LocalizedStringResource {
         switch self {
-        case .comfortable: "Three lines per item"
-        case .compact: "Two lines per item"
-        case .smart: "Shrinks rows when that lists more items"
+        case .comfortable: .widgetDensityComfortableDescription
+        case .compact: .widgetDensityCompactDescription
+        case .smart: .widgetDensitySmartDescription
         }
     }
 

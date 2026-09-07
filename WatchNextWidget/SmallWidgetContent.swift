@@ -22,8 +22,8 @@ struct SmallWidgetContent: View {
                     WidgetStackedLayout(
                         entry: entry,
                         candidate: candidate,
-                        readyTitle: "Ready",
-                        comingTitle: "Upcoming",
+                        readyTitle: String(localized: .widgetSectionReadyTitle),
+                        comingTitle: String(localized: .widgetSectionUpcomingTitle),
                         titleFont: .footnote,
                         secondaryFont: .caption2,
                         showsArtwork: false,

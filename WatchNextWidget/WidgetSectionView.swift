@@ -25,7 +25,8 @@ struct WidgetSectionView: View {
                     .lineLimit(1)
                 Spacer(minLength: 4)
                 if totalCount > items.count {
-                    Text("+\(totalCount - items.count) more")
+                    Text(String(localized: .widgetOverflowLabel(count: totalCount - items.count)))
+                        .accessibilityLabel(String(localized: .widgetOverflowAccessibilityLabel(count: totalCount - items.count)))
                         .font(.caption2)
                         .foregroundStyle(.tertiary)
                         .lineLimit(1)
@@ -58,13 +59,13 @@ struct WidgetSectionAccessories: View {
             Image(systemName: "wifi.exclamationmark")
                 .font(.caption2)
                 .foregroundStyle(.secondary)
-                .accessibilityLabel("Refresh failed; showing cached data")
+                .accessibilityLabel(String(localized: .widgetRefreshErrorAccessibilityLabel))
         }
         Button(intent: WatchNextRefreshIntent()) {
             Image(systemName: "arrow.clockwise")
                 .font(.caption2.weight(.semibold))
                 .foregroundStyle(.secondary)
-                .accessibilityLabel("Refresh")
+                .accessibilityLabel(String(localized: .widgetRefreshButtonAccessibilityLabel))
         }
         .buttonStyle(.plain)
     }

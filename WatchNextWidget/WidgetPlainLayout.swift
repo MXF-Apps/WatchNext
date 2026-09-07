@@ -33,7 +33,7 @@ struct WidgetPlainLayout: View {
                         Image(systemName: "arrow.clockwise")
                             .font(.caption2.weight(.semibold))
                             .foregroundStyle(.secondary)
-                            .accessibilityLabel("Refresh")
+                            .accessibilityLabel(String(localized: .widgetRefreshButtonAccessibilityLabel))
                     }
                     .buttonStyle(.plain)
                     line
@@ -81,7 +81,7 @@ struct WidgetPlainLayout: View {
             if arrowFirst {
                 Image(systemName: arrow)
             }
-            Text("+\(count) more")
+            Text(String(localized: .widgetOverflowLabel(count: count)))
             if arrowFirst == false {
                 Image(systemName: arrow)
             }
@@ -90,6 +90,6 @@ struct WidgetPlainLayout: View {
         .foregroundStyle(color)
         .lineLimit(1)
         .fixedSize()
-        .accessibilityLabel(arrowFirst ? "\(count) more ready above" : "\(count) more upcoming below")
+        .accessibilityLabel(arrowFirst ? String(localized: .widgetOverflowReadyAccessibilityLabel(count: count)) : String(localized: .widgetOverflowUpcomingAccessibilityLabel(count: count)))
     }
 }

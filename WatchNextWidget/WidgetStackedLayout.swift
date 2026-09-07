@@ -6,7 +6,7 @@ struct WidgetStackedLayout: View {
     let entry: WatchNextEntry
     let candidate: WidgetLayoutCandidate
     let readyTitle: String
-    var comingTitle = "Coming Soon"
+    var comingTitle = String(localized: .widgetSectionComingSoonTitle)
     let titleFont: Font
     let secondaryFont: Font
     let showsArtwork: Bool

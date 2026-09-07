@@ -2,8 +2,8 @@ import AppIntents
 import WatchNextCore
 
 struct WatchNextConfigurationIntent: WidgetConfigurationIntent {
-    static let title: LocalizedStringResource = "WatchNext"
-    static let description = IntentDescription("Shows your ready-to-watch and upcoming media.")
+    static let title: LocalizedStringResource = LocalizedStringResource("widget.configuration.title", defaultValue: "WatchNext")
+    static let description = IntentDescription(LocalizedStringResource("widget.configuration.description", defaultValue: "Shows your ready-to-watch and upcoming media."))
 
     /// The `RowDensity` raw value, stored as a plain String on purpose.
     ///
@@ -13,19 +13,19 @@ struct WatchNextConfigurationIntent: WidgetConfigurationIntent {
     /// decodes the enum correctly on iOS 26.4. Primitive parameters are
     /// unaffected, so the pickers are provided by options providers and the
     /// values are mapped back through `rowDensity` and `kindFilter`.
-    @Parameter(title: "Density", optionsProvider: RowDensityOptionsProvider())
+    @Parameter(title: LocalizedStringResource("widget.configuration.density.title", defaultValue: "Density"), optionsProvider: RowDensityOptionsProvider())
     var density: String?
 
-    /// A `FeedKindFilter` display name ("All", "Movies", "Shows"); see `density`.
-    @Parameter(title: "Content", optionsProvider: FeedKindOptionsProvider())
+    /// A stable media-kind identifier; legacy English display names still decode.
+    @Parameter(title: LocalizedStringResource("widget.configuration.content.title", defaultValue: "Content"), optionsProvider: FeedKindOptionsProvider())
     var kind: String?
 
-    @Parameter(title: "Show Artwork", description: "Large widget only.", default: true)
+    @Parameter(title: LocalizedStringResource("widget.configuration.artwork.title", defaultValue: "Show Artwork"), description: LocalizedStringResource("widget.configuration.artwork.description", defaultValue: "Large widget only."), default: true)
     var showsArtwork: Bool
 
     @Parameter(
-        title: "Section Titles",
-        description: "Small and large widgets. Off replaces the section titles with a divider that carries the overflow counts and the refresh button, which fits more items.",
+        title: LocalizedStringResource("widget.configuration.sectionTitles.title", defaultValue: "Section Titles"),
+        description: LocalizedStringResource("widget.configuration.sectionTitles.description", defaultValue: "Small and large widgets. Off replaces the section titles with a divider that carries the overflow counts and the refresh button, which fits more items."),
         default: true
     )
     var showsSectionTitles: Bool
@@ -44,7 +44,7 @@ struct RowDensityOptionsProvider: DynamicOptionsProvider {
     func results() async throws -> IntentItemCollection<String> {
         IntentItemCollection(sections: [
             IntentItemSection(items: RowDensity.allCases.map { density in
-                IntentItem(density.rawValue, title: LocalizedStringResource(stringLiteral: density.rawValue), subtitle: density.subtitle)
+                IntentItem(density.rawValue, title: density.title, subtitle: density.subtitle)
             })
         ])
     }
@@ -59,24 +59,22 @@ struct FeedKindOptionsProvider: DynamicOptionsProvider {
     func results() async throws -> IntentItemCollection<String> {
         IntentItemCollection(sections: [
             IntentItemSection(items: FeedKindFilter.allCases.map { filter in
-                IntentItem(filter.displayName, title: LocalizedStringResource(stringLiteral: filter.displayName))
+                IntentItem(filter.rawValue, title: filter.widgetTitle)
             })
         ])
     }
 
     func defaultResult() async -> String? {
-        FeedKindFilter.all.displayName
+        FeedKindFilter.all.rawValue
     }
 }
 
 extension FeedKindFilter {
-    /// Matches a stored display name or raw value regardless of case.
-    init?(storedValue: String?) {
-        guard let storedValue else { return nil }
-        guard let match = Self.allCases.first(where: {
-            $0.displayName.caseInsensitiveCompare(storedValue) == .orderedSame
-                || $0.rawValue.caseInsensitiveCompare(storedValue) == .orderedSame
-        }) else { return nil }
-        self = match
+    var widgetTitle: LocalizedStringResource {
+        switch self {
+        case .all: .widgetContentAllTitle
+        case .movies: .widgetContentMoviesTitle
+        case .shows: .widgetContentShowsTitle
+        }
     }
 }

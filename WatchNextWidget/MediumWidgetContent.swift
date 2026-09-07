@@ -19,7 +19,7 @@ struct MediumWidgetContent: View {
         HStack(alignment: .top, spacing: 12) {
             if candidate.ready > 0 {
                 WidgetSectionView(
-                    title: "Ready",
+                    title: String(localized: .widgetSectionReadyTitle),
                     items: entry.feed.ready.prefix(candidate.ready),
                     totalCount: entry.feed.ready.count,
                     artwork: entry.artwork,
@@ -34,7 +34,7 @@ struct MediumWidgetContent: View {
             }
             if candidate.coming > 0 {
                 WidgetSectionView(
-                    title: "Coming Soon",
+                    title: String(localized: .widgetSectionComingSoonTitle),
                     items: entry.feed.comingSoon.prefix(candidate.coming),
                     totalCount: entry.feed.comingSoon.count,
                     artwork: entry.artwork,

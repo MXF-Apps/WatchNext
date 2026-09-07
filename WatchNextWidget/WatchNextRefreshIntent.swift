@@ -3,8 +3,8 @@ import WidgetKit
 import WatchNextCore
 
 struct WatchNextRefreshIntent: AppIntent {
-    static let title: LocalizedStringResource = "Refresh WatchNext"
-    static let description = IntentDescription("Refreshes the WatchNext feed from your configured media services.")
+    static let title: LocalizedStringResource = LocalizedStringResource("widget.refresh.intent.title", defaultValue: "Refresh WatchNext")
+    static let description = IntentDescription(LocalizedStringResource("widget.refresh.intent.description", defaultValue: "Refreshes the WatchNext feed from your configured media services."))
     static let openAppWhenRun = false
 
     func perform() async throws -> some IntentResult {

@@ -17,7 +17,7 @@ struct LargeWidgetContent: View {
                     WidgetStackedLayout(
                         entry: entry,
                         candidate: candidate,
-                        readyTitle: "Ready to Watch",
+                        readyTitle: String(localized: .widgetSectionReadyToWatchTitle),
                         titleFont: .subheadline,
                         secondaryFont: .caption,
                         showsArtwork: entry.showsArtwork && candidate.style == .comfortable

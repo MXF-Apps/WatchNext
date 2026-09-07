@@ -42,9 +42,9 @@ struct WatchNextWidgetView: View {
 
     private var emptyMessage: String {
         switch entry.kindFilter {
-        case .all: "Open WatchNext to configure or refresh."
-        case .movies: "No movies right now."
-        case .shows: "No shows right now."
+        case .all: String(localized: .widgetEmptyAllMessage)
+        case .movies: String(localized: .widgetEmptyMoviesMessage)
+        case .shows: String(localized: .widgetEmptyShowsMessage)
         }
     }
 }

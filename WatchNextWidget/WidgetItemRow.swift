@@ -23,32 +23,56 @@ struct WidgetItemRow: View {
     static let timeColor = Color.orange
 
     var body: some View {
-        switch style {
-        case .comfortable:
-            HStack(alignment: .top, spacing: 8) {
-                if showsArtwork {
-                    WidgetArtworkView(cacheKey: item.artworkCacheKey, artwork: artwork)
+        Group {
+            switch style {
+            case .comfortable:
+                HStack(alignment: .top, spacing: 8) {
+                    if showsArtwork {
+                        WidgetArtworkView(cacheKey: item.artworkCacheKey, artwork: artwork)
+                    }
+                    VStack(alignment: .leading, spacing: 1) {
+                        title(fixed: false)
+                        if let subtitle = item.localizedSubtitle {
+                            secondary(subtitle)
+                        }
+                        WidgetItemStatus(item: item, font: secondaryFont, hintFormat: hintFormat)
+                    }
                 }
+                .accessibilityElement(children: .combine)
+            case .compact:
                 VStack(alignment: .leading, spacing: 1) {
                     title(fixed: false)
-                    if let subtitle = item.subtitle {
-                        secondary(subtitle)
+                    if compactBase != nil || item.collapsedEpisodesBadge != nil {
+                        secondary(compactBase, badge: item.collapsedEpisodesBadge, color: isUpcoming ? Self.timeColor : .secondary, leadingSymbol: awaitingSymbol)
                     }
-                    WidgetItemStatus(item: item, font: secondaryFont, hintFormat: hintFormat)
                 }
+                .accessibilityElement(children: .combine)
+            case .dense:
+                denseBody
             }
-            .accessibilityElement(children: .combine)
-        case .compact:
-            VStack(alignment: .leading, spacing: 1) {
-                title(fixed: false)
-                if compactBase != nil || item.collapsedEpisodesBadge != nil {
-                    secondary(compactBase, badge: item.collapsedEpisodesBadge, color: isUpcoming ? Self.timeColor : .secondary, leadingSymbol: awaitingSymbol)
-                }
-            }
-            .accessibilityElement(children: .combine)
-        case .dense:
-            denseBody
         }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(accessibilitySummary)
+    }
+
+    private var accessibilitySummary: String {
+        var parts = [item.title]
+        if let subtitle = item.localizedSubtitle { parts.append(subtitle) }
+        if item.availability == .ready {
+            parts.append(String(localized: .mediaAvailabilityReadyLabel))
+        } else if let time = item.relativeReleaseText(.full) {
+            if item.isAwaitingDownload {
+                parts.append(String(localized: item.kind == .movie
+                    ? .mediaReleaseMovieAccessibilityLabel(time: time)
+                    : .mediaReleaseEpisodeAccessibilityLabel(time: time)))
+            } else {
+                parts.append(time)
+            }
+        }
+        if let count = item.collapsedEpisodeCount {
+            parts.append(String(localized: .mediaSeasonAdditionalEpisodesAccessibilityLabel(count: count)))
+        }
+        return parts.joined(separator: ", ")
     }
 
     // MARK: Dense
@@ -107,7 +131,7 @@ struct WidgetItemRow: View {
         HStack(spacing: 3) {
             if let leadingSymbol {
                 Image(systemName: leadingSymbol)
-                    .accessibilityLabel("Not downloaded yet")
+                    .accessibilityLabel(String(localized: .mediaDownloadPendingAccessibilityLabel))
             }
             styled(text, badge: badge, color: color)
         }
@@ -119,10 +143,10 @@ struct WidgetItemRow: View {
         let base = text.map { Text($0).foregroundStyle(color) }
         let emphasized = badge.map { Text($0).bold().foregroundStyle(.tint) }
         switch (base, emphasized) {
-        case let (base?, emphasized?): return base + Text(" · ").foregroundStyle(color) + emphasized
+        case let (base?, emphasized?): return base + Text(verbatim: " · ").foregroundStyle(color) + emphasized
         case let (base?, nil): return base
         case let (nil, emphasized?): return emphasized
-        case (nil, nil): return Text("")
+        case (nil, nil): return Text(verbatim: "")
         }
     }
 
@@ -131,7 +155,7 @@ struct WidgetItemRow: View {
     private var compactBase: String? {
         let base: [String?] = isUpcoming
             ? [item.relativeReleaseText(hintFormat), item.episodeCode(hintFormat)]
-            : [hintFormat == .short ? item.episodeCode(.short).map { subtitleWithout(seasonIn: $0) } ?? item.subtitle : item.subtitle]
+            : [hintFormat == .short ? item.episodeCode(.short).map { subtitleWithout(seasonIn: $0) } ?? item.localizedSubtitle : item.localizedSubtitle]
         return joined(base)
     }
 
@@ -142,7 +166,7 @@ struct WidgetItemRow: View {
 
     /// "E20 — Chronoa the Hero" from "S04E20 — Chronoa the Hero".
     private func subtitleWithout(seasonIn code: String) -> String {
-        guard let subtitle = item.subtitle, let range = subtitle.range(of: " — ") else { return code }
+        guard let subtitle = item.localizedSubtitle, let range = subtitle.range(of: " — ") else { return code }
         return code + subtitle[range.lowerBound...]
     }
 
