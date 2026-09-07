@@ -63,6 +63,7 @@ struct SettingsScreen: View {
                     }
                 }
             }
+            .scrollDismissesKeyboard(.immediately)
             .navigationTitle(String(localized: .settingsTitle))
             .overlay(alignment: .top) {
                 if let message = model.settingsMessage {
@@ -78,6 +79,11 @@ struct SettingsScreen: View {
                 if phase == .active { Task { await model.refreshLocalNetworkAccess() } }
             }
             .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button(String(localized: .settingsKeyboardDoneButton), action: hideKeyboard)
+                        .fontWeight(.semibold)
+                }
                 ToolbarItem(placement: .confirmationAction) {
                     if model.isSavingSettings {
                         ProgressView()
@@ -106,5 +112,14 @@ struct SettingsScreen: View {
 
     private func save() {
         Task { await model.saveSettingsFromUI() }
+    }
+
+    /// The fields live in separate sections with their own bindings, so the
+    /// keyboard is dismissed through the window instead of a focus state.
+    private func hideKeyboard() {
+        UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap(\.windows)
+            .forEach { $0.endEditing(true) }
     }
 }

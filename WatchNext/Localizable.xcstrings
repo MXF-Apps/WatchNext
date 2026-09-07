@@ -1757,6 +1757,24 @@
         }
       }
     },
+    "settings.keyboard.done.button": {
+      "comment": "Button above the keyboard in Settings that hides the keyboard.",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Done"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        }
+      },
+      "extractionState": "manual"
+    },
     "settings.network.allow.button": {
       "comment": "Starts the system local network authorization check.",
       "extractionState": "manual",
