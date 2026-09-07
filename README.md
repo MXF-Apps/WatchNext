@@ -55,10 +55,10 @@ See [PRIVACY.md](PRIVACY.md). Short version: the app talks only to the servers y
 
 The checked-in identifiers belong to the App Store build. To sign your own build, replace them with identifiers registered to your team:
 
-- App: `com.mxfapps.WatchNext`
-- Widget: `com.mxfapps.WatchNext.Widget`
-- App Group: `group.com.mxfapps.WatchNext`
-- Shared Keychain group suffix: `com.mxfapps.WatchNext.shared`
+- App: `com.mxf-apps.WatchNext`
+- Widget: `com.mxf-apps.WatchNext.Widget`
+- App Group: `group.com.mxf-apps.WatchNext`
+- Shared Keychain group suffix: `com.mxf-apps.WatchNext.shared`
 
 Update them consistently in the Xcode project, both entitlement files, both Info.plists, and `WatchNextConstants.swift`, then set your team under Signing & Capabilities for both targets.
 

@@ -35,6 +35,6 @@
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>WatchNext connects to your media servers on your local network to refresh the widget.</string>
 	<key>WatchNextKeychainAccessGroup</key>
-	<string>$(AppIdentifierPrefix)com.mxfapps.WatchNext.shared</string>
+	<string>$(AppIdentifierPrefix)com.mxf-apps.WatchNext.shared</string>
 </dict>
 </plist>

@@ -30,7 +30,7 @@ Screenshots: boot an iPhone 17 Pro Max simulator, run the demo server on the sta
 
 Before the first upload:
 
-- [x] Real identifiers everywhere (`com.mxfapps.WatchNext`, `com.mxfapps.WatchNext.Widget`, `group.com.mxfapps.WatchNext`, `com.mxfapps.WatchNext.shared`): both targets' bundle IDs, both `.entitlements`, both Info.plists, `WatchNextConstants.swift`. Development team set on both targets; automatic signing registers the App IDs, App Group and Keychain Sharing.
+- [x] Real identifiers everywhere (`com.mxf-apps.WatchNext`, `com.mxf-apps.WatchNext.Widget`, `group.com.mxf-apps.WatchNext`, `com.mxf-apps.WatchNext.shared`): both targets' bundle IDs, both `.entitlements`, both Info.plists, `WatchNextConstants.swift`. Development team set on both targets; automatic signing registers the App IDs, App Group and Keychain Sharing.
 - [ ] Set `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` (currently 1.0 / 1).
 - [x] Add `ITSAppUsesNonExemptEncryption = NO` to both Info.plists.
 - [ ] Archive with Release configuration and upload with Xcode Organizer or `xcodebuild -exportArchive`.

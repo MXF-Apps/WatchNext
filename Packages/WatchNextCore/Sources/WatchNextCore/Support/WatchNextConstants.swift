@@ -1,7 +1,7 @@
 import Foundation
 
 public enum WatchNextConstants {
-    public static let appGroupIdentifier = "group.com.mxfapps.WatchNext"
+    public static let appGroupIdentifier = "group.com.mxf-apps.WatchNext"
     public static let keychainAccessGroupInfoKey = "WatchNextKeychainAccessGroup"
     public static let widgetKind = "WatchNextWidget"
     public static let cacheFileName = "watch-next-feed.json"
