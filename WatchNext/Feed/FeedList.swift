@@ -14,7 +14,9 @@ struct FeedList: View {
         let selectedVisible = (visible.ready + visible.comingSoon).filter { selection.contains($0.id) }
         let selectedSeries = selectedVisible.filter { $0.seriesHideKey != nil }
         let selectedHidden = hidden.filter { selection.contains($0.id) }
-        List(selection: $selection) {
+        // Only bind the selection while selecting: iPadOS otherwise lets a plain
+        // tap select a row outside edit mode and leaves it highlighted.
+        List(selection: model.isSelectingItems ? $selection : nil) {
             if let message = model.refreshError ?? model.feed.lastRefreshError {
                 Section {
                     Label(message, systemImage: "wifi.exclamationmark")
