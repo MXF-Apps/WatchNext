@@ -64,6 +64,7 @@ struct SettingsScreen: View {
                 }
             }
             .scrollDismissesKeyboard(.immediately)
+            .appBackground()
             .navigationTitle(String(localized: .settingsTitle))
             .overlay(alignment: .top) {
                 if let message = model.settingsMessage {

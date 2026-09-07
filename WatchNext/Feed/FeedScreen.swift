@@ -7,6 +7,7 @@ struct FeedScreen: View {
     var body: some View {
         NavigationStack {
             FeedList()
+            .appBackground()
             .navigationTitle(String(localized: .appName))
             .toolbar {
                 if model.isSelectingItems {

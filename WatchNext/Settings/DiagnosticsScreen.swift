@@ -58,6 +58,7 @@ struct DiagnosticsScreen: View {
                 }
             }
         }
+        .appBackground()
         .navigationTitle(String(localized: .settingsDiagnosticsTitle))
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
