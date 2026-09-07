@@ -7,6 +7,7 @@ struct SettingsScreen: View {
     @EnvironmentObject private var model: WatchNextAppModel
     @Environment(\.scenePhase) private var scenePhase
     @AppStorage(AppearanceSettings.textureKey, store: .appGroup) private var backgroundTexture = AppearanceSettings.default.texture.rawValue
+    @AppStorage(AppearanceSettings.tintKey, store: .appGroup) private var backgroundTint = AppearanceSettings.default.tint.rawValue
 
     var body: some View {
         NavigationStack {
@@ -54,6 +55,20 @@ struct SettingsScreen: View {
                         }
                     }
                     .pickerStyle(.segmented)
+                    Picker(selection: $backgroundTint) {
+                        ForEach(BackgroundTint.allCases) { tint in
+                            Label {
+                                Text(tint.localizedName)
+                            } icon: {
+                                TintSwatch(tint: tint)
+                            }
+                            .tag(tint.rawValue)
+                        }
+                    } label: {
+                        Text(String(localized: .settingsAppearanceTintLabel))
+                    }
+                    .pickerStyle(.navigationLink)
+                    .disabled(backgroundTexture == BackgroundTexture.off.rawValue)
                 } header: {
                     Text(String(localized: .settingsAppearanceTitle))
                 } footer: {
@@ -92,6 +107,7 @@ struct SettingsScreen: View {
             .animation(.default, value: model.settingsMessage)
             .animation(.default, value: model.localNetworkAccess)
             .onChange(of: backgroundTexture) { reloadWidgets() }
+            .onChange(of: backgroundTint) { reloadWidgets() }
             .onChange(of: scenePhase) { _, phase in
                 // Coming back from the iOS Settings app after flipping the switch.
                 if phase == .active { Task { await model.refreshLocalNetworkAccess() } }
@@ -147,3 +163,13 @@ struct SettingsScreen: View {
     }
 }
 
+/// Small gradient disc previewing a tint pair.
+private struct TintSwatch: View {
+    let tint: BackgroundTint
+
+    var body: some View {
+        Circle()
+            .fill(LinearGradient(colors: [tint.primary, tint.secondary], startPoint: .topLeading, endPoint: .bottomTrailing))
+            .frame(width: 22, height: 22)
+    }
+}

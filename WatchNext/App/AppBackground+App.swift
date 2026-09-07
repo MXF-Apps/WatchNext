@@ -47,3 +47,17 @@ extension BackgroundTexture {
         }
     }
 }
+
+extension BackgroundTint {
+    var localizedName: String {
+        switch self {
+        case .indigo: String(localized: .settingsAppearanceTintIndigo)
+        case .ocean: String(localized: .settingsAppearanceTintOcean)
+        case .orchid: String(localized: .settingsAppearanceTintOrchid)
+        case .sunset: String(localized: .settingsAppearanceTintSunset)
+        case .forest: String(localized: .settingsAppearanceTintForest)
+        case .ember: String(localized: .settingsAppearanceTintEmber)
+        case .graphite: String(localized: .settingsAppearanceTintGraphite)
+        }
+    }
+}
