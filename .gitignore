@@ -36,8 +36,8 @@ MEMORY.local.md
 .mcp.json
 mcp.local.json
 scratchpad/
-ai-notes/
-ai-memory/
+ai-notes
+ai-memory
 simulator-workflow.md
 
 # Local credentials and environment overrides
