@@ -1,0 +1,876 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "media.availability.quality.label": {
+      "comment": "Quality is a server-provided video format such as 1080p.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$(quality)@ • Ready"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$(quality)@ • Disponible"
+          }
+        }
+      }
+    },
+    "media.availability.ready.label": {
+      "comment": "One media item is available to watch.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ready"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disponible"
+          }
+        }
+      }
+    },
+    "media.download.pending.accessibilityLabel": {
+      "comment": "VoiceOver label for the missing download symbol.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not downloaded yet"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pas encore téléchargé"
+          }
+        }
+      }
+    },
+    "media.release.episode.accessibilityLabel": {
+      "comment": "VoiceOver label. Time is a localized relative release date.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aired %1$(time)@, not downloaded yet"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diffusion %1$(time)@, pas encore téléchargé"
+          }
+        }
+      }
+    },
+    "media.release.episode.label": {
+      "comment": "Time is a localized relative date such as “2 hours ago”.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aired %1$(time)@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diffusion %1$(time)@"
+          }
+        }
+      }
+    },
+    "media.release.movie.accessibilityLabel": {
+      "comment": "VoiceOver label. Time is a localized relative release date.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Released %1$(time)@, not downloaded yet"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sortie %1$(time)@, pas encore téléchargé"
+          }
+        }
+      }
+    },
+    "media.release.movie.label": {
+      "comment": "Time is a localized relative date such as “2 hours ago”.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Released %1$(time)@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sortie %1$(time)@"
+          }
+        }
+      }
+    },
+    "media.release.now.label": {
+      "comment": "Compact relative time for a release within thirty seconds of now.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "now"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "maintenant"
+          }
+        }
+      }
+    },
+    "media.season.additionalEpisodes.accessibilityLabel": {
+      "comment": "VoiceOver explanation of a folded season badge. Count excludes the visible episode.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld additional episode"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld additional episodes"
+                }
+              }
+            }
+          }
+        },
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld épisode supplémentaire"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld épisodes supplémentaires"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "widget.configuration.artwork.description": {
+      "comment": "Artwork is only used by the large widget.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Large widget only."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grand widget uniquement."
+          }
+        }
+      }
+    },
+    "widget.configuration.artwork.title": {
+      "comment": "Toggles posters in the large widget.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show Artwork"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher les affiches"
+          }
+        }
+      }
+    },
+    "widget.configuration.content.title": {
+      "comment": "Which media kind the widget displays.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Content"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contenu"
+          }
+        }
+      }
+    },
+    "widget.configuration.density.title": {
+      "comment": "How tightly widget rows are packed.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Density"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Densité"
+          }
+        }
+      }
+    },
+    "widget.configuration.description": {
+      "comment": "Widget configuration intent description.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shows your ready-to-watch and upcoming media."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Affiche vos contenus disponibles et à venir."
+          }
+        }
+      }
+    },
+    "widget.configuration.sectionTitles.description": {
+      "comment": "Description of the headerless layout option.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Small and large widgets. Off replaces the section titles with a divider that carries the overflow counts and the refresh button, which fits more items."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Petits et grands widgets. Désactivez cette option pour remplacer les titres par un séparateur avec les nombres d’éléments supplémentaires et le bouton d’actualisation, afin d’afficher plus de contenus."
+          }
+        }
+      }
+    },
+    "widget.configuration.sectionTitles.title": {
+      "comment": "Toggles visible section headings.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Section Titles"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Titres des sections"
+          }
+        }
+      }
+    },
+    "widget.configuration.title": {
+      "comment": "Configuration intent product name. Do not translate.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WatchNext"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WatchNext"
+          }
+        }
+      }
+    },
+    "widget.content.all.title": {
+      "comment": "Media kind picker title. Its stored value stays independent of language.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tout"
+          }
+        }
+      }
+    },
+    "widget.content.movies.title": {
+      "comment": "Media kind picker title. Its stored value stays independent of language.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Movies"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Films"
+          }
+        }
+      }
+    },
+    "widget.content.shows.title": {
+      "comment": "Media kind picker title. Its stored value stays independent of language.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shows"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Séries"
+          }
+        }
+      }
+    },
+    "widget.density.comfortable.description": {
+      "comment": "Explanation of the Comfortable widget density.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Three lines per item"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trois lignes par élément"
+          }
+        }
+      }
+    },
+    "widget.density.comfortable.title": {
+      "comment": "Localized display title; persisted option identifier must remain unchanged.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comfortable"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confortable"
+          }
+        }
+      }
+    },
+    "widget.density.compact.description": {
+      "comment": "Explanation of the Compact widget density.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Two lines per item"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deux lignes par élément"
+          }
+        }
+      }
+    },
+    "widget.density.compact.title": {
+      "comment": "Localized display title; persisted option identifier must remain unchanged.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compact"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compacte"
+          }
+        }
+      }
+    },
+    "widget.density.smart.description": {
+      "comment": "Explanation of the Smart widget density.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shrinks rows when that lists more items"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réduit les lignes pour afficher plus d’éléments"
+          }
+        }
+      }
+    },
+    "widget.density.smart.title": {
+      "comment": "Localized display title; persisted option identifier must remain unchanged.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Smart"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adaptative"
+          }
+        }
+      }
+    },
+    "widget.empty.all.message": {
+      "comment": "Empty widget before configuration or refresh.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open WatchNext to configure or refresh."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrez WatchNext pour configurer ou actualiser."
+          }
+        }
+      }
+    },
+    "widget.empty.movies.message": {
+      "comment": "Empty widget filtered to movies.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No movies right now."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun film pour le moment."
+          }
+        }
+      }
+    },
+    "widget.empty.shows.message": {
+      "comment": "Empty widget filtered to shows.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No shows right now."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucune série pour le moment."
+          }
+        }
+      }
+    },
+    "widget.gallery.description": {
+      "comment": "Description displayed in the widget gallery.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See what is ready to watch and what is coming next from your media library."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Découvrez les contenus disponibles et à venir dans votre bibliothèque multimédia."
+          }
+        }
+      }
+    },
+    "widget.gallery.name": {
+      "comment": "Widget product name. Do not translate.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WatchNext"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WatchNext"
+          }
+        }
+      }
+    },
+    "widget.overflow.accessibilityLabel": {
+      "comment": "VoiceOver description of rows that do not fit in this widget section.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld more item"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld more items"
+                }
+              }
+            }
+          }
+        },
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld élément supplémentaire"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld éléments supplémentaires"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "widget.overflow.label": {
+      "comment": "Compact overflow count. French omits extra words to fit small widgets; VoiceOver provides the full meaning.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "+%1$(count)lld more"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "+%1$(count)lld"
+          }
+        }
+      }
+    },
+    "widget.overflow.ready.accessibilityLabel": {
+      "comment": "VoiceOver overflow count for the ready section above the divider.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld more ready above"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld more ready above"
+                }
+              }
+            }
+          }
+        },
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld contenu disponible supplémentaire au-dessus"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld contenus disponibles supplémentaires au-dessus"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "widget.overflow.upcoming.accessibilityLabel": {
+      "comment": "VoiceOver overflow count for the upcoming section below the divider.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld more upcoming below"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld more upcoming below"
+                }
+              }
+            }
+          }
+        },
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld contenu à venir supplémentaire en dessous"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld contenus à venir supplémentaires en dessous"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "widget.refresh.button.accessibilityLabel": {
+      "comment": "VoiceOver label of the widget refresh button.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refresh"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actualiser"
+          }
+        }
+      }
+    },
+    "widget.refresh.error.accessibilityLabel": {
+      "comment": "VoiceOver label for stale data warning icon.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refresh failed; showing cached data"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Échec de l’actualisation ; affichage des données en cache"
+          }
+        }
+      }
+    },
+    "widget.refresh.intent.description": {
+      "comment": "Description of the refresh App Intent.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refreshes the WatchNext feed from your configured media services."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actualise le flux WatchNext depuis vos services multimédias configurés."
+          }
+        }
+      }
+    },
+    "widget.refresh.intent.title": {
+      "comment": "Name of the refresh App Intent.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refresh WatchNext"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actualiser WatchNext"
+          }
+        }
+      }
+    },
+    "widget.section.comingSoon.title": {
+      "comment": "Upcoming media section heading.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coming Soon"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À venir"
+          }
+        }
+      }
+    },
+    "widget.section.ready.title": {
+      "comment": "Short heading for media ready to watch; small and medium widgets.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ready"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disponibles"
+          }
+        }
+      }
+    },
+    "widget.section.readyToWatch.title": {
+      "comment": "Full heading for ready media in the large widget.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ready to Watch"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À regarder"
+          }
+        }
+      }
+    },
+    "widget.section.upcoming.title": {
+      "comment": "Short upcoming media heading in the small widget.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upcoming"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À venir"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

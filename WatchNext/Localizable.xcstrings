@@ -1,0 +1,2308 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "app.name": {
+      "comment": "Product name. Do not translate.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WatchNext"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WatchNext"
+          }
+        }
+      }
+    },
+    "diagnostics.credentials.jellyfin.label": {
+      "comment": "Keychain status of the Jellyfin token.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jellyfin token"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeton Jellyfin"
+          }
+        }
+      }
+    },
+    "diagnostics.credentials.radarr.label": {
+      "comment": "Keychain status of the Radarr API key.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Radarr API key"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clé API Radarr"
+          }
+        }
+      }
+    },
+    "diagnostics.credentials.sonarr.label": {
+      "comment": "Keychain status of the Sonarr API key.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sonarr API key"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clé API Sonarr"
+          }
+        }
+      }
+    },
+    "diagnostics.credentials.title": {
+      "comment": "Section reporting whether secure credentials are stored.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Credential Status"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "État des identifiants"
+          }
+        }
+      }
+    },
+    "diagnostics.level.debug.label": {
+      "comment": "Display name for the debug diagnostic severity.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debug"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Débogage"
+          }
+        }
+      }
+    },
+    "diagnostics.level.error.label": {
+      "comment": "Display name for the error diagnostic severity.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Error"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erreur"
+          }
+        }
+      }
+    },
+    "diagnostics.level.fault.label": {
+      "comment": "Display name for the fault diagnostic severity.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fault"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erreur critique"
+          }
+        }
+      }
+    },
+    "diagnostics.level.info.label": {
+      "comment": "Display name for the info diagnostic severity.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Info"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Information"
+          }
+        }
+      }
+    },
+    "diagnostics.level.notice.label": {
+      "comment": "Display name for the notice diagnostic severity.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notice"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notification"
+          }
+        }
+      }
+    },
+    "diagnostics.level.off.label": {
+      "comment": "Display name for the off diagnostic severity.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Off"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Désactivé"
+          }
+        }
+      }
+    },
+    "diagnostics.level.warning.label": {
+      "comment": "Display name for the warning diagnostic severity.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warning"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avertissement"
+          }
+        }
+      }
+    },
+    "diagnostics.logging.level.label": {
+      "comment": "Minimum severity of recorded diagnostic events.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minimum level"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Niveau minimum"
+          }
+        }
+      }
+    },
+    "diagnostics.logging.title": {
+      "comment": "Log level settings section.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logging"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Journalisation"
+          }
+        }
+      }
+    },
+    "diagnostics.logs.clear.button": {
+      "comment": "Clears the in-memory diagnostic log history.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clear"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Effacer"
+          }
+        }
+      }
+    },
+    "diagnostics.logs.empty.message": {
+      "comment": "How to generate diagnostic log entries.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Run a connection test or refresh the feed."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Testez une connexion ou actualisez le flux."
+          }
+        }
+      }
+    },
+    "diagnostics.logs.empty.title": {
+      "comment": "Empty log heading.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Logs Yet"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun journal pour le moment"
+          }
+        }
+      }
+    },
+    "diagnostics.logs.title": {
+      "comment": "Diagnostic event history. Technical log payloads retain their original language.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App Logs"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Journaux de l’app"
+          }
+        }
+      }
+    },
+    "diagnostics.refresh.attempt.label": {
+      "comment": "Date of last attempted refresh.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last attempt"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dernière tentative"
+          }
+        }
+      }
+    },
+    "diagnostics.refresh.success.label": {
+      "comment": "Date of last successful refresh.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last success"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dernière réussite"
+          }
+        }
+      }
+    },
+    "diagnostics.refresh.success.message": {
+      "comment": "No known refresh failure.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No refresh error recorded"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucune erreur d’actualisation enregistrée"
+          }
+        }
+      }
+    },
+    "diagnostics.refresh.title": {
+      "comment": "Refresh diagnostics section.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refresh"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actualisation"
+          }
+        }
+      }
+    },
+    "feed.actions.done.button": {
+      "comment": "Leaves multiple selection mode.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Done"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminé"
+          }
+        }
+      }
+    },
+    "feed.actions.hide.button": {
+      "comment": "Hides selected media from the feed.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hide"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Masquer"
+          }
+        }
+      }
+    },
+    "feed.actions.hideSeries.button": {
+      "comment": "Hides every feed episode of the selected series.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hide Series"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Masquer la série"
+          }
+        }
+      }
+    },
+    "feed.actions.options.button": {
+      "comment": "Feed toolbar menu; also its accessibility label.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Options"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Options"
+          }
+        }
+      }
+    },
+    "feed.actions.refresh.button": {
+      "comment": "Refreshes the feed from the user's servers.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refresh"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actualiser"
+          }
+        }
+      }
+    },
+    "feed.actions.select.button": {
+      "comment": "Enables selection of several feed rows.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select Items"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sélectionner des éléments"
+          }
+        }
+      }
+    },
+    "feed.actions.showHidden.toggle": {
+      "comment": "Reveals hidden media in the feed.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show Hidden"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher les éléments masqués"
+          }
+        }
+      }
+    },
+    "feed.actions.unhide.button": {
+      "comment": "Restores hidden media to the feed.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unhide"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réafficher"
+          }
+        }
+      }
+    },
+    "feed.demo.message": {
+      "comment": "Banner explaining sample media.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo data. This is a fictional library; turn it off in Settings › Demo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Données de démonstration. Cette bibliothèque est fictive ; désactivez-la dans Réglages › Démonstration."
+          }
+        }
+      }
+    },
+    "feed.empty.all.message": {
+      "comment": "Guidance for an empty filtered feed.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pull to refresh, or review Settings and Diagnostics for details."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tirez vers le bas pour actualiser, ou consultez les réglages et le diagnostic."
+          }
+        }
+      }
+    },
+    "feed.empty.hidden.message": {
+      "comment": "Explains how to reveal hidden media. Count is hidden rows.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld hidden item can be shown from the toolbar menu."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld hidden items can be shown from the toolbar menu."
+                }
+              }
+            }
+          }
+        },
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Vous pouvez réafficher %1$(count)lld élément masqué depuis le menu de la barre d’outils."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Vous pouvez réafficher %1$(count)lld éléments masqués depuis le menu de la barre d’outils."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "feed.empty.movies.message": {
+      "comment": "Guidance for an empty filtered feed.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No movies right now. Switch to All or Shows, or pull to refresh."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun film pour le moment. Choisissez Tout ou Séries, ou tirez vers le bas pour actualiser."
+          }
+        }
+      }
+    },
+    "feed.empty.shows.message": {
+      "comment": "Guidance for an empty filtered feed.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No shows right now. Switch to All or Movies, or pull to refresh."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucune série pour le moment. Choisissez Tout ou Films, ou tirez vers le bas pour actualiser."
+          }
+        }
+      }
+    },
+    "feed.empty.title": {
+      "comment": "Empty feed heading.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nothing to Show Yet"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rien à afficher pour le moment"
+          }
+        }
+      }
+    },
+    "feed.filter.title": {
+      "comment": "Picker filtering the feed by media kind.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher"
+          }
+        }
+      }
+    },
+    "feed.hidden.count": {
+      "comment": "Number of hidden feed items.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld hidden"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld hidden"
+                }
+              }
+            }
+          }
+        },
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld masqué"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$(count)lld masqués"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "feed.refresh.error.accessibilityLabel": {
+      "comment": "VoiceOver announcement. Message is the underlying error.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refresh failed. %1$(message)@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Échec de l’actualisation. %1$(message)@"
+          }
+        }
+      }
+    },
+    "feed.refresh.error.title": {
+      "comment": "Heading above a refresh error.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refresh Failed"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Échec de l’actualisation"
+          }
+        }
+      }
+    },
+    "feed.refresh.progress": {
+      "comment": "Progress overlay while loading the feed.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refreshing…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actualisation…"
+          }
+        }
+      }
+    },
+    "feed.section.collapse.accessibilityHint": {
+      "comment": "VoiceOver hint for an expanded section header.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Collapses the section"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réduit la section"
+          }
+        }
+      }
+    },
+    "feed.section.collapsed.accessibilityValue": {
+      "comment": "VoiceOver state of a feed section.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Collapsed"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réduite"
+          }
+        }
+      }
+    },
+    "feed.section.count.accessibilityLabel": {
+      "comment": "VoiceOver section name and number of media rows.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$(title)@, %#@count@"
+          },
+          "substitutions": {
+            "count": {
+              "argNum": 2,
+              "formatSpecifier": "lld",
+              "variations": {
+                "plural": {
+                  "one": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg item"
+                    }
+                  },
+                  "other": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg items"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$(title)@, %#@count@"
+          },
+          "substitutions": {
+            "count": {
+              "argNum": 2,
+              "formatSpecifier": "lld",
+              "variations": {
+                "plural": {
+                  "one": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg élément"
+                    }
+                  },
+                  "other": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg éléments"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "feed.section.empty.message": {
+      "comment": "Empty section placeholder.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No items"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun élément"
+          }
+        }
+      }
+    },
+    "feed.section.expand.accessibilityHint": {
+      "comment": "VoiceOver hint for a collapsed section header.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expands the section"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Développe la section"
+          }
+        }
+      }
+    },
+    "feed.section.expanded.accessibilityValue": {
+      "comment": "VoiceOver state of a feed section.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expanded"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Développée"
+          }
+        }
+      }
+    },
+    "feed.section.hidden.title": {
+      "comment": "Section containing hidden media.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hidden"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Masqués"
+          }
+        }
+      }
+    },
+    "feed.section.ready.title": {
+      "comment": "Imported media that has not been watched.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ready to Watch"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À regarder"
+          }
+        }
+      }
+    },
+    "feed.section.upcoming.title": {
+      "comment": "Monitored media with upcoming or missing downloads.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coming Soon"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À venir"
+          }
+        }
+      }
+    },
+    "feed.selection.action.accessibilityLabel": {
+      "comment": "VoiceOver batch action and number of selected media items.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$(title)@, %#@count@"
+          },
+          "substitutions": {
+            "count": {
+              "argNum": 2,
+              "formatSpecifier": "lld",
+              "variations": {
+                "plural": {
+                  "one": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg selected"
+                    }
+                  },
+                  "other": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg selected"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$(title)@, %#@count@"
+          },
+          "substitutions": {
+            "count": {
+              "argNum": 2,
+              "formatSpecifier": "lld",
+              "variations": {
+                "plural": {
+                  "one": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg sélectionné"
+                    }
+                  },
+                  "other": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg sélectionnés"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "feed.selection.action.label": {
+      "comment": "Batch action label. Title is a localized action; count is selected rows.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$(title)@ (%2$(count)lld)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$(title)@ (%2$(count)lld)"
+          }
+        }
+      }
+    },
+    "feed.updated.label": {
+      "comment": "Date of the last successful feed refresh.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last updated"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dernière actualisation"
+          }
+        }
+      }
+    },
+    "feed.welcome.demo.button": {
+      "comment": "Loads fictional media without requiring servers.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try with sample data"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Essayer la démonstration"
+          }
+        }
+      }
+    },
+    "feed.welcome.message": {
+      "comment": "First launch explanation. Product names stay unchanged.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add your Sonarr, Radarr and Jellyfin servers in Settings, or look around with a fictional library first."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajoutez vos serveurs Sonarr, Radarr et Jellyfin dans les réglages, ou découvrez l’app avec une bibliothèque fictive."
+          }
+        }
+      }
+    },
+    "feed.welcome.title": {
+      "comment": "First launch welcome heading.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Welcome to WatchNext"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bienvenue dans WatchNext"
+          }
+        }
+      }
+    },
+    "media.availability.ready.label": {
+      "comment": "An item is available to watch.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ready"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disponible"
+          }
+        }
+      }
+    },
+    "media.playback.progress.accessibilityLabel": {
+      "comment": "VoiceOver label for the playback progress bar.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Playback progress"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Progression de la lecture"
+          }
+        }
+      }
+    },
+    "media.release.episode.accessibilityLabel": {
+      "comment": "VoiceOver label. Time is a localized relative release date.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aired %1$(time)@, not downloaded yet"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diffusion %1$(time)@, pas encore téléchargé"
+          }
+        }
+      }
+    },
+    "media.release.episode.label": {
+      "comment": "Time is a localized relative date such as “2 hours ago”.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aired %1$(time)@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diffusion %1$(time)@"
+          }
+        }
+      }
+    },
+    "media.release.movie.accessibilityLabel": {
+      "comment": "VoiceOver label. Time is a localized relative release date.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Released %1$(time)@, not downloaded yet"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sortie %1$(time)@, pas encore téléchargé"
+          }
+        }
+      }
+    },
+    "media.release.movie.label": {
+      "comment": "Time is a localized relative date such as “2 hours ago”.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Released %1$(time)@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sortie %1$(time)@"
+          }
+        }
+      }
+    },
+    "settings.banner.error.accessibilityLabel": {
+      "comment": "VoiceOver announcement of a settings status banner. Message is the detailed result.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings error. %1$(message)@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erreur de réglages. %1$(message)@"
+          }
+        }
+      }
+    },
+    "settings.banner.success.accessibilityLabel": {
+      "comment": "VoiceOver announcement of a settings status banner. Message is the detailed result.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings saved. %1$(message)@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réglages enregistrés. %1$(message)@"
+          }
+        }
+      }
+    },
+    "settings.connection.success.label": {
+      "comment": "Successful settings or connection status.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connected"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connecté"
+          }
+        }
+      }
+    },
+    "settings.connection.test.button": {
+      "comment": "Tests the configured server connection.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Test Connection"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tester la connexion"
+          }
+        }
+      }
+    },
+    "settings.connection.testing.label": {
+      "comment": "Connection test progress.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Testing…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Test en cours…"
+          }
+        }
+      }
+    },
+    "settings.connection.version.label": {
+      "comment": "Connection status or error shown in Settings. Argument is the indicated server value or underlying error.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connected • %1$(version)@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connecté • %1$(version)@"
+          }
+        }
+      }
+    },
+    "settings.credentials.apiKey.placeholder": {
+      "comment": "API key input field.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API key"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clé API"
+          }
+        }
+      }
+    },
+    "settings.credentials.missing.label": {
+      "comment": "A credential is absent from Keychain.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Missing"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Manquant"
+          }
+        }
+      }
+    },
+    "settings.credentials.read.error": {
+      "comment": "Connection status or error shown in Settings. Argument is the indicated server value or underlying error.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Secure credentials could not be read: %1$(error)@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible de lire les identifiants sécurisés : %1$(error)@"
+          }
+        }
+      }
+    },
+    "settings.credentials.stored.label": {
+      "comment": "A credential exists in Keychain.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stored"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistré"
+          }
+        }
+      }
+    },
+    "settings.credentials.storedApiKey.placeholder": {
+      "comment": "Empty input with an existing key in Keychain.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API key (stored)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clé API (enregistrée)"
+          }
+        }
+      }
+    },
+    "settings.demo.footer": {
+      "comment": "Demo mode explanation.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shows a fictional library in the app and the widgets so you can try WatchNext without servers. Your server settings are kept and used again when this is off."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Affiche une bibliothèque fictive dans l’app et les widgets pour essayer WatchNext sans serveurs. Vos réglages sont conservés et réutilisés lorsque ce mode est désactivé."
+          }
+        }
+      }
+    },
+    "settings.demo.title": {
+      "comment": "Demo settings section heading.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Démonstration"
+          }
+        }
+      }
+    },
+    "settings.demo.toggle": {
+      "comment": "Enables a fictional library in app and widgets.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demo mode"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mode démonstration"
+          }
+        }
+      }
+    },
+    "settings.diagnostics.logs.label": {
+      "comment": "Link to the app diagnostic log.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logs"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Journaux"
+          }
+        }
+      }
+    },
+    "settings.diagnostics.title": {
+      "comment": "Diagnostics screen and settings section.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diagnostics"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diagnostic"
+          }
+        }
+      }
+    },
+    "settings.jellyfin.password.placeholder": {
+      "comment": "Password is used for authentication only.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Password (not stored)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mot de passe (non enregistré)"
+          }
+        }
+      }
+    },
+    "settings.jellyfin.restore.error": {
+      "comment": "Connection status or error shown in Settings. Argument is the indicated server value or underlying error.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stored Jellyfin credentials could not load users: %1$(error)@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible de charger les profils avec les identifiants Jellyfin enregistrés : %1$(error)@"
+          }
+        }
+      }
+    },
+    "settings.jellyfin.signIn.button": {
+      "comment": "Authenticates against the user's Jellyfin server.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign In"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se connecter"
+          }
+        }
+      }
+    },
+    "settings.jellyfin.signedIn.message": {
+      "comment": "Connection status or error shown in Settings. Argument is the indicated server value or underlying error.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signed in as %1$(username)@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connecté en tant que %1$(username)@"
+          }
+        }
+      }
+    },
+    "settings.jellyfin.storedToken.placeholder": {
+      "comment": "A Jellyfin token already exists in Keychain.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API token (stored)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeton API (enregistré)"
+          }
+        }
+      }
+    },
+    "settings.jellyfin.testToken.button": {
+      "comment": "Tests the Jellyfin API token.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Test Token"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tester le jeton"
+          }
+        }
+      }
+    },
+    "settings.jellyfin.title": {
+      "comment": "Service name. Do not translate.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jellyfin"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jellyfin"
+          }
+        }
+      }
+    },
+    "settings.jellyfin.token.placeholder": {
+      "comment": "Jellyfin API token input.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API token"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeton API"
+          }
+        }
+      }
+    },
+    "settings.jellyfin.user.label": {
+      "comment": "Jellyfin user whose watched state filters the feed.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Watched-state user"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil de suivi du visionnage"
+          }
+        }
+      }
+    },
+    "settings.jellyfin.user.placeholder": {
+      "comment": "Placeholder before selecting a Jellyfin user.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select a user"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sélectionner un profil"
+          }
+        }
+      }
+    },
+    "settings.jellyfin.username.placeholder": {
+      "comment": "Jellyfin sign-in username.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Username"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nom d’utilisateur"
+          }
+        }
+      }
+    },
+    "settings.network.allow.button": {
+      "comment": "Starts the system local network authorization check.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allow Local Network Access"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autoriser l’accès au réseau local"
+          }
+        }
+      }
+    },
+    "settings.network.denied.footer": {
+      "comment": "Instructions after local network access is denied.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn on Local Network for WatchNext under Settings › Apps › WatchNext, or Privacy & Security › Local Network. The server fields below stay usable for servers reachable over the internet."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activez le réseau local pour WatchNext dans Réglages › Apps › WatchNext, ou Confidentialité et sécurité › Réseau local. Vous pouvez toujours configurer ci-dessous des serveurs accessibles par Internet."
+          }
+        }
+      }
+    },
+    "settings.network.denied.message": {
+      "comment": "Shown when local network access is denied.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local network access is turned off, so servers on your home network cannot be reached."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’accès au réseau local est désactivé. Les serveurs de votre réseau domestique sont inaccessibles."
+          }
+        }
+      }
+    },
+    "settings.network.explanation.message": {
+      "comment": "Explanation before requesting local network permission.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WatchNext talks to Sonarr, Radarr and Jellyfin on your home network. iOS asks once before an app may reach devices on the local network. Allow it, then add your servers."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WatchNext communique avec Sonarr, Radarr et Jellyfin sur votre réseau domestique. iOS demande votre autorisation avant qu’une app puisse accéder au réseau local. Autorisez cet accès, puis ajoutez vos serveurs."
+          }
+        }
+      }
+    },
+    "settings.network.footer": {
+      "comment": "Explains the consequences of declining permission.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If you decline, WatchNext only reaches servers over the internet, and you can change your mind later in the iOS Settings app."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si vous refusez, WatchNext pourra uniquement accéder aux serveurs par Internet. Vous pourrez modifier ce choix dans les réglages d’iOS."
+          }
+        }
+      }
+    },
+    "settings.network.openSettings.button": {
+      "comment": "Opens the system Settings app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Settings"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrir les réglages"
+          }
+        }
+      }
+    },
+    "settings.network.title": {
+      "comment": "Local network settings section heading.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local Network"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réseau local"
+          }
+        }
+      }
+    },
+    "settings.network.waiting.label": {
+      "comment": "Displayed while checking network permission.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for permission…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En attente de l’autorisation…"
+          }
+        }
+      }
+    },
+    "settings.radarr.title": {
+      "comment": "Service name. Do not translate.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Radarr"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Radarr"
+          }
+        }
+      }
+    },
+    "settings.save.accessibilityLabel": {
+      "comment": "VoiceOver label for the save progress indicator.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saving settings"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrement des réglages"
+          }
+        }
+      }
+    },
+    "settings.save.button": {
+      "comment": "Stores server settings and supplied credentials.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrer"
+          }
+        }
+      }
+    },
+    "settings.save.success.message": {
+      "comment": "Successful settings or connection status.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings saved securely."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réglages enregistrés en toute sécurité."
+          }
+        }
+      }
+    },
+    "settings.server.invalidURL.message": {
+      "comment": "Service is Sonarr, Radarr, or Jellyfin.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter a valid HTTP or HTTPS URL for %1$(service)@."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saisissez une URL HTTP ou HTTPS valide pour %1$(service)@."
+          }
+        }
+      }
+    },
+    "settings.server.url.placeholder": {
+      "comment": "HTTP or HTTPS base address of the server.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Base URL"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL du serveur"
+          }
+        }
+      }
+    },
+    "settings.sonarr.title": {
+      "comment": "Service name. Do not translate.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sonarr"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sonarr"
+          }
+        }
+      }
+    },
+    "settings.title": {
+      "comment": "Settings tab and navigation title.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réglages"
+          }
+        }
+      }
+    },
+    "settings.windows.footer": {
+      "comment": "Instructions for the day steppers.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step a window down to 0 to remove its limit."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réglez une période sur 0 pour supprimer sa limite."
+          }
+        }
+      }
+    },
+    "settings.windows.recent.label": {
+      "comment": "Number of days included in the recent feed window.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Recent imports: %1$(days)lld day"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Recent imports: %1$(days)lld days"
+                }
+              }
+            }
+          }
+        },
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Imports récents : %1$(days)lld jour"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Imports récents : %1$(days)lld jours"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "settings.windows.recent.message": {
+      "comment": "Explains the recent import cutoff. Days is the configured lookback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Ready to Watch lists what Sonarr and Radarr imported in the last %1$(days)lld day and you have not watched in Jellyfin. Older imports drop off even if unwatched."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Ready to Watch lists what Sonarr and Radarr imported in the last %1$(days)lld days and you have not watched in Jellyfin. Older imports drop off even if unwatched."
+                }
+              }
+            }
+          }
+        },
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "À regarder affiche les imports de Sonarr et Radarr du dernier jour que vous n’avez pas vus dans Jellyfin. Les imports plus anciens disparaissent, même s’ils n’ont pas été vus."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "À regarder affiche les imports de Sonarr et Radarr des %1$(days)lld derniers jours que vous n’avez pas vus dans Jellyfin. Les imports plus anciens disparaissent, même s’ils n’ont pas été vus."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "settings.windows.recent.unlimited.label": {
+      "comment": "Ready feed lookback with no time limit.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recent imports: no limit"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imports récents : sans limite"
+          }
+        }
+      }
+    },
+    "settings.windows.recent.unlimited.message": {
+      "comment": "Explanation of unlimited recent imports.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ready to Watch lists everything Sonarr and Radarr imported that you have not watched in Jellyfin, up to the newest 250 imports per service."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À regarder affiche les éléments importés par Sonarr et Radarr que vous n’avez pas vus dans Jellyfin, dans la limite des 250 derniers imports par service."
+          }
+        }
+      }
+    },
+    "settings.windows.title": {
+      "comment": "Settings controlling past and future date windows.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Feed Windows"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Périodes du flux"
+          }
+        }
+      }
+    },
+    "settings.windows.upcoming.label": {
+      "comment": "Number of days included in the upcoming feed window.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Coming soon: %1$(days)lld day"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Coming soon: %1$(days)lld days"
+                }
+              }
+            }
+          }
+        },
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "À venir : %1$(days)lld jour"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "À venir : %1$(days)lld jours"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "settings.windows.upcoming.message": {
+      "comment": "Explains the upcoming release cutoff. Days is the configured window.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Coming Soon lists monitored episodes and movies that release within the next %1$(days)lld day."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Coming Soon lists monitored episodes and movies that release within the next %1$(days)lld days."
+                }
+              }
+            }
+          }
+        },
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "À venir affiche les épisodes et films suivis dont la sortie est prévue dans le prochain jour."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "À venir affiche les épisodes et films suivis dont la sortie est prévue dans les %1$(days)lld prochains jours."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "settings.windows.upcoming.unlimited.label": {
+      "comment": "Upcoming feed with no configured day limit.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coming soon: no limit"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À venir : sans limite"
+          }
+        }
+      }
+    },
+    "settings.windows.upcoming.unlimited.message": {
+      "comment": "Explanation of the unlimited upcoming window, actually capped at one year.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coming Soon lists every monitored episode and movie with a release date in the next year."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À venir affiche tous les épisodes et films suivis dont la sortie est prévue au cours de l’année à venir."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
