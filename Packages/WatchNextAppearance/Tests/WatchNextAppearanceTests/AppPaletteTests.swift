@@ -21,10 +21,7 @@ struct AppPaletteTests {
         let palette = settings.palette(for: scheme)
         var environment = EnvironmentValues()
         environment.colorScheme = scheme
-        var samples = settings.washColors(for: scheme) + [AppearanceSettings.base(for: scheme)]
-        if scheme == .dark, texture != .off {
-            samples = samples.map { $0.mix(with: .white, by: 0.1) }
-        }
+        let samples = settings.contrastSamples(for: scheme)
         for role in [palette.ready, palette.upcoming, palette.emphasis, palette.alert, palette.caution] {
             let resolved = role.resolve(in: environment)
             for sample in samples {
@@ -40,5 +37,17 @@ struct AppPaletteTests {
         #expect(AppPalette.contrast(white, black) > 20)
         let kept = AppPalette.ensuringContrast(.black, over: [.white], minimum: 3.5, scheme: .light)
         #expect(kept == .black)
+    }
+}
+
+extension AppPaletteTests {
+    @Test(arguments: [BackgroundTint.white, .black, .graphite])
+    func neutralTintsUseIndigoForEmphasis(_ tint: BackgroundTint) {
+        let settings = AppearanceSettings(texture: .strong, tint: tint)
+        for scheme in [ColorScheme.light, .dark] {
+            let emphasis = settings.palette(for: scheme).emphasis.resolve(in: EnvironmentValues())
+            // Indigo keeps blue as its strongest channel whatever the adjustment.
+            #expect(emphasis.blue > emphasis.red && emphasis.blue > emphasis.green)
+        }
     }
 }

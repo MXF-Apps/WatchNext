@@ -17,6 +17,14 @@ public enum BackgroundTint: String, CaseIterable, Identifiable, Sendable {
 
     public var id: Self { self }
 
+    /// Gray, white, and black carry no hue worth reusing for emphasis.
+    public var isNeutral: Bool {
+        switch self {
+        case .graphite, .white, .black: true
+        default: false
+        }
+    }
+
     public var primary: Color {
         switch self {
         case .indigo: .indigo

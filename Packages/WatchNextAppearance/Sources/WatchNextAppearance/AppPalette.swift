@@ -87,21 +87,31 @@ public extension AppearanceSettings {
         ]
     }
 
-    /// Role colors that keep `AppPalette.minimumContrast` over this
-    /// background. In dark mode the grain lifts the wash a little, so the
-    /// samples are brightened by the same amount before checking.
-    func palette(for scheme: ColorScheme) -> AppPalette {
-        var samples = washColors(for: scheme) + [Self.base(for: scheme)]
+    /// The surfaces text can sit on: the mesh samples plus the base and the
+    /// row cards (white in light, elevated gray in dark). In dark mode the grain
+    /// lifts the wash a little, so the wash samples are brightened by the same
+    /// amount before checking.
+    func contrastSamples(for scheme: ColorScheme) -> [Color] {
+        var wash = washColors(for: scheme) + [Self.base(for: scheme)]
         if scheme == .dark, texture != .off {
-            samples = samples.map { $0.mix(with: .white, by: 0.1) }
+            wash = wash.map { $0.mix(with: .white, by: 0.1) }
         }
+        let card: Color = scheme == .dark ? Color(red: 28 / 255, green: 28 / 255, blue: 30 / 255) : .white
+        return wash + [card]
+    }
+
+    /// Role colors that keep `AppPalette.minimumContrast` over every sample.
+    /// Emphasis follows the tint's leading hue, except for neutral tints where
+    /// the app's indigo stands in, since white or gray emphasis says nothing.
+    func palette(for scheme: ColorScheme) -> AppPalette {
+        let samples = contrastSamples(for: scheme)
         func fit(_ color: Color) -> Color {
             AppPalette.ensuringContrast(color, over: samples, minimum: AppPalette.minimumContrast, scheme: scheme)
         }
         return AppPalette(
             ready: fit(.green),
             upcoming: fit(.orange),
-            emphasis: fit(tint.primary),
+            emphasis: fit(tint.isNeutral ? .indigo : tint.primary),
             alert: fit(.red),
             caution: fit(.orange)
         )
