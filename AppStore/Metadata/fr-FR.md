@@ -14,9 +14,9 @@ WatchNext Widgets
 
 ## Sous-titre (30 max)
 
-Votre serveur, prêt à regarder
+Vos médias, prêts à regarder
 
-(30 caractères)
+(28 caractères)
 
 ## Texte promotionnel (170 max, modifiable sans nouvelle version)
 
