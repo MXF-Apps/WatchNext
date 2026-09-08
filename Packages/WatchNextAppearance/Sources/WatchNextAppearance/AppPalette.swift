@@ -8,9 +8,10 @@ public struct AppPalette: Equatable, Sendable {
     public var ready: Color
     /// Release and air times still in the future, clock glyphs.
     public var upcoming: Color
-    /// Already aired or released but not downloaded yet (the magnifier rows):
-    /// teal, so "out now, in flight" reads apart from both the orange of
-    /// "still waiting" and the green of "ready".
+    /// Already aired or released but not downloaded yet (the magnifier rows).
+    /// Same meaning family as `upcoming`, so the same orange, pushed one step
+    /// further from the background (deeper in light, brighter in dark); views
+    /// pair it with a heavier weight.
     public var released: Color
     /// Folded-season counts and other emphasized numbers; the palette's leading hue.
     public var emphasis: Color
@@ -231,10 +232,11 @@ public extension AppearanceSettings {
         let secondaryOnBase: Color = scheme == .dark
             ? Color(red: 141 / 255, green: 141 / 255, blue: 147 / 255)
             : Color(red: 133 / 255, green: 133 / 255, blue: 139 / 255)
+        let upcoming = fit(.orange)
         return AppPalette(
             ready: fit(.green),
-            upcoming: fit(.orange),
-            released: fit(.teal),
+            upcoming: upcoming,
+            released: upcoming.mix(with: scheme == .dark ? .white : .black, by: 0.2),
             emphasis: fit(tint.isNeutral ? .indigo : tint.primary),
             alert: fit(.red),
             caution: fit(.orange),

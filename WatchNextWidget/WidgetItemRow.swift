@@ -142,6 +142,8 @@ struct WidgetItemRow: View {
             styled(text, badge: badge, color: color)
         }
         .font(secondaryFont)
+        // Aired-but-missing rows carry their orange one step heavier.
+        .fontWeight(item.isAwaitingDownload ? .semibold : .regular)
         .lineLimit(1)
     }
 
