@@ -18,6 +18,10 @@ public struct AppPalette: Equatable, Sendable {
     public var alert: Color
     /// Warnings that are not errors: a refused permission, the hide action.
     public var caution: Color
+    /// Inactive or disabled controls and text that must stay readable without
+    /// drawing attention; replaces the system's disabled dimming, which is
+    /// not contrast-checked.
+    public var muted: Color
 
     /// Fill behind a selected row.
     public var selectionFill: Color { emphasis.opacity(0.14) }
@@ -201,8 +205,12 @@ public extension AppearanceSettings {
     /// under the grain, plus the row cards (white in light, elevated gray in dark).
     func contrastSamples(for scheme: ColorScheme) -> [Color] {
         let wash = (washColors(for: scheme) + [Self.base(for: scheme)]).map { grained($0, for: scheme) }
-        let card: Color = scheme == .dark ? Color(red: 28 / 255, green: 28 / 255, blue: 30 / 255) : .white
-        return wash + [card]
+        return wash + [Self.card(for: scheme)]
+    }
+
+    /// The row and bar surface: white in light, the elevated gray in dark.
+    static func card(for scheme: ColorScheme) -> Color {
+        scheme == .dark ? Color(red: 28 / 255, green: 28 / 255, blue: 30 / 255) : .white
     }
 
     /// Role colors that keep `AppPalette.minimumContrast` over every sample.
@@ -219,7 +227,8 @@ public extension AppearanceSettings {
             released: fit(.green),
             emphasis: fit(tint.isNeutral ? .indigo : tint.primary),
             alert: fit(.red),
-            caution: fit(.orange)
+            caution: fit(.orange),
+            muted: fit(.gray)
         )
     }
 }
