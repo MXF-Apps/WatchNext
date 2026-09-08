@@ -12,19 +12,22 @@ struct SettingsScreen: View {
     var body: some View {
         NavigationStack {
             Form {
-                // The server fields need the Local Network permission for LAN
-                // hosts, so they stay hidden until the user has answered the
-                // prompt. After a refusal they come back, with the warning on
-                // top, because servers reachable over the internet still work.
-                if model.localNetworkAccess != .granted {
-                    LocalNetworkAccessSection(access: model.localNetworkAccess) {
-                        Task { await model.requestLocalNetworkAccess() }
+                Section {
+                    NavigationLink {
+                        ServersScreen()
+                    } label: {
+                        HStack(spacing: 8) {
+                            Label(String(localized: .settingsServersTitle), systemImage: "server.rack")
+                            Spacer()
+                            if model.localNetworkAccess == .denied {
+                                Image(systemName: "wifi.exclamationmark")
+                                    .foregroundStyle(.orange)
+                                    .accessibilityLabel(String(localized: .settingsNetworkDeniedMessage))
+                            }
+                            Text(String(localized: .settingsServersConfiguredCount(count: configuredServerCount)))
+                                .foregroundStyle(.secondary)
+                        }
                     }
-                }
-                if model.localNetworkAccess == .granted || model.localNetworkAccess == .denied {
-                    SonarrSettingsSection(model: model)
-                    RadarrSettingsSection(model: model)
-                    JellyfinSettingsSection(model: model)
                 }
                 Section {
                     Stepper(value: $model.recentLookbackDays, in: 0...60) {
@@ -93,40 +96,33 @@ struct SettingsScreen: View {
                     }
                 }
             }
-            .scrollDismissesKeyboard(.immediately)
             .appBackground()
             .navigationTitle(String(localized: .settingsTitle))
-            .overlay(alignment: .top) {
-                if let message = model.settingsMessage {
-                    SettingsStatusBanner(message: message, isError: model.settingsMessageIsError, onDismiss: model.dismissSettingsMessage)
-                        .padding(.horizontal)
-                        .transition(.move(edge: .top).combined(with: .opacity))
-                }
-            }
-            .animation(.default, value: model.settingsMessage)
-            .animation(.default, value: model.localNetworkAccess)
             .onChange(of: backgroundTexture) { reloadWidgets() }
             .onChange(of: backgroundTint) { reloadWidgets() }
-            .onChange(of: scenePhase) { _, phase in
-                // Coming back from the iOS Settings app after flipping the switch.
-                if phase == .active { Task { await model.refreshLocalNetworkAccess() } }
-            }
             .toolbar {
-                ToolbarItemGroup(placement: .keyboard) {
-                    Spacer()
-                    Button(String(localized: .settingsKeyboardDoneButton), action: hideKeyboard)
-                        .fontWeight(.semibold)
-                }
                 ToolbarItem(placement: .confirmationAction) {
-                    if model.isSavingSettings {
-                        ProgressView()
-                            .accessibilityLabel(String(localized: .settingsSaveAccessibilityLabel))
-                    } else {
-                        Button(String(localized: .settingsSaveButton), action: save)
-                    }
+                    SettingsSaveButton()
                 }
             }
         }
+        // On the stack, so the banner also covers the Servers page.
+        .overlay(alignment: .top) {
+            if let message = model.settingsMessage {
+                SettingsStatusBanner(message: message, isError: model.settingsMessageIsError, onDismiss: model.dismissSettingsMessage)
+                    .padding(.horizontal)
+                    .transition(.move(edge: .top).combined(with: .opacity))
+            }
+        }
+        .animation(.default, value: model.settingsMessage)
+        .onChange(of: scenePhase) { _, phase in
+            // Coming back from the iOS Settings app after flipping the switch.
+            if phase == .active { Task { await model.refreshLocalNetworkAccess() } }
+        }
+    }
+
+    private var configuredServerCount: Int {
+        [model.sonarrURL, model.radarrURL, model.jellyfinURL].filter { $0.isEmpty == false }.count
     }
 
     private var selectedTint: BackgroundTint {
@@ -147,22 +143,9 @@ struct SettingsScreen: View {
         return String(localized: .settingsWindowsUpcomingMessage(days: model.futureWindowDays))
     }
 
-    private func save() {
-        Task { await model.saveSettingsFromUI() }
-    }
-
     /// Widgets read the appearance from the App Group only when they re-render.
     private func reloadWidgets() {
         WidgetCenter.shared.reloadTimelines(ofKind: WatchNextConstants.widgetKind)
-    }
-
-    /// The fields live in separate sections with their own bindings, so the
-    /// keyboard is dismissed through the window instead of a focus state.
-    private func hideKeyboard() {
-        UIApplication.shared.connectedScenes
-            .compactMap { $0 as? UIWindowScene }
-            .flatMap(\.windows)
-            .forEach { $0.endEditing(true) }
     }
 }
 
