@@ -23,14 +23,16 @@ struct WidgetSectionView: View {
                     .font(.caption2.weight(.bold))
                     .foregroundStyle(.secondary)
                     .lineLimit(1)
-                Spacer(minLength: 4)
+                // Right after the title, so "+3" reads as part of the section
+                // count rather than floating at the trailing edge.
                 if totalCount > items.count {
                     Text(String(localized: .widgetOverflowLabel(count: totalCount - items.count)))
                         .accessibilityLabel(String(localized: .widgetOverflowAccessibilityLabel(count: totalCount - items.count)))
-                        .font(.caption2)
+                        .font(.caption2.weight(.semibold))
                         .foregroundStyle(.tertiary)
                         .lineLimit(1)
                 }
+                Spacer(minLength: 4)
                 if let accessories {
                     accessories
                 }
