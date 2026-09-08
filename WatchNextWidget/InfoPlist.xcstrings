@@ -1,42 +1,60 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "NSLocalNetworkUsageDescription": {
-      "comment": "System local network permission explanation. Keep the Apple-defined key unchanged.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "WatchNext connects to your media servers on your local network to refresh the widget."
+  "sourceLanguage" : "en",
+  "strings" : {
+    "CFBundleDisplayName" : {
+      "comment" : "Home Screen product name. Do not translate.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "WatchNext se connecte à vos serveurs multimédias sur votre réseau local pour actualiser le widget."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
           }
         }
       }
     },
-    "CFBundleDisplayName": {
-      "comment": "Home Screen product name. Do not translate.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "WatchNext"
+    "CFBundleName" : {
+      "comment" : "Bundle name shown by the system where the display name is unavailable. Do not translate.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNextWidget"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "WatchNext"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNextWidget"
+          }
+        }
+      }
+    },
+    "NSLocalNetworkUsageDescription" : {
+      "comment" : "System local network permission explanation. Keep the Apple-defined key unchanged.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext connects to your media servers on your local network to refresh the widget."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext se connecte à vos serveurs multimédias sur votre réseau local pour actualiser le widget."
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }
