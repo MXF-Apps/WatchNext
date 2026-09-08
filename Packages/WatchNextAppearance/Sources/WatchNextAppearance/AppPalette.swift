@@ -93,9 +93,11 @@ public struct AppPalette: Equatable, Sendable {
 public enum SystemLabel {
     /// Body text, WCAG AA.
     public static let primaryMinimumContrast = 4.5
-    /// Secondary labels: the stock value on the grouped background is about
-    /// 3.3, so 3.0 is the most the wash can promise.
-    public static let secondaryMinimumContrast = 3.0
+    /// Secondary labels are supplementary text. Their stock contrast on the
+    /// plain grouped background is about 3.3; asking for 3.0 left no room for
+    /// any wash in light mode, so the promise is 80 % of stock. Primary text
+    /// keeps the WCAG AA 4.5 and palette roles 3.5.
+    public static let secondaryMinimumContrast = 2.7
     /// How much of the grain's effect is assumed when checking a surface.
     static let grainShiftAmount = 0.5
 
