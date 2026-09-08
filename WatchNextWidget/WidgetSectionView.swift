@@ -29,6 +29,7 @@ struct WidgetSectionView: View {
                     .tracking(0.5)
                     .foregroundStyle(palette.heading)
                     .lineLimit(1)
+                    .layoutPriority(2)
                 // Right after the title, so "+3" reads as part of the section
                 // count rather than floating at the trailing edge.
                 if totalCount > items.count {
@@ -37,14 +38,17 @@ struct WidgetSectionView: View {
                         .font(.caption2.weight(.semibold))
                         .foregroundStyle(sectionColor)
                         .lineLimit(1)
+                        .layoutPriority(1)
                 }
                 // Hairline across the rest of the title line in the section
-                // color, so the header reads as a divider. It shrinks to nothing
-                // when the small family leaves no room.
+                // color, so the header reads as a divider. Lowest layout priority:
+                // the title and the count take the width they need first, and the
+                // rule keeps whatever is left, down to nothing.
                 Rectangle()
                     .fill(sectionColor.opacity(0.4))
                     .frame(height: 1)
-                    .frame(maxWidth: .infinity)
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .layoutPriority(-1)
                     .padding(.horizontal, 2)
                     // Center the rule on the small caps (about 4 pt above
                     // the baseline) instead of sitting on the baseline.
