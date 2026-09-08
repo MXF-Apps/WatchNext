@@ -17,24 +17,7 @@ public struct AppBackground: View {
         self.settings = settings
     }
 
-    /// The surface the tints are mixed into: the values of the grouped
-    /// background at the base level, fixed rather than read from the system so
-    /// the widget, which renders at the elevated level where dark gray replaces
-    /// black, matches the app exactly.
-    private var base: Color {
-        colorScheme == .dark ? Color(red: 0, green: 0, blue: 0) : Color(red: 242 / 255, green: 242 / 255, blue: 247 / 255)
-    }
-
-    /// How far the warm and cool ends move away from the base (0 = none).
-    private var tintAmount: Double {
-        switch (settings.texture, colorScheme) {
-        case (.off, _): 0
-        case (.strong, .dark): 0.42
-        case (.strong, _): 0.30
-        case (.subtle, .dark): 0.26
-        case (.subtle, _): 0.18
-        }
-    }
+    private var base: Color { AppearanceSettings.base(for: colorScheme) }
 
     /// Grain strength. Multiply darkens a light base and plus-lighter lifts a
     /// dark one; overlay would be invisible on pure black.
@@ -68,15 +51,12 @@ public struct AppBackground: View {
 
     /// Diffuse wash over the whole surface: the primary hue leads at the
     /// top-left, the secondary at the bottom-right, and the middle carries a
-    /// blend of both, so no area is left as plain base color.
+    /// blend of both, so no area is left as plain base color. The colors come
+    /// from `AppearanceSettings.washColors`, which the palette also checks
+    /// contrast against.
     private var gradient: some View {
-        let primary = settings.tint.primary
-        let secondary = settings.tint.secondary
-        let warm = base.mix(with: primary, by: tintAmount)
-        let warmSide = base.mix(with: primary, by: tintAmount * 0.8).mix(with: secondary, by: tintAmount * 0.15)
-        let middle = base.mix(with: primary, by: tintAmount * 0.45).mix(with: secondary, by: tintAmount * 0.4)
-        let coolSide = base.mix(with: secondary, by: tintAmount * 0.7).mix(with: primary, by: tintAmount * 0.15)
-        let cool = base.mix(with: secondary, by: tintAmount * 0.85)
+        let wash = settings.washColors(for: colorScheme)
+        let (warm, warmSide, middle, coolSide, cool) = (wash[0], wash[1], wash[2], wash[3], wash[4])
         return MeshGradient(
             width: 3,
             height: 3,

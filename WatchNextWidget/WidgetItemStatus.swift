@@ -1,8 +1,10 @@
 import SwiftUI
+import WatchNextAppearance
 import WatchNextCore
 
 /// Ready badge or relative release time, for comfortable rows.
 struct WidgetItemStatus: View {
+    @Environment(\.palette) private var palette
     let item: MediaFeedItem
     var font: Font = .caption
     var hintFormat: WidgetHintFormat = .full
@@ -22,13 +24,13 @@ struct WidgetItemStatus: View {
                 joined(hintFormat == .full ? String(localized: item.kind == .movie ? .mediaReleaseMovieLabel(time: text) : .mediaReleaseEpisodeLabel(time: text)) : text)
             }
             .font(font)
-            .foregroundStyle(WidgetItemRow.timeColor)
+            .foregroundStyle(palette.upcoming)
             .lineLimit(1)
             .accessibilityLabel(String(localized: item.kind == .movie ? .mediaReleaseMovieAccessibilityLabel(time: text) : .mediaReleaseEpisodeAccessibilityLabel(time: text)))
         } else if let text = item.relativeReleaseText(hintFormat) {
             joined(text)
                 .font(font)
-                .foregroundStyle(WidgetItemRow.timeColor)
+                .foregroundStyle(palette.upcoming)
                 .lineLimit(1)
         }
     }
@@ -36,7 +38,7 @@ struct WidgetItemStatus: View {
     /// Appends a bold, tinted "and N more" when the row stands in for a whole season.
     private func joined(_ text: String) -> Text {
         guard let more = item.collapsedEpisodesDescription else { return Text(text) }
-        return Text(text) + Text(verbatim: " · ") + Text(more).bold().foregroundStyle(.tint)
+        return Text(text) + Text(verbatim: " · ") + Text(more).bold().foregroundStyle(palette.emphasis)
     }
 }
 

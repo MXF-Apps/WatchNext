@@ -1,8 +1,10 @@
 import SwiftUI
+import WatchNextAppearance
 import WatchNextCore
 import WatchNextLogging
 
 struct LogEntryRow: View {
+    @Environment(\.palette) private var palette
     let entry: WatchNextLogEntry
 
     var body: some View {
@@ -36,8 +38,8 @@ struct LogEntryRow: View {
     private var levelColor: Color {
         switch entry.level {
         case .debug, .info, .notice: .secondary
-        case .warning: .orange
-        case .error, .fault: .red
+        case .warning: palette.caution
+        case .error, .fault: palette.alert
         case .off: .secondary
         }
     }

@@ -12,6 +12,7 @@ enum WidgetHintFormat {
 }
 
 struct WidgetItemRow: View {
+    @Environment(\.palette) private var palette
     @Environment(\.appearance) private var appearance
     let item: MediaFeedItem
     let artwork: [String: Data]
@@ -22,7 +23,7 @@ struct WidgetItemRow: View {
     var hintFormat: WidgetHintFormat = .full
 
     /// Upcoming rows tint their time so the two kinds of row read apart.
-    static let timeColor = Color.orange
+    private var timeColor: Color { palette.upcoming }
 
     var body: some View {
         Group {
@@ -45,7 +46,7 @@ struct WidgetItemRow: View {
                 VStack(alignment: .leading, spacing: 1) {
                     title(fixed: false)
                     if compactBase != nil || item.collapsedEpisodesBadge != nil {
-                        secondary(compactBase, badge: item.collapsedEpisodesBadge, color: isUpcoming ? Self.timeColor : .secondary, leadingSymbol: awaitingSymbol)
+                        secondary(compactBase, badge: item.collapsedEpisodesBadge, color: isUpcoming ? timeColor : .secondary, leadingSymbol: awaitingSymbol)
                     }
                 }
                 .accessibilityElement(children: .combine)
@@ -102,7 +103,7 @@ struct WidgetItemRow: View {
             title(fixed: fixedTitle)
             Spacer(minLength: 4)
             if detail != nil || badge != nil {
-                secondary(detail, badge: badge, color: isUpcoming ? Self.timeColor : .secondary, leadingSymbol: awaitingSymbol)
+                secondary(detail, badge: badge, color: isUpcoming ? timeColor : .secondary, leadingSymbol: awaitingSymbol)
                     .fixedSize(horizontal: true, vertical: false)
             }
         }

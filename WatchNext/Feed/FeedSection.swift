@@ -1,4 +1,5 @@
 import SwiftUI
+import WatchNextAppearance
 import WatchNextCore
 
 struct FeedSection<Actions: View>: View {
@@ -96,6 +97,7 @@ struct CollapsibleSectionHeader: View {
 /// A row with a leading check circle that toggles on tap. A plain button, so
 /// a drag that starts on it still scrolls the list.
 private struct SelectableRow<Content: View>: View {
+    @Environment(\.palette) private var palette
     let isSelected: Bool
     let toggle: () -> Void
     @ViewBuilder let content: () -> Content
@@ -105,7 +107,7 @@ private struct SelectableRow<Content: View>: View {
             HStack(spacing: 12) {
                 Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
                     .font(.title2)
-                    .foregroundStyle(isSelected ? AnyShapeStyle(.tint) : AnyShapeStyle(.tertiary))
+                    .foregroundStyle(isSelected ? AnyShapeStyle(palette.emphasis) : AnyShapeStyle(.tertiary))
                     .contentTransition(.symbolEffect(.replace))
                 content()
             }
@@ -113,7 +115,7 @@ private struct SelectableRow<Content: View>: View {
             .contentShape(.rect)
         }
         .buttonStyle(.plain)
-        .listRowBackground(isSelected ? Color.accentColor.opacity(0.14) : nil)
+        .listRowBackground(isSelected ? palette.selectionFill : nil)
         .accessibilityAddTraits(isSelected ? [.isSelected] : [])
         .animation(.snappy, value: isSelected)
     }

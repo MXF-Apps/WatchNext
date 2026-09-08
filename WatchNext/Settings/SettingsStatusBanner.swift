@@ -1,14 +1,16 @@
 import SwiftUI
+import WatchNextAppearance
 
 /// Top banner for Settings feedback. Text stays `.primary` on a tinted
 /// material so it reads in both color schemes; the color carries the meaning
 /// through the icon, fill, and border. A tap dismisses it.
 struct SettingsStatusBanner: View {
+    @Environment(\.palette) private var palette
     let message: String
     let isError: Bool
     var onDismiss: () -> Void = {}
 
-    private var tint: Color { isError ? .red : .green }
+    private var tint: Color { isError ? palette.alert : palette.ready }
 
     var body: some View {
         HStack(alignment: .firstTextBaseline, spacing: 10) {

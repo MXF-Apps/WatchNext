@@ -1,8 +1,10 @@
 import SwiftUI
+import WatchNextAppearance
 
 /// Explains the Local Network permission and offers the one action that fits
 /// the current state: ask for it, or open Settings after a refusal.
 struct LocalNetworkAccessSection: View {
+    @Environment(\.palette) private var palette
     let access: LocalNetworkAccess
     /// Why the last check could not decide, shown under the button.
     var issue: ActionableIssue? = nil
@@ -17,7 +19,7 @@ struct LocalNetworkAccessSection: View {
                     Text(String(localized: .settingsNetworkDeniedMessage))
                 } icon: {
                     Image(systemName: "wifi.exclamationmark")
-                        .foregroundStyle(.orange)
+                        .foregroundStyle(palette.caution)
                 }
                 Button(String(localized: .settingsNetworkOpenSettingsButton), systemImage: "gear") {
                     if let url = URL(string: UIApplication.openSettingsURLString) {
@@ -38,7 +40,7 @@ struct LocalNetworkAccessSection: View {
                 }
                 .disabled(access == .checking)
                 if let issue {
-                    IssueRows(issue: issue, symbol: "wifi.exclamationmark", color: .orange)
+                    IssueRows(issue: issue, symbol: "wifi.exclamationmark", color: palette.caution)
                 }
             }
         } header: {

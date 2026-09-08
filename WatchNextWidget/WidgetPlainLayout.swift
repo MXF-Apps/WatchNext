@@ -1,4 +1,5 @@
 import SwiftUI
+import WatchNextAppearance
 import WatchNextCore
 
 /// Layout without section titles: ready rows, then a divider, then upcoming
@@ -7,6 +8,7 @@ import WatchNextCore
 /// "+N more ↓" in the upcoming tint on the right for the rows below, and the
 /// refresh button as a break in the middle of the line.
 struct WidgetPlainLayout: View {
+    @Environment(\.palette) private var palette
     let entry: WatchNextEntry
     let candidate: WidgetLayoutCandidate
     let titleFont: Font
@@ -26,19 +28,19 @@ struct WidgetPlainLayout: View {
             if ready.isEmpty == false || coming.isEmpty == false {
                 HStack(spacing: 6) {
                     if readyOverflow > 0 {
-                        overflow(readyOverflow, arrow: "arrow.up", color: Color.green, arrowFirst: true)
+                        overflow(readyOverflow, arrow: "arrow.up", color: palette.ready, arrowFirst: true)
                     }
                     line
                     Button(intent: WatchNextRefreshIntent()) {
                         Image(systemName: "arrow.clockwise")
                             .font(.caption2.weight(.semibold))
-                            .foregroundStyle(entry.feed.lastRefreshError == nil ? AnyShapeStyle(.secondary) : AnyShapeStyle(.red))
+                            .foregroundStyle(entry.feed.lastRefreshError == nil ? AnyShapeStyle(.secondary) : AnyShapeStyle(palette.alert))
                             .accessibilityLabel(String(localized: .widgetRefreshButtonAccessibilityLabel))
                     }
                     .buttonStyle(.plain)
                     line
                     if comingOverflow > 0 {
-                        overflow(comingOverflow, arrow: "arrow.down", color: WidgetItemRow.timeColor, arrowFirst: false)
+                        overflow(comingOverflow, arrow: "arrow.down", color: palette.upcoming, arrowFirst: false)
                     }
                 }
                 .padding(.vertical, 2)

@@ -1,7 +1,9 @@
 import SwiftUI
+import WatchNextAppearance
 import WatchNextCore
 
 struct FeedScreen: View {
+    @Environment(\.palette) private var palette
     @EnvironmentObject private var model: WatchNextAppModel
 
     var body: some View {
@@ -31,7 +33,7 @@ struct FeedScreen: View {
                         // Red with a warning glyph while the last refresh failed,
                         // so the state is visible without opening the list.
                         Button(String(localized: .feedActionsRefreshButton), systemImage: refreshFailed ? "exclamationmark.arrow.circlepath" : "arrow.clockwise", action: refresh)
-                            .tint(refreshFailed ? .red : nil)
+                            .tint(refreshFailed ? palette.alert : nil)
                             .disabled(model.isRefreshing)
                             .accessibilityValue(refreshFailed ? String(localized: .feedRefreshErrorTitle) : "")
                     }

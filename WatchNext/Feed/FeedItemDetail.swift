@@ -1,14 +1,16 @@
 import SwiftUI
+import WatchNextAppearance
 import WatchNextCore
 
 struct FeedItemDetail: View {
+    @Environment(\.palette) private var palette
     let item: MediaFeedItem
 
     var body: some View {
         HStack {
             if item.availability == .ready {
                 Label(String(localized: .mediaAvailabilityReadyLabel), systemImage: "checkmark.circle.fill")
-                    .foregroundStyle(.green)
+                    .foregroundStyle(palette.ready)
             } else if item.isAwaitingDownload, let releaseDate = item.releaseDate {
                 Label {
                     Text(item.kind == .movie
@@ -17,7 +19,7 @@ struct FeedItemDetail: View {
                 } icon: {
                     Image(systemName: "magnifyingglass")
                 }
-                .foregroundStyle(.orange)
+                .foregroundStyle(palette.upcoming)
                 .accessibilityLabel(String(localized: item.kind == .movie
                     ? .mediaReleaseMovieAccessibilityLabel(time: releaseDate.formatted(.relative(presentation: .named)))
                     : .mediaReleaseEpisodeAccessibilityLabel(time: releaseDate.formatted(.relative(presentation: .named)))))

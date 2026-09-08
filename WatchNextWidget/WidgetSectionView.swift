@@ -1,4 +1,5 @@
 import SwiftUI
+import WatchNextAppearance
 import WatchNextCore
 
 /// A titled group of rows. Overflow count, refresh button, and status live on
@@ -54,19 +55,20 @@ struct WidgetSectionView: View {
 
 /// Error hint and refresh button for a section title line.
 struct WidgetSectionAccessories: View {
+    @Environment(\.palette) private var palette
     let feed: WatchNextFeed
 
     var body: some View {
         if feed.lastRefreshError != nil {
             Image(systemName: "wifi.exclamationmark")
                 .font(.caption2)
-                .foregroundStyle(.red)
+                .foregroundStyle(palette.alert)
                 .accessibilityLabel(String(localized: .widgetRefreshErrorAccessibilityLabel))
         }
         Button(intent: WatchNextRefreshIntent()) {
             Image(systemName: "arrow.clockwise")
                 .font(.caption2.weight(.semibold))
-                .foregroundStyle(feed.lastRefreshError == nil ? AnyShapeStyle(.secondary) : AnyShapeStyle(.red))
+                .foregroundStyle(feed.lastRefreshError == nil ? AnyShapeStyle(.secondary) : AnyShapeStyle(palette.alert))
                 .accessibilityLabel(String(localized: .widgetRefreshButtonAccessibilityLabel))
         }
         .buttonStyle(.plain)

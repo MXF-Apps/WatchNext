@@ -79,9 +79,11 @@ extension ActionableIssue {
 
 /// Message, advice, and action rows for a Form or List section.
 struct IssueRows: View {
+    @Environment(\.palette) private var palette
     let issue: ActionableIssue
     var symbol = "exclamationmark.triangle.fill"
-    var color: Color = .red
+    /// Icon color; defaults to the palette's alert color.
+    var color: Color? = nil
     /// VoiceOver text for the message row when the visible text needs context.
     var messageAccessibilityLabel: String? = nil
 
@@ -90,7 +92,7 @@ struct IssueRows: View {
             Text(issue.message)
         } icon: {
             Image(systemName: symbol)
-                .foregroundStyle(color)
+                .foregroundStyle(color ?? palette.alert)
         }
         .font(.callout)
         .accessibilityLabel(messageAccessibilityLabel ?? issue.message)

@@ -1,7 +1,9 @@
 import SwiftUI
+import WatchNextAppearance
 import WatchNextCore
 
 struct ConnectionStatusView: View {
+    @Environment(\.palette) private var palette
     let status: ConnectionStatus
 
     var body: some View {
@@ -13,10 +15,10 @@ struct ConnectionStatusView: View {
                 .foregroundStyle(.secondary)
         case .connected(let message):
             Label(message, systemImage: "checkmark.circle.fill")
-                .foregroundStyle(.green)
+                .foregroundStyle(palette.ready)
         case .failed(let message):
             Label(message, systemImage: "exclamationmark.triangle.fill")
-                .foregroundStyle(.red)
+                .foregroundStyle(palette.alert)
         }
     }
 }

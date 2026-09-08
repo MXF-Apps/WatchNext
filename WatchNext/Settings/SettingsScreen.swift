@@ -4,6 +4,7 @@ import WatchNextCore
 import WidgetKit
 
 struct SettingsScreen: View {
+    @Environment(\.palette) private var palette
     @EnvironmentObject private var model: WatchNextAppModel
     @Environment(\.scenePhase) private var scenePhase
     @AppStorage(AppearanceSettings.textureKey, store: .appGroup) private var backgroundTexture = AppearanceSettings.default.texture.rawValue
@@ -19,7 +20,7 @@ struct SettingsScreen: View {
                             Spacer()
                             if model.localNetworkAccess == .denied {
                                 Image(systemName: "wifi.exclamationmark")
-                                    .foregroundStyle(.orange)
+                                    .foregroundStyle(palette.caution)
                                     .accessibilityLabel(String(localized: .settingsNetworkDeniedMessage))
                             }
                             Text(String(localized: .settingsServersConfiguredCount(count: configuredServerCount)))

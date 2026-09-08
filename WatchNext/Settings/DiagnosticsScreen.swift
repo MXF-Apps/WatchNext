@@ -1,8 +1,10 @@
 import SwiftUI
+import WatchNextAppearance
 import WatchNextCore
 import WatchNextLogging
 
 struct DiagnosticsScreen: View {
+    @Environment(\.palette) private var palette
     @EnvironmentObject private var model: WatchNextAppModel
 
     var body: some View {
@@ -27,7 +29,7 @@ struct DiagnosticsScreen: View {
             Section(String(localized: .diagnosticsRefreshTitle)) {
                 if let error = model.refreshError ?? model.feed.lastRefreshError {
                     Label(error, systemImage: "exclamationmark.triangle.fill")
-                        .foregroundStyle(.red)
+                        .foregroundStyle(palette.alert)
                 } else {
                     Label(String(localized: .diagnosticsRefreshSuccessMessage), systemImage: "checkmark.circle")
                         .foregroundStyle(.secondary)
