@@ -19,17 +19,7 @@ public struct AppBackground: View {
 
     private var base: Color { AppearanceSettings.base(for: colorScheme) }
 
-    /// Grain strength. Multiply darkens a light base and plus-lighter lifts a
-    /// dark one; overlay would be invisible on pure black.
-    private var grainOpacity: Double {
-        switch (settings.texture, colorScheme) {
-        case (.off, _): 0
-        case (.strong, .dark): 0.20
-        case (.strong, _): 0.18
-        case (.subtle, .dark): 0.12
-        case (.subtle, _): 0.11
-        }
-    }
+    private var grainOpacity: Double { settings.grainOpacity(for: colorScheme) }
 
     private var grainBlend: BlendMode { colorScheme == .dark ? .plusLighter : .multiply }
 
