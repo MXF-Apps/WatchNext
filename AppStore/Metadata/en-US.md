@@ -97,3 +97,5 @@ If a reviewer insists on live servers, `AppStore/DemoServer/demo_server.py` can 
 3. Hide what you don't want to see. Many at once.
 4. Widgets that fit: small, medium, large.
 5. Your servers, your Keychain. Nothing leaves your device.
+6. Pick a texture and a tint; the app and widgets follow.
+7. Small, medium, large: the widget that fits your Home Screen.

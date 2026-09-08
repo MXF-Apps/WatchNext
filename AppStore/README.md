@@ -5,12 +5,12 @@ Everything needed to submit WatchNext, in one place.
 | Folder | What |
 |---|---|
 | `Icon/` | `GenerateIcon.swift` draws the icon with CoreGraphics; `icon-1024.png` is the shipped variant (A, indigo) and is copied into `WatchNext/Assets.xcassets/AppIcon.appiconset/AppIcon.png`. `variants/` holds B (teal) and C (charcoal) with rounded previews; `contact-sheet.png` shows all three at 180, 120 and 60 px on light and dark. |
-| `Metadata/en-US.md` | Paste-ready App Store Connect text: name, subtitle, promo text, description, keywords, category, age rating, privacy answers, export compliance, review notes, screenshot captions. |
+| `Metadata/<locale>.md` | Paste-ready App Store Connect text per language: `en-US.md` (name, subtitle, promo text, description, keywords, plus the shared category, age rating, privacy answers, export compliance and review notes) and `fr-FR.md` (the localized fields only). Add one file per additional store language. |
 | `DemoServer/` | `demo_server.py` fakes Sonarr, Radarr and Jellyfin with an invented catalog and generated posters (`GeneratePosters.swift` → `posters/`). Used for every screenshot so no real title or artwork appears, and usable as the demo backend App Review asks for. |
 | `Screenshots/*-preview-*.png` | Previews of the opt-in header-less layout (small at 6.3-inch, large at 6.9-inch), for reference, not for upload. |
-| `Screenshots/iPhone-6.9/` | 1320 × 2868 captures from the iPhone 17 Pro Max simulator, clean status bar, demo catalog only: `01-ready-to-watch`, `02-coming-soon` (Ready collapsed, folded season), `03-select-items` (multi-select with the action bar), `04-widgets` (medium in Smart and large in Comfortable on one page), `05-settings`. |
-| `Screenshots/iPad-13/` | 2064 × 2752 captures from the iPad Pro 13-inch (M5) simulator, same demo catalog and the same five subjects (`01-ready-to-watch`, `02-coming-soon`, `03-select-items`, `04-widgets` with medium in Smart and large in Comfortable, `05-settings`). Required because the build targets iPad; App Store Connect reuses them for 12.9-inch and 11-inch. |
-| `Screenshots/iPhone-6.5/` | 1284 × 2778 versions of the 6.9-inch set (scaled to width, 6 px trimmed top and bottom) for the "iPhone 6.5-inch Display" slot when App Store Connect shows that one instead of 6.9-inch. |
+| `Screenshots/<locale>/iPhone-6.9/` | 1320 × 2868 captures from the iPhone 17 Pro Max simulator, one folder per store language (`en-US`, `fr-FR`), clean status bar, demo catalog only: `01-ready-to-watch`, `02-coming-soon` (Ready collapsed, folded season), `03-select-items` (multi-select with the action bar), `04-widgets` (large in Comfortable and medium in Smart on one page), `05-settings`, `06-appearance` (Settings › Appearance with a Strong Orchid wash and the tint swatches), `07-widgets-small` (small next to a large, so all three sizes appear across 04 and 07). |
+| `Screenshots/<locale>/iPad-13/` | 2064 × 2752 captures from the iPad Pro 13-inch (M5) simulator, same demo catalog and the same subjects: `01-ready-to-watch`, `02-coming-soon`, `03-select-items`, `04-widgets` (small, medium and large on one page), `05-settings`, `06-appearance`. Required because the build targets iPad; App Store Connect reuses them for 12.9-inch and 11-inch. |
+| `Screenshots/<locale>/iPhone-6.5/` | 1284 × 2778 versions of the 6.9-inch set (scaled to width, 6 px trimmed top and bottom) for the "iPhone 6.5-inch Display" slot when App Store Connect shows that one instead of 6.9-inch. |
 
 ## Regenerate
 
@@ -26,7 +26,7 @@ python3 AppStore/DemoServer/demo_server.py
 
 Point a simulator's WatchNext at `http://127.0.0.1:18989`, `http://127.0.0.1:17878`, `http://127.0.0.1:18096`; any API key, token `demo-token`, user `Demo`. For a physical device or a reviewer, run with `--host 0.0.0.0 --poster-host <reachable-ip-or-domain>` behind a tunnel.
 
-Screenshots: boot an iPhone 17 Pro Max simulator (or the iPad Pro 13-inch for the iPad set), run the demo server on the standard ports (`--ports 8989,7878,8096`, loopback; the macOS firewall's stealth mode blocks the Mac's own LAN address), `xcrun simctl status_bar <udid> override --time 9:41 --dataNetwork wifi --wifiBars 3 --cellularBars 4 --batteryState discharging --batteryLevel 100`, enter the URLs and any keys in Settings, refresh, then `xcrun simctl io <udid> screenshot --type=png`. Edit a placed large widget to Density = Comfortable for the poster layout.
+Screenshots: boot an iPhone 17 Pro Max simulator (or the iPad Pro 13-inch for the iPad set), set the simulator language to the store locale (`xcrun simctl spawn <udid> defaults write .GlobalPreferences AppleLanguages -array fr-FR` then shut down and boot), run the demo server on the standard ports (`--ports 8989,7878,8096`, loopback; the macOS firewall's stealth mode blocks the Mac's own LAN address), `xcrun simctl status_bar <udid> override --time 9:41 --dataNetwork wifi --wifiBars 3 --cellularBars 4 --batteryState discharging --batteryLevel 100`, enter the URLs and any keys in Settings, refresh, then `xcrun simctl io <udid> screenshot --type=png`. Edit a placed large widget to Density = Comfortable for the poster layout.
 
 ## Release checklist
 
@@ -37,7 +37,7 @@ Before the first upload:
 - [x] Add `ITSAppUsesNonExemptEncryption = NO` to both Info.plists.
 - [ ] Archive with Release configuration and upload with Xcode Organizer or `xcodebuild -exportArchive`.
 - [ ] Create the app record in App Store Connect with the name, bundle ID and SKU; fill in `Metadata/en-US.md`.
-- [ ] Upload the iPhone screenshots (6.9-inch set, or the 6.5-inch set if that is the slot App Store Connect offers) and the 13-inch iPad screenshots from `Screenshots/`; App Store Connect scales them for the smaller sizes.
+- [ ] Upload the iPhone screenshots (6.9-inch set, or the 6.5-inch set if that is the slot App Store Connect offers) and the 13-inch iPad screenshots from `Screenshots/<locale>/` for each store language; App Store Connect scales them for the smaller sizes.
 - [ ] Privacy: answer "Data Not Collected"; the policy is `PRIVACY.md` at the repository root, paste its GitHub URL.
 - [ ] Trader status: declare non-trader (free app, no in-app purchases). Keep sponsorship links out of the app and the store metadata.
 - [ ] Review notes: paste the demo-mode paragraph from `Metadata/en-US.md`.
