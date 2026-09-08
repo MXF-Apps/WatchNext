@@ -24,7 +24,7 @@ struct FeedItemDetail: View {
                         ? LocalizedStringResource.mediaReleaseMovieLabel(time: releaseDate.formatted(.relative(presentation: .named)))
                         : .mediaReleaseEpisodeLabel(time: releaseDate.formatted(.relative(presentation: .named))))
                 }
-                .foregroundStyle(palette.upcoming)
+                .foregroundStyle(palette.released)
                 .accessibilityElement(children: .ignore)
                 .accessibilityLabel(String(localized: item.kind == .movie
                     ? .mediaReleaseMovieAccessibilityLabel(time: releaseDate.formatted(.relative(presentation: .named)))

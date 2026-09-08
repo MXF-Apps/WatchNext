@@ -21,8 +21,12 @@ struct WidgetItemRow: View {
     let secondaryFont: Font
     var hintFormat: WidgetHintFormat = .full
 
-    /// Upcoming rows tint their time so the two kinds of row read apart.
-    private var timeColor: Color { palette.upcoming }
+    /// Upcoming rows tint their time so the two kinds of row read apart; an
+    /// item that is already out but not downloaded shows green instead.
+    private var hintColor: Color {
+        if item.isAwaitingDownload { return palette.released }
+        return isUpcoming ? palette.upcoming : .secondary
+    }
 
     var body: some View {
         Group {
@@ -45,7 +49,7 @@ struct WidgetItemRow: View {
                 VStack(alignment: .leading, spacing: 1) {
                     title(fixed: false)
                     if compactBase != nil || item.collapsedEpisodesBadge != nil {
-                        secondary(compactBase, badge: item.collapsedEpisodesBadge, color: isUpcoming ? timeColor : .secondary, leadingSymbol: awaitingSymbol)
+                        secondary(compactBase, badge: item.collapsedEpisodesBadge, color: hintColor, leadingSymbol: awaitingSymbol)
                     }
                 }
                 .accessibilityElement(children: .combine)
@@ -102,7 +106,7 @@ struct WidgetItemRow: View {
             title(fixed: fixedTitle)
             Spacer(minLength: 4)
             if detail != nil || badge != nil {
-                secondary(detail, badge: badge, color: isUpcoming ? timeColor : .secondary, leadingSymbol: awaitingSymbol)
+                secondary(detail, badge: badge, color: hintColor, leadingSymbol: awaitingSymbol)
                     .fixedSize(horizontal: true, vertical: false)
             }
         }

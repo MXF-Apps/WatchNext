@@ -24,7 +24,7 @@ struct WidgetItemStatus: View {
                 joined(hintFormat == .full ? String(localized: item.kind == .movie ? .mediaReleaseMovieLabel(time: text) : .mediaReleaseEpisodeLabel(time: text)) : text)
             }
             .font(font)
-            .foregroundStyle(palette.upcoming)
+            .foregroundStyle(palette.released)
             .lineLimit(1)
             .accessibilityLabel(String(localized: item.kind == .movie ? .mediaReleaseMovieAccessibilityLabel(time: text) : .mediaReleaseEpisodeAccessibilityLabel(time: text)))
         } else if let text = item.relativeReleaseText(hintFormat) {

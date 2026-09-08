@@ -30,8 +30,8 @@ struct AppPaletteTests {
         let palette = settings.palette(for: scheme)
         let environment = Self.environment(scheme)
         let roles: [(String, Color)] = [
-            ("ready", palette.ready), ("upcoming", palette.upcoming), ("emphasis", palette.emphasis),
-            ("alert", palette.alert), ("caution", palette.caution)
+            ("ready", palette.ready), ("upcoming", palette.upcoming), ("released", palette.released),
+            ("emphasis", palette.emphasis), ("alert", palette.alert), ("caution", palette.caution)
         ]
         for (name, role) in roles {
             let resolved = role.resolve(in: environment)

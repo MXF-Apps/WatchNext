@@ -6,8 +6,12 @@ import SwiftUI
 public struct AppPalette: Equatable, Sendable {
     /// Available to watch: checkmarks, "Ready", restore actions.
     public var ready: Color
-    /// Release and air times, clock glyphs, awaiting-download hints.
+    /// Release and air times still in the future, clock glyphs.
     public var upcoming: Color
+    /// Already aired or released but not downloaded yet (the magnifier rows):
+    /// green like `ready`, so "out now, arriving soon" reads apart from
+    /// "still waiting".
+    public var released: Color
     /// Folded-season counts and other emphasized numbers; the palette's leading hue.
     public var emphasis: Color
     /// Errors, failed refreshes, destructive actions.
@@ -212,6 +216,7 @@ public extension AppearanceSettings {
         return AppPalette(
             ready: fit(.green),
             upcoming: fit(.orange),
+            released: fit(.green),
             emphasis: fit(tint.isNeutral ? .indigo : tint.primary),
             alert: fit(.red),
             caution: fit(.orange)
