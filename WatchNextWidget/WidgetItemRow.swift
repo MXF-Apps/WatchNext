@@ -13,7 +13,6 @@ enum WidgetHintFormat {
 
 struct WidgetItemRow: View {
     @Environment(\.palette) private var palette
-    @Environment(\.appearance) private var appearance
     let item: MediaFeedItem
     let artwork: [String: Data]
     let style: WidgetRowStyle
@@ -144,7 +143,7 @@ struct WidgetItemRow: View {
 
     private func styled(_ text: String?, badge: String?, color: Color) -> Text {
         let base = text.map { Text($0).foregroundStyle(color) }
-        let emphasized = badge.map { Text($0).bold().foregroundStyle(appearance.emphasis) }
+        let emphasized = badge.map { Text($0).bold().foregroundStyle(palette.emphasis) }
         switch (base, emphasized) {
         case let (base?, emphasized?): return base + Text(verbatim: " · ").foregroundStyle(color) + emphasized
         case let (base?, nil): return base
