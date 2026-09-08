@@ -1,113 +1,113 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "media.filter.all.title": {
-      "comment": "Display title for filtering media. Never use this localized text as a stored identifier.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "All"
+  "sourceLanguage" : "en",
+  "strings" : {
+    "media.filter.all.title" : {
+      "comment" : "Display title for filtering media. Never use this localized text as a stored identifier.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tout"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tout"
           }
         }
       }
     },
-    "media.filter.movies.title": {
-      "comment": "Display title for filtering media. Never use this localized text as a stored identifier.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Movies"
+    "media.filter.movies.title" : {
+      "comment" : "Display title for filtering media. Never use this localized text as a stored identifier.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Movies"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Films"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Films"
           }
         }
       }
     },
-    "media.filter.shows.title": {
-      "comment": "Display title for filtering media. Never use this localized text as a stored identifier.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Shows"
+    "media.filter.shows.title" : {
+      "comment" : "Display title for filtering media. Never use this localized text as a stored identifier.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shows"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Séries"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Séries"
           }
         }
       }
     },
-    "media.kind.movie.label": {
-      "comment": "Media kind subtitle for a movie.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Movie"
+    "media.kind.movie.label" : {
+      "comment" : "Media kind subtitle for a movie.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Movie"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Film"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Film"
           }
         }
       }
     },
-    "media.season.additionalEpisodes": {
-      "comment": "Number of additional episodes after the displayed episode.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "variations": {
-            "plural": {
-              "one": {
-                "stringUnit": {
-                  "state": "translated",
-                  "value": "and %lld more"
+    "media.season.additionalEpisodes" : {
+      "comment" : "Number of additional episodes after the displayed episode.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "and %lld more"
                 }
               },
-              "other": {
-                "stringUnit": {
-                  "state": "translated",
-                  "value": "and %lld more"
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "and %lld more"
                 }
               }
             }
           }
         },
-        "fr": {
-          "variations": {
-            "plural": {
-              "one": {
-                "stringUnit": {
-                  "state": "translated",
-                  "value": "et %lld de plus"
+        "fr" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "et %lld de plus"
                 }
               },
-              "other": {
-                "stringUnit": {
-                  "state": "translated",
-                  "value": "et %lld de plus"
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "et %lld de plus"
                 }
               }
             }
@@ -115,276 +115,294 @@
         }
       }
     },
-    "media.series.unknown.title": {
-      "comment": "Series title shown for an episode whose series record could not be loaded from Sonarr.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Unknown Series"
+    "media.series.unknown.title" : {
+      "comment" : "Series title shown for an episode whose series record could not be loaded from Sonarr.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Series"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Série inconnue"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Série inconnue"
           }
         }
       }
     },
-    "network.error.configuration.message": {
-      "comment": "Argument is the localized name of a missing configuration field, including its article.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Configure %@ before refreshing."
+    "network.error.configuration.message" : {
+      "comment" : "Argument is the localized name of a missing configuration field, including its article.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configure %@ before refreshing."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Configurez %@ avant d’actualiser."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configurez %@ avant d’actualiser."
           }
         }
       }
     },
-    "network.error.decoding.message": {
-      "comment": "User-facing network error.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "The service response was not understood. Check that the server version is supported."
+    "network.error.decoding.message" : {
+      "comment" : "User-facing network error.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The service response was not understood. Check that the server version is supported."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "La réponse du service n’a pas pu être interprétée. Vérifiez que la version du serveur est prise en charge."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La réponse du service n’a pas pu être interprétée. Vérifiez que la version du serveur est prise en charge."
           }
         }
       }
     },
-    "network.error.invalidResponse.message": {
-      "comment": "User-facing network error.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "The service returned an invalid response."
+    "network.error.invalidResponse.message" : {
+      "comment" : "User-facing network error.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The service returned an invalid response."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Le service a renvoyé une réponse invalide."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le service a renvoyé une réponse invalide."
           }
         }
       }
     },
-    "network.error.invalidURL.message": {
-      "comment": "User-facing network error.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "The service URL is invalid."
+    "network.error.invalidURL.message" : {
+      "comment" : "User-facing network error.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The service URL is invalid."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "L’URL du service est invalide."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’URL du service est invalide."
           }
         }
       }
     },
-    "network.error.server.message": {
-      "comment": "Argument is an HTTP status code.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "The service returned HTTP %lld."
+    "network.error.server.message" : {
+      "comment" : "Argument is an HTTP status code.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The service returned HTTP %lld."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Le service a renvoyé le code HTTP %lld."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le service a renvoyé le code HTTP %lld."
           }
         }
       }
     },
-    "network.error.unauthorized.message": {
-      "comment": "User-facing network error.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Authentication failed. Check the configured credentials."
+    "network.error.unauthorized.message" : {
+      "comment" : "User-facing network error.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Authentication failed. Check the configured credentials."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Échec de l’authentification. Vérifiez les identifiants configurés."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Échec de l’authentification. Vérifiez les identifiants configurés."
           }
         }
       }
     },
-    "security.keychain.error.message": {
-      "comment": "Fallback error when the system does not provide a Keychain error description. Argument is OSStatus.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Keychain error %d."
+    "security.keychain.error.message" : {
+      "comment" : "Fallback error when the system does not provide a Keychain error description. Argument is OSStatus.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keychain error %d."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Erreur du trousseau %d."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erreur du trousseau %d."
           }
         }
       }
     },
-    "settings.missing.jellyfinToken.label": {
-      "comment": "Missing field name inserted after “Configure”. Includes an article.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "the Jellyfin token"
+    "service.failure.message" : {
+      "comment" : "Error text prefixing a server error with the server's product name. First argument: Sonarr, Radarr, or Jellyfin. Second: the underlying error message.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@: %2$@"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "le jeton Jellyfin"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ : %2$@"
           }
         }
       }
     },
-    "settings.missing.jellyfinURL.label": {
-      "comment": "Missing field name inserted after “Configure”. Includes an article.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "the Jellyfin URL"
+    "settings.missing.jellyfinToken.label" : {
+      "comment" : "Missing field name inserted after “Configure”. Includes an article.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "the Jellyfin token"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "l’URL de Jellyfin"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "le jeton Jellyfin"
           }
         }
       }
     },
-    "settings.missing.jellyfinUser.label": {
-      "comment": "Missing field name inserted after “Configure”. Includes an article.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "a Jellyfin user"
+    "settings.missing.jellyfinURL.label" : {
+      "comment" : "Missing field name inserted after “Configure”. Includes an article.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "the Jellyfin URL"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "un profil Jellyfin"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "l’URL de Jellyfin"
           }
         }
       }
     },
-    "settings.missing.radarrKey.label": {
-      "comment": "Missing field name inserted after “Configure”. Includes an article.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "the Radarr API key"
+    "settings.missing.jellyfinUser.label" : {
+      "comment" : "Missing field name inserted after “Configure”. Includes an article.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "a Jellyfin user"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "la clé API de Radarr"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "un profil Jellyfin"
           }
         }
       }
     },
-    "settings.missing.radarrURL.label": {
-      "comment": "Missing field name inserted after “Configure”. Includes an article.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "the Radarr URL"
+    "settings.missing.radarrKey.label" : {
+      "comment" : "Missing field name inserted after “Configure”. Includes an article.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "the Radarr API key"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "l’URL de Radarr"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "la clé API de Radarr"
           }
         }
       }
     },
-    "settings.missing.sonarrKey.label": {
-      "comment": "Missing field name inserted after “Configure”. Includes an article.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "the Sonarr API key"
+    "settings.missing.radarrURL.label" : {
+      "comment" : "Missing field name inserted after “Configure”. Includes an article.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "the Radarr URL"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "la clé API de Sonarr"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "l’URL de Radarr"
           }
         }
       }
     },
-    "settings.missing.sonarrURL.label": {
-      "comment": "Missing field name inserted after “Configure”. Includes an article.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "the Sonarr URL"
+    "settings.missing.sonarrKey.label" : {
+      "comment" : "Missing field name inserted after “Configure”. Includes an article.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "the Sonarr API key"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "l’URL de Sonarr"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "la clé API de Sonarr"
+          }
+        }
+      }
+    },
+    "settings.missing.sonarrURL.label" : {
+      "comment" : "Missing field name inserted after “Configure”. Includes an article.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "the Sonarr URL"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "l’URL de Sonarr"
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }

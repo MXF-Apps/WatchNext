@@ -15,26 +15,26 @@ public struct LiveSourceLoader: SourceLoading {
     public func load(configuration: ServiceConfiguration) async throws -> SourceSnapshot {
         logger.info("Loading source data.", category: "Refresh")
         guard let sonarrURL = configuration.sonarrBaseURL else {
-            throw NetworkError.missingConfiguration(String(localized: "settings.missing.sonarrURL.label", defaultValue: "the Sonarr URL", bundle: .module))
+            throw ServiceFailure(service: .sonarr, underlying: NetworkError.missingConfiguration(String(localized: "settings.missing.sonarrURL.label", defaultValue: "the Sonarr URL", bundle: .module)))
         }
         guard let radarrURL = configuration.radarrBaseURL else {
-            throw NetworkError.missingConfiguration(String(localized: "settings.missing.radarrURL.label", defaultValue: "the Radarr URL", bundle: .module))
+            throw ServiceFailure(service: .radarr, underlying: NetworkError.missingConfiguration(String(localized: "settings.missing.radarrURL.label", defaultValue: "the Radarr URL", bundle: .module)))
         }
         guard let jellyfinURL = configuration.jellyfinBaseURL else {
-            throw NetworkError.missingConfiguration(String(localized: "settings.missing.jellyfinURL.label", defaultValue: "the Jellyfin URL", bundle: .module))
+            throw ServiceFailure(service: .jellyfin, underlying: NetworkError.missingConfiguration(String(localized: "settings.missing.jellyfinURL.label", defaultValue: "the Jellyfin URL", bundle: .module)))
         }
         guard let userID = configuration.jellyfinUserID, userID.isEmpty == false else {
-            throw NetworkError.missingConfiguration(String(localized: "settings.missing.jellyfinUser.label", defaultValue: "a Jellyfin user", bundle: .module))
+            throw ServiceFailure(service: .jellyfin, underlying: NetworkError.missingConfiguration(String(localized: "settings.missing.jellyfinUser.label", defaultValue: "a Jellyfin user", bundle: .module)))
         }
         let secrets = try await credentials()
         guard let sonarrKey = secrets[.sonarrAPIKey], sonarrKey.isEmpty == false else {
-            throw NetworkError.missingConfiguration(String(localized: "settings.missing.sonarrKey.label", defaultValue: "the Sonarr API key", bundle: .module))
+            throw ServiceFailure(service: .sonarr, underlying: NetworkError.missingConfiguration(String(localized: "settings.missing.sonarrKey.label", defaultValue: "the Sonarr API key", bundle: .module)))
         }
         guard let radarrKey = secrets[.radarrAPIKey], radarrKey.isEmpty == false else {
-            throw NetworkError.missingConfiguration(String(localized: "settings.missing.radarrKey.label", defaultValue: "the Radarr API key", bundle: .module))
+            throw ServiceFailure(service: .radarr, underlying: NetworkError.missingConfiguration(String(localized: "settings.missing.radarrKey.label", defaultValue: "the Radarr API key", bundle: .module)))
         }
         guard let jellyfinToken = secrets[.jellyfinAccessToken], jellyfinToken.isEmpty == false else {
-            throw NetworkError.missingConfiguration(String(localized: "settings.missing.jellyfinToken.label", defaultValue: "the Jellyfin token", bundle: .module))
+            throw ServiceFailure(service: .jellyfin, underlying: NetworkError.missingConfiguration(String(localized: "settings.missing.jellyfinToken.label", defaultValue: "the Jellyfin token", bundle: .module)))
         }
         logger.debug(
             "Resolved Sonarr, Radarr, and Jellyfin credentials without exposing their values.",
@@ -48,9 +48,17 @@ public struct LiveSourceLoader: SourceLoading {
         let radarr = RadarrClient(baseURL: radarrURL, apiKey: radarrKey, transport: transport)
         let jellyfin = JellyfinClient(baseURL: jellyfinURL, accessToken: jellyfinToken, transport: transport)
 
-        async let episodes = sonarr.fetchEpisodes(recentSince: recentSince, futureThrough: futureThrough)
-        async let movies = radarr.fetchMovies(recentSince: recentSince, futureThrough: futureThrough)
-        async let library = jellyfin.fetchLibrary(userID: userID)
+        // Attribute each failure to its server so the app can point at the
+        // matching settings section.
+        async let episodes = ServiceFailure.attributing(.sonarr) {
+            try await sonarr.fetchEpisodes(recentSince: recentSince, futureThrough: futureThrough)
+        }
+        async let movies = ServiceFailure.attributing(.radarr) {
+            try await radarr.fetchMovies(recentSince: recentSince, futureThrough: futureThrough)
+        }
+        async let library = ServiceFailure.attributing(.jellyfin) {
+            try await jellyfin.fetchLibrary(userID: userID)
+        }
         let snapshot = try await SourceSnapshot(
             sonarrEpisodes: episodes,
             radarrMovies: movies,
