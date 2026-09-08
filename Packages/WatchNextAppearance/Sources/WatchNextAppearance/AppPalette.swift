@@ -236,8 +236,10 @@ public extension AppearanceSettings {
         // The fitted orange is the lightest legible shade in light mode, so it
         // becomes `released` there and `upcoming` steps darker; in dark mode the
         // fitted orange is `upcoming` and `released` steps lighter.
+        // Light mode takes a wider step: the semibold released text reads heavier
+        // than its color alone, which would otherwise mask the difference.
         let orange = fit(.orange)
-        let upcoming = scheme == .dark ? orange : orange.mix(with: .black, by: 0.2)
+        let upcoming = scheme == .dark ? orange : orange.mix(with: .black, by: 0.3)
         let released = scheme == .dark ? orange.mix(with: .white, by: 0.2) : orange
         return AppPalette(
             ready: fit(.green),

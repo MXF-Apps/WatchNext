@@ -13,7 +13,6 @@ struct WidgetStackedLayout: View {
     let secondaryFont: Font
     let showsArtwork: Bool
     var hintFormat: WidgetHintFormat = .full
-    var showsSectionRules = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
@@ -29,7 +28,6 @@ struct WidgetStackedLayout: View {
                     secondaryFont: secondaryFont,
                     accessories: WidgetSectionAccessories(feed: entry.feed),
                     hintFormat: hintFormat,
-                    showsRule: showsSectionRules,
                     sectionColor: palette.ready
                 )
             }
@@ -45,7 +43,6 @@ struct WidgetStackedLayout: View {
                     secondaryFont: secondaryFont,
                     accessories: candidate.ready == 0 ? WidgetSectionAccessories(feed: entry.feed) : nil,
                     hintFormat: hintFormat,
-                    showsRule: showsSectionRules,
                     sectionColor: palette.upcoming
                 )
             }

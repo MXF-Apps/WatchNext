@@ -17,9 +17,6 @@ struct WidgetSectionView: View {
     /// Only the first section on a widget carries the refresh control and stamps.
     var accessories: WidgetSectionAccessories? = nil
     var hintFormat: WidgetHintFormat = .full
-    /// Draws a hairline across the rest of the title line, so the header reads
-    /// as a divider where the width allows it (large family).
-    var showsRule = false
     /// The section's meaning in color (ready green, upcoming orange) for the
     /// rule and the overflow count; the words themselves stay gray.
     var sectionColor: Color = .secondary
@@ -41,19 +38,18 @@ struct WidgetSectionView: View {
                         .foregroundStyle(sectionColor)
                         .lineLimit(1)
                 }
-                if showsRule {
-                    Rectangle()
-                        .fill(sectionColor.opacity(0.4))
-                        .frame(height: 1)
-                        .frame(maxWidth: .infinity)
-                        .padding(.horizontal, 2)
-                        // Center the rule on the small caps (about 4 pt above
-                        // the baseline) instead of sitting on the baseline.
-                        .alignmentGuide(.firstTextBaseline) { $0[VerticalAlignment.center] + 4 }
-                        .accessibilityHidden(true)
-                } else {
-                    Spacer(minLength: 4)
-                }
+                // Hairline across the rest of the title line in the section
+                // color, so the header reads as a divider. It shrinks to nothing
+                // when the small family leaves no room.
+                Rectangle()
+                    .fill(sectionColor.opacity(0.4))
+                    .frame(height: 1)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, 2)
+                    // Center the rule on the small caps (about 4 pt above
+                    // the baseline) instead of sitting on the baseline.
+                    .alignmentGuide(.firstTextBaseline) { $0[VerticalAlignment.center] + 4 }
+                    .accessibilityHidden(true)
                 if let accessories {
                     accessories
                 }
