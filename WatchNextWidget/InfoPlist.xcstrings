@@ -16,6 +16,30 @@
             "state" : "translated",
             "value" : "WatchNext"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
+          }
         }
       }
     },
@@ -30,6 +54,30 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNextWidget"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNextWidget"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNextWidget"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNextWidget"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "WatchNextWidget"
@@ -51,6 +99,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "WatchNext se connecte à vos serveurs multimédias sur votre réseau local pour actualiser le widget."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext 会连接您本地网络上的媒体服务器以刷新小组件。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext はウィジェットを更新するためにローカルネットワーク上のメディアサーバーに接続します。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يتصل WatchNext بخوادم الوسائط على شبكتك المحلية لتحديث الأداة."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext подключается к медиасерверам в локальной сети, чтобы обновлять виджет."
           }
         }
       }

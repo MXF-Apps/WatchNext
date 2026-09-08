@@ -16,6 +16,30 @@
             "state" : "translated",
             "value" : "WatchNext"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
+          }
         }
       }
     },
@@ -33,6 +57,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jeton Jellyfin"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jellyfin 令牌"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jellyfin トークン"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رمز Jellyfin"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Токен Jellyfin"
           }
         }
       }
@@ -52,6 +100,30 @@
             "state" : "translated",
             "value" : "Clé API Radarr"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radarr API 密钥"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radarr API キー"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفتاح API لـ Radarr"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API-ключ Radarr"
+          }
         }
       }
     },
@@ -69,6 +141,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clé API Sonarr"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonarr API 密钥"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonarr API キー"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفتاح API لـ Sonarr"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API-ключ Sonarr"
           }
         }
       }
@@ -88,6 +184,30 @@
             "state" : "translated",
             "value" : "État des identifiants"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "凭据状态"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "認証情報の状態"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حالة بيانات الاعتماد"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Состояние учётных данных"
+          }
         }
       }
     },
@@ -105,6 +225,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Débogage"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "调试"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デバッグ"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تصحيح"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отладка"
           }
         }
       }
@@ -124,6 +268,30 @@
             "state" : "translated",
             "value" : "Erreur"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "错误"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エラー"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خطأ"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка"
+          }
         }
       }
     },
@@ -141,6 +309,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Erreur critique"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "故障"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重大エラー"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عطل"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сбой"
           }
         }
       }
@@ -160,6 +352,30 @@
             "state" : "translated",
             "value" : "Information"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "信息"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "情報"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "معلومات"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Информация"
+          }
         }
       }
     },
@@ -177,6 +393,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notification"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "注意"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ملاحظة"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Уведомление"
           }
         }
       }
@@ -196,6 +436,30 @@
             "state" : "translated",
             "value" : "Désactivé"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オフ"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إيقاف"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выкл."
+          }
         }
       }
     },
@@ -213,6 +477,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Avertissement"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "警告"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "警告"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحذير"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предупреждение"
           }
         }
       }
@@ -232,6 +520,30 @@
             "state" : "translated",
             "value" : "Niveau minimum"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最低级别"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最小レベル"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الحد الأدنى للمستوى"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Минимальный уровень"
+          }
         }
       }
     },
@@ -249,6 +561,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Journalisation"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日志记录"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ログ"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "السجلات"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Журналирование"
           }
         }
       }
@@ -268,6 +604,30 @@
             "state" : "translated",
             "value" : "Effacer"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "消去"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مسح"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Очистить"
+          }
         }
       }
     },
@@ -285,6 +645,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Testez une connexion ou actualisez le flux."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "运行连接测试或刷新内容。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "接続テストを実行するか、フィードを更新してください。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شغّل اختبار اتصال أو حدّث الخلاصة."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Запустите проверку подключения или обновите ленту."
           }
         }
       }
@@ -304,6 +688,30 @@
             "state" : "translated",
             "value" : "Aucun journal pour le moment"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂无日志"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ログはまだありません"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا توجد سجلات بعد"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Журналов пока нет"
+          }
         }
       }
     },
@@ -321,6 +729,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Journaux de l’app"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "应用日志"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリのログ"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجلات التطبيق"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Журналы приложения"
           }
         }
       }
@@ -340,6 +772,30 @@
             "state" : "translated",
             "value" : "Dernière tentative"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上次尝试"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最終試行"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آخر محاولة"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Последняя попытка"
+          }
         }
       }
     },
@@ -357,6 +813,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dernière réussite"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上次成功"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最終成功"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آخر نجاح"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Последний успех"
           }
         }
       }
@@ -376,6 +856,30 @@
             "state" : "translated",
             "value" : "Aucune erreur d’actualisation enregistrée"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未记录刷新错误"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新エラーは記録されていません"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم يُسجَّل أي خطأ في التحديث"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибок обновления не зафиксировано"
+          }
         }
       }
     },
@@ -393,6 +897,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Actualisation"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刷新"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التحديث"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обновление"
           }
         }
       }
@@ -412,6 +940,30 @@
             "state" : "translated",
             "value" : "Terminé"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完成"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完了"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Готово"
+          }
         }
       }
     },
@@ -429,6 +981,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Masquer"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐藏"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "非表示"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إخفاء"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скрыть"
           }
         }
       }
@@ -448,6 +1024,30 @@
             "state" : "translated",
             "value" : "Masquer la série"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐藏剧集"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シリーズを非表示"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إخفاء المسلسل"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скрыть сериал"
+          }
         }
       }
     },
@@ -465,6 +1065,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Options"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选项"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オプション"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خيارات"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Параметры"
           }
         }
       }
@@ -484,6 +1108,30 @@
             "state" : "translated",
             "value" : "Actualiser"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刷新"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحديث"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обновить"
+          }
         }
       }
     },
@@ -501,6 +1149,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sélectionner des éléments"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择项目"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "項目を選択"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحديد العناصر"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать элементы"
           }
         }
       }
@@ -520,6 +1192,30 @@
             "state" : "translated",
             "value" : "Afficher les éléments masqués"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示已隐藏"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "非表示を表示"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إظهار المخفي"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать скрытые"
+          }
         }
       }
     },
@@ -537,6 +1233,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Réafficher"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消隐藏"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再表示"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إلغاء الإخفاء"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать"
           }
         }
       }
@@ -556,6 +1276,30 @@
             "state" : "translated",
             "value" : "Données de démonstration. Cette bibliothèque est fictive ; désactivez-la dans Réglages › Démonstration."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "演示数据。这是一个虚构的媒体库；可在“设置 › 演示”中关闭。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デモデータです。これは架空のライブラリです。「設定 › デモ」でオフにできます。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بيانات تجريبية. هذه مكتبة خيالية؛ أوقفها من الإعدادات › العرض التجريبي."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Демо-данные. Это вымышленная библиотека; отключите её в разделе «Настройки › Демо»."
+          }
         }
       }
     },
@@ -573,6 +1317,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tirez vers le bas pour actualiser, ou consultez les réglages et le diagnostic."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下拉刷新，或查看“设置”和“诊断”了解详情。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下に引いて更新するか、「設定」と「診断」で詳細を確認してください。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسحب للتحديث، أو راجع الإعدادات والتشخيصات لمعرفة التفاصيل."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Потяните вниз для обновления или проверьте разделы «Настройки» и «Диагностика»."
           }
         }
       }
@@ -616,6 +1384,102 @@
               }
             }
           }
+        },
+        "zh-Hans" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld 个已隐藏项目可从工具栏菜单中显示。"
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld 件の非表示項目はツールバーメニューから表示できます。"
+                }
+              }
+            }
+          }
+        },
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "لا توجد عناصر مخفية."
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "يمكن إظهار عنصر مخفي واحد من قائمة شريط الأدوات."
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "يمكن إظهار عنصرَين مخفيَّين من قائمة شريط الأدوات."
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "يمكن إظهار %1$(count)lld عناصر مخفية من قائمة شريط الأدوات."
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "يمكن إظهار %1$(count)lld عنصرًا مخفيًا من قائمة شريط الأدوات."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "يمكن إظهار %1$(count)lld عنصر مخفي من قائمة شريط الأدوات."
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld скрытый элемент можно показать через меню панели инструментов."
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld скрытых элемента можно показать через меню панели инструментов."
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld скрытых элементов можно показать через меню панели инструментов."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld скрытого элемента можно показать через меню панели инструментов."
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -633,6 +1497,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aucun film pour le moment. Choisissez Tout ou Séries, ou tirez vers le bas pour actualiser."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目前没有电影。切换到“全部”或“剧集”，或下拉刷新。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在映画はありません。「すべて」または「番組」に切り替えるか、下に引いて更新してください。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا توجد أفلام حاليًا. بدّل إلى الكل أو المسلسلات، أو اسحب للتحديث."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фильмов пока нет. Переключитесь на «Все» или «Сериалы» либо потяните вниз для обновления."
           }
         }
       }
@@ -652,6 +1540,30 @@
             "state" : "translated",
             "value" : "Aucune série pour le moment. Choisissez Tout ou Films, ou tirez vers le bas pour actualiser."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目前没有剧集。切换到“全部”或“电影”，或下拉刷新。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在番組はありません。「すべて」または「映画」に切り替えるか、下に引いて更新してください。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا توجد مسلسلات حاليًا. بدّل إلى الكل أو الأفلام، أو اسحب للتحديث."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сериалов пока нет. Переключитесь на «Все» или «Фильмы» либо потяните вниз для обновления."
+          }
         }
       }
     },
@@ -670,6 +1582,30 @@
             "state" : "translated",
             "value" : "Rien à afficher pour le moment"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂无内容"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表示する項目はまだありません"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا شيء لعرضه بعد"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пока нечего показать"
+          }
         }
       }
     },
@@ -687,6 +1623,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Afficher"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表示"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عرض"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать"
           }
         }
       }
@@ -730,6 +1690,102 @@
               }
             }
           }
+        },
+        "zh-Hans" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld 个已隐藏"
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld 件非表示"
+                }
+              }
+            }
+          }
+        },
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "لا شيء مخفي"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "عنصر واحد مخفي"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "عنصران مخفيان"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld عناصر مخفية"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld عنصرًا مخفيًا"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld عنصر مخفي"
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld скрытый"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld скрытых"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld скрытых"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld скрытого"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -747,6 +1803,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Échec de l’actualisation. %1$(message)@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刷新失败。%1$(message)@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新に失敗しました。%1$(message)@"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فشل التحديث. %1$(message)@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось обновить. %1$(message)@"
           }
         }
       }
@@ -766,6 +1846,30 @@
             "state" : "translated",
             "value" : "Échec de l’actualisation"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刷新失败"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新に失敗"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فشل التحديث"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка обновления"
+          }
         }
       }
     },
@@ -783,6 +1887,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Actualisation…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在刷新…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新中…"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جارٍ التحديث…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обновление…"
           }
         }
       }
@@ -802,6 +1930,30 @@
             "state" : "translated",
             "value" : "Réduit la section"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "折叠该部分"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "セクションを折りたたみます"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يطوي القسم"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сворачивает раздел"
+          }
         }
       }
     },
@@ -819,6 +1971,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Réduite"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已折叠"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "折りたたみ済み"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مطوي"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Свёрнуто"
           }
         }
       }
@@ -882,6 +2058,142 @@
               }
             }
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(title)@, %#@count@"
+          },
+          "substitutions" : {
+            "count" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg 项"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(title)@, %#@count@"
+          },
+          "substitutions" : {
+            "count" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg 件"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(title)@, %#@count@"
+          },
+          "substitutions" : {
+            "count" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "لا عناصر"
+                    }
+                  },
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "عنصر واحد"
+                    }
+                  },
+                  "two" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "عنصران"
+                    }
+                  },
+                  "few" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg عناصر"
+                    }
+                  },
+                  "many" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg عنصرًا"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg عنصر"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(title)@, %#@count@"
+          },
+          "substitutions" : {
+            "count" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg элемент"
+                    }
+                  },
+                  "few" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg элемента"
+                    }
+                  },
+                  "many" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg элементов"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg элемента"
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -899,6 +2211,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aucun élément"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有项目"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "項目なし"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا توجد عناصر"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет элементов"
           }
         }
       }
@@ -918,6 +2254,30 @@
             "state" : "translated",
             "value" : "Développe la section"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "展开该部分"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "セクションを展開します"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يوسّع القسم"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разворачивает раздел"
+          }
         }
       }
     },
@@ -935,6 +2295,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Développée"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已展开"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "展開済み"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "موسّع"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Развёрнуто"
           }
         }
       }
@@ -954,6 +2338,30 @@
             "state" : "translated",
             "value" : "Masqués"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已隐藏"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "非表示"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المخفية"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скрытые"
+          }
         }
       }
     },
@@ -972,6 +2380,30 @@
             "state" : "translated",
             "value" : "À regarder"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可观看"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "視聴可能"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جاهز للمشاهدة"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Готово к просмотру"
+          }
         }
       }
     },
@@ -989,6 +2421,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "À venir"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即将推出"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "近日公開"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قريبًا"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скоро"
           }
         }
       }
@@ -1052,6 +2508,142 @@
               }
             }
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(title)@, %#@count@"
+          },
+          "substitutions" : {
+            "count" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "已选择 %arg 项"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(title)@, %#@count@"
+          },
+          "substitutions" : {
+            "count" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg 件選択中"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(title)@, %#@count@"
+          },
+          "substitutions" : {
+            "count" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "لا شيء محدد"
+                    }
+                  },
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "عنصر واحد محدد"
+                    }
+                  },
+                  "two" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "عنصران محددان"
+                    }
+                  },
+                  "few" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg عناصر محددة"
+                    }
+                  },
+                  "many" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg عنصرًا محددًا"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg عنصر محدد"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(title)@, %#@count@"
+          },
+          "substitutions" : {
+            "count" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "выбран %arg"
+                    }
+                  },
+                  "few" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "выбрано %arg"
+                    }
+                  },
+                  "many" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "выбрано %arg"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "выбрано %arg"
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -1066,6 +2658,30 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(title)@ (%2$(count)lld)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(title)@ (%2$(count)lld)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(title)@ (%2$(count)lld)"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(title)@ (%2$(count)lld)"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$(title)@ (%2$(count)lld)"
@@ -1088,6 +2704,30 @@
             "state" : "translated",
             "value" : "Dernière actualisation"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上次更新"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最終更新"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آخر تحديث"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Последнее обновление"
+          }
         }
       }
     },
@@ -1105,6 +2745,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Essayer la démonstration"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "试用示例数据"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サンプルデータで試す"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جرّب ببيانات نموذجية"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Попробовать с примером данных"
           }
         }
       }
@@ -1124,6 +2788,30 @@
             "state" : "translated",
             "value" : "Ajoutez vos serveurs Sonarr, Radarr et Jellyfin dans les réglages, ou découvrez l’app avec une bibliothèque fictive."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在“设置”中添加您的 Sonarr、Radarr 和 Jellyfin 服务器，或先用虚构的媒体库看看。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「設定」で Sonarr、Radarr、Jellyfin のサーバーを追加するか、まず架空のライブラリで試してみてください。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أضِف خوادم Sonarr وRadarr وJellyfin في الإعدادات، أو استكشف أولًا بمكتبة خيالية."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавьте серверы Sonarr, Radarr и Jellyfin в настройках или сначала осмотритесь на вымышленной библиотеке."
+          }
         }
       }
     },
@@ -1141,6 +2829,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bienvenue dans WatchNext"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "欢迎使用 WatchNext"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext へようこそ"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مرحبًا بك في WatchNext"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добро пожаловать в WatchNext"
           }
         }
       }
@@ -1160,6 +2872,30 @@
             "state" : "translated",
             "value" : "Corriger dans Réglages"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在设置中修复"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定で修正"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إصلاح في الإعدادات"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Исправить в настройках"
+          }
         }
       }
     },
@@ -1177,6 +2913,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajoutez les informations %1$(service)@ manquantes dans Réglages › Serveurs."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请在“设置 › 服务器”中补全缺少的 %1$(service)@ 信息。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「設定 › サーバー」で不足している %1$(service)@ の情報を追加してください。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أضِف بيانات %1$(service)@ الناقصة في الإعدادات › الخوادم."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавьте недостающие данные %1$(service)@ в разделе «Настройки › Серверы»."
           }
         }
       }
@@ -1196,6 +2956,30 @@
             "state" : "translated",
             "value" : "%1$(service)@ a renvoyé une erreur. Vérifiez que le serveur utilise une version prise en charge."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(service)@ 返回了错误。请检查服务器是否运行受支持的版本。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(service)@ がエラーを返しました。サーバーが対応バージョンで動作しているか確認してください。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أجاب %1$(service)@ بخطأ. تأكد من أن الخادم يعمل بإصدار مدعوم."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(service)@ ответил ошибкой. Убедитесь, что сервер работает на поддерживаемой версии."
+          }
         }
       }
     },
@@ -1213,6 +2997,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$(service)@ a refusé les identifiants enregistrés. Remplacez la clé ou reconnectez-vous dans Réglages › Serveurs."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(service)@ 拒绝了已保存的凭据。请在“设置 › 服务器”中更换密钥或重新登录。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(service)@ が保存済みの認証情報を拒否しました。「設定 › サーバー」でキーを置き換えるか、再度サインインしてください。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رفض %1$(service)@ بيانات الاعتماد المحفوظة. استبدل المفتاح أو سجّل الدخول مجددًا في الإعدادات › الخوادم."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(service)@ отклонил сохранённые учётные данные. Замените ключ или войдите заново в разделе «Настройки › Серверы»."
           }
         }
       }
@@ -1232,6 +3040,30 @@
             "state" : "translated",
             "value" : "%1$(service)@ ne répond pas. Vérifiez son adresse dans Réglages › Serveurs et que le serveur est en marche."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(service)@ 没有响应。请在“设置 › 服务器”中检查其地址，并确认服务器正在运行。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(service)@ が応答しません。「設定 › サーバー」でアドレスを確認し、サーバーが動作しているか確認してください。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم يستجب %1$(service)@. تحقق من عنوانه في الإعدادات › الخوادم ومن أن الخادم يعمل."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(service)@ не отвечает. Проверьте его адрес в разделе «Настройки › Серверы» и убедитесь, что сервер запущен."
+          }
         }
       }
     },
@@ -1249,6 +3081,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "La vérification du réseau local a échoué (%1$(reason)@)."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本地网络检查失败（%1$(reason)@）。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ローカルネットワークの確認に失敗しました（%1$(reason)@）。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فشل فحص الشبكة المحلية (%1$(reason)@)."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проверка локальной сети не удалась (%1$(reason)@)."
           }
         }
       }
@@ -1268,6 +3124,30 @@
             "state" : "translated",
             "value" : "Activez Réseau local pour WatchNext dans l’app Réglages, puis réessayez."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请在“设置”应用中为 WatchNext 开启“本地网络”，然后重试。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「設定」アプリで WatchNext の「ローカルネットワーク」をオンにしてから、もう一度お試しください。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فعّل «الشبكة المحلية» لـ WatchNext في تطبيق الإعدادات، ثم أعد المحاولة."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Включите «Локальная сеть» для WatchNext в приложении «Настройки» и повторите попытку."
+          }
         }
       }
     },
@@ -1285,6 +3165,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "iOS n’a pas autorisé WatchNext à rechercher des appareils sur le réseau local."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS 未允许 WatchNext 查找本地网络上的设备。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS が WatchNext によるローカルネットワーク上のデバイス検索を許可しませんでした。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم يسمح iOS لـ WatchNext بالبحث عن أجهزة على الشبكة المحلية."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS не разрешила WatchNext искать устройства в локальной сети."
           }
         }
       }
@@ -1304,6 +3208,30 @@
             "state" : "translated",
             "value" : "Répondez à la demande d’autorisation si elle est affichée, ou vérifiez Réseau local pour WatchNext dans l’app Réglages, puis réessayez."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果正在显示权限提示，请先回应；或在“设置”应用中检查 WatchNext 的“本地网络”权限，然后重试。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "権限のダイアログが表示されていれば応答するか、「設定」アプリで WatchNext の「ローカルネットワーク」を確認してから、もう一度お試しください。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أجِب على طلب الإذن إذا كان معروضًا، أو تحقق من «الشبكة المحلية» لـ WatchNext في تطبيق الإعدادات، ثم أعد المحاولة."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ответьте на запрос разрешения, если он показан, или проверьте «Локальная сеть» для WatchNext в приложении «Настройки», затем повторите попытку."
+          }
         }
       }
     },
@@ -1321,6 +3249,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Impossible de confirmer l’accès au réseau local."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法确认本地网络访问权限。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ローカルネットワークへのアクセスを確認できませんでした。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذّر تأكيد الوصول إلى الشبكة المحلية."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось подтвердить доступ к локальной сети."
           }
         }
       }
@@ -1340,6 +3292,30 @@
             "state" : "translated",
             "value" : "Disponible"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可观看"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "視聴可能"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جاهز"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Готово"
+          }
         }
       }
     },
@@ -1357,6 +3333,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Progression de la lecture"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "播放进度"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再生の進行状況"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تقدّم التشغيل"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ход воспроизведения"
           }
         }
       }
@@ -1376,6 +3376,30 @@
             "state" : "translated",
             "value" : "Diffusion %1$(time)@, pas encore téléchargé"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已于%1$(time)@播出，尚未下载"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(time)@に放送済み、まだダウンロードされていません"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بُثّ %1$(time)@، لم يُنزَّل بعد"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вышло %1$(time)@, ещё не загружено"
+          }
         }
       }
     },
@@ -1393,6 +3417,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Diffusion %1$(time)@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已于%1$(time)@播出"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(time)@に放送"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بُثّ %1$(time)@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вышло %1$(time)@"
           }
         }
       }
@@ -1412,6 +3460,30 @@
             "state" : "translated",
             "value" : "Sortie %1$(time)@, pas encore téléchargé"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已于%1$(time)@上映，尚未下载"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(time)@に公開済み、まだダウンロードされていません"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صدر %1$(time)@، لم يُنزَّل بعد"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вышел %1$(time)@, ещё не загружен"
+          }
         }
       }
     },
@@ -1429,6 +3501,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sortie %1$(time)@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已于%1$(time)@上映"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(time)@に公開"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صدر %1$(time)@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вышел %1$(time)@"
           }
         }
       }
@@ -1448,6 +3544,30 @@
             "state" : "translated",
             "value" : "Un léger dégradé et un grain de pellicule derrière les listes et les widgets. Les lignes gardent leur contraste."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在列表和小组件后方加入柔和的强调色渐变与胶片颗粒。各行保持原有对比度。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リストとウィジェットの背景に、やわらかなアクセントグラデーションとフィルムグレインを加えます。行のコントラストは維持されます。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تدرّج لوني ناعم وحبيبات فيلم خلف القوائم والأدوات. تحافظ الصفوف على تباينها."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мягкий акцентный градиент и зернистость за списками и виджетами. Контраст строк сохраняется."
+          }
         }
       }
     },
@@ -1465,6 +3585,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Texture du fond"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "背景纹理"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "背景テクスチャ"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نسيج الخلفية"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Текстура фона"
           }
         }
       }
@@ -1484,6 +3628,30 @@
             "state" : "translated",
             "value" : "Aucune"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オフ"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بدون"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выкл."
+          }
         }
       }
     },
@@ -1501,6 +3669,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Marquée"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "浓郁"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "強め"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قوي"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Насыщенная"
           }
         }
       }
@@ -1520,6 +3712,30 @@
             "state" : "translated",
             "value" : "Légère"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "柔和"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "控えめ"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خفيف"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Лёгкая"
+          }
         }
       }
     },
@@ -1537,6 +3753,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Noir"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "黑"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ブラック"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أسود"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чёрный"
           }
         }
       }
@@ -1556,6 +3796,30 @@
             "state" : "translated",
             "value" : "Braise"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "余烬"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エンバー"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جمر"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жар"
+          }
         }
       }
     },
@@ -1573,6 +3837,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Forêt"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "森林"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "フォレスト"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "غابة"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Лес"
           }
         }
       }
@@ -1592,6 +3880,30 @@
             "state" : "translated",
             "value" : "Graphite"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "石墨"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "グラファイト"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "غرافيت"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Графит"
+          }
         }
       }
     },
@@ -1609,6 +3921,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Indigo"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "靛蓝"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "インディゴ"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نيلي"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Индиго"
           }
         }
       }
@@ -1628,6 +3964,30 @@
             "state" : "translated",
             "value" : "Teinte"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "色调"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ティント"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اللون"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оттенок"
+          }
         }
       }
     },
@@ -1645,6 +4005,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Océan"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海洋"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーシャン"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "محيط"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Океан"
           }
         }
       }
@@ -1664,6 +4048,30 @@
             "state" : "translated",
             "value" : "Orchidée"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "兰花"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーキッド"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أوركيد"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Орхидея"
+          }
         }
       }
     },
@@ -1681,6 +4089,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coucher de soleil"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日落"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サンセット"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "غروب"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закат"
           }
         }
       }
@@ -1700,6 +4132,30 @@
             "state" : "translated",
             "value" : "Blanc"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "白"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ホワイト"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أبيض"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Белый"
+          }
         }
       }
     },
@@ -1718,6 +4174,30 @@
             "state" : "translated",
             "value" : "Apparence"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "外观"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "外観"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المظهر"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оформление"
+          }
         }
       }
     },
@@ -1734,6 +4214,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Masque le message."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭该消息。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メッセージを閉じます。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يُخفي الرسالة."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скрывает сообщение."
           }
         }
       },
@@ -1754,6 +4258,30 @@
             "state" : "translated",
             "value" : "Erreur de réglages. %1$(message)@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置错误。%1$(message)@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定エラー。%1$(message)@"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خطأ في الإعدادات. %1$(message)@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка настроек. %1$(message)@"
+          }
         }
       }
     },
@@ -1771,6 +4299,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Réglages enregistrés. %1$(message)@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置已保存。%1$(message)@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定を保存しました。%1$(message)@"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم حفظ الإعدادات. %1$(message)@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки сохранены. %1$(message)@"
           }
         }
       }
@@ -1790,6 +4342,30 @@
             "state" : "translated",
             "value" : "Connecté"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已连接"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "接続済み"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متصل"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подключено"
+          }
         }
       }
     },
@@ -1807,6 +4383,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tester la connexion"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "测试连接"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "接続をテスト"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختبار الاتصال"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проверить подключение"
           }
         }
       }
@@ -1826,6 +4426,30 @@
             "state" : "translated",
             "value" : "Test en cours…"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在测试…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "テスト中…"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جارٍ الاختبار…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проверка…"
+          }
         }
       }
     },
@@ -1843,6 +4467,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Connecté • %1$(version)@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已连接 • %1$(version)@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "接続済み • %1$(version)@"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متصل • %1$(version)@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подключено • %1$(version)@"
           }
         }
       }
@@ -1862,6 +4510,30 @@
             "state" : "translated",
             "value" : "Clé API"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API 密钥"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API キー"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفتاح API"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API-ключ"
+          }
         }
       }
     },
@@ -1879,6 +4551,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Manquant"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "缺失"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未設定"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفقود"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отсутствует"
           }
         }
       }
@@ -1898,6 +4594,30 @@
             "state" : "translated",
             "value" : "Impossible de lire les identifiants sécurisés : %1$(error)@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法读取安全凭据：%1$(error)@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安全な認証情報を読み取れませんでした: %1$(error)@"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذّرت قراءة بيانات الاعتماد الآمنة: %1$(error)@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось прочитать защищённые учётные данные: %1$(error)@"
+          }
         }
       }
     },
@@ -1915,6 +4635,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Enregistré"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已保存"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存済み"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "محفوظ"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранено"
           }
         }
       }
@@ -1934,6 +4678,30 @@
             "state" : "translated",
             "value" : "Clé API (enregistrée)"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API 密钥（已保存）"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API キー（保存済み）"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مفتاح API (محفوظ)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API-ключ (сохранён)"
+          }
         }
       }
     },
@@ -1951,6 +4719,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Affiche une bibliothèque fictive dans l’app et les widgets pour essayer WatchNext sans serveurs. Vos réglages sont conservés et réutilisés lorsque ce mode est désactivé."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在应用和小组件中显示虚构的媒体库，让您无需服务器即可试用 WatchNext。关闭后将继续使用您保存的服务器设置。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリとウィジェットに架空のライブラリを表示し、サーバーなしで WatchNext を試せます。サーバー設定は保持され、オフにすると再び使われます。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يعرض مكتبة خيالية في التطبيق والأدوات لتجربة WatchNext دون خوادم. تبقى إعدادات خوادمك محفوظة وتُستخدم مجددًا عند إيقاف هذا الخيار."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показывает вымышленную библиотеку в приложении и виджетах, чтобы попробовать WatchNext без серверов. Настройки серверов сохраняются и снова используются после отключения."
           }
         }
       }
@@ -1970,6 +4762,30 @@
             "state" : "translated",
             "value" : "Démonstration"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "演示"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デモ"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "العرض التجريبي"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Демо"
+          }
         }
       }
     },
@@ -1987,6 +4803,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mode démonstration"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "演示模式"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デモモード"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الوضع التجريبي"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Демо-режим"
           }
         }
       }
@@ -2006,6 +4846,30 @@
             "state" : "translated",
             "value" : "Journaux"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日志"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ログ"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "السجلات"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Журналы"
+          }
         }
       }
     },
@@ -2023,6 +4887,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Diagnostic"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "诊断"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "診断"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التشخيصات"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Диагностика"
           }
         }
       }
@@ -2042,6 +4930,30 @@
             "state" : "translated",
             "value" : "Mot de passe (non enregistré)"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "密码（不保存）"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パスワード（保存されません）"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كلمة السر (لا تُحفظ)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пароль (не сохраняется)"
+          }
         }
       }
     },
@@ -2059,6 +4971,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Impossible de charger les profils avec les identifiants Jellyfin enregistrés : %1$(error)@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已保存的 Jellyfin 凭据无法加载用户：%1$(error)@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存済みの Jellyfin 認証情報でユーザーを読み込めませんでした: %1$(error)@"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذّر تحميل المستخدمين ببيانات اعتماد Jellyfin المحفوظة: %1$(error)@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранённые учётные данные Jellyfin не позволили загрузить пользователей: %1$(error)@"
           }
         }
       }
@@ -2078,6 +5014,30 @@
             "state" : "translated",
             "value" : "Se connecter"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登录"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サインイン"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تسجيل الدخول"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Войти"
+          }
         }
       }
     },
@@ -2095,6 +5055,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Connecté en tant que %1$(username)@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已以 %1$(username)@ 登录"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(username)@ としてサインイン中"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم تسجيل الدخول باسم %1$(username)@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вы вошли как %1$(username)@"
           }
         }
       }
@@ -2114,6 +5098,30 @@
             "state" : "translated",
             "value" : "Jeton API (enregistré)"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API 令牌（已保存）"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API トークン（保存済み）"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رمز API (محفوظ)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API-токен (сохранён)"
+          }
         }
       }
     },
@@ -2132,6 +5140,30 @@
             "state" : "translated",
             "value" : "Tester le jeton"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "测试令牌"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トークンをテスト"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختبار الرمز"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проверить токен"
+          }
         }
       }
     },
@@ -2146,6 +5178,30 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jellyfin"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jellyfin"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jellyfin"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jellyfin"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jellyfin"
@@ -2168,6 +5224,30 @@
             "state" : "translated",
             "value" : "Jeton API"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API 令牌"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API トークン"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رمز API"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API-токен"
+          }
         }
       }
     },
@@ -2185,6 +5265,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profil de suivi du visionnage"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "观看状态用户"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "視聴状態のユーザー"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مستخدم حالة المشاهدة"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пользователь для статуса просмотра"
           }
         }
       }
@@ -2204,6 +5308,30 @@
             "state" : "translated",
             "value" : "Sélectionner un profil"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择用户"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ユーザーを選択"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر مستخدمًا"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите пользователя"
+          }
         }
       }
     },
@@ -2222,6 +5350,30 @@
             "state" : "translated",
             "value" : "Nom d’utilisateur"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用户名"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ユーザー名"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسم المستخدم"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Имя пользователя"
+          }
         }
       }
     },
@@ -2238,6 +5390,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完成"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完了"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Готово"
           }
         }
       },
@@ -2258,6 +5434,30 @@
             "state" : "translated",
             "value" : "Autoriser l’accès au réseau local"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "允许访问本地网络"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ローカルネットワークへのアクセスを許可"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "السماح بالوصول إلى الشبكة المحلية"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разрешить доступ к локальной сети"
+          }
         }
       }
     },
@@ -2275,6 +5475,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Activez le réseau local pour WatchNext dans Réglages › Apps › WatchNext, ou Confidentialité et sécurité › Réseau local. Vous pouvez toujours configurer ci-dessous des serveurs accessibles par Internet."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请在“设置 › 应用 › WatchNext”或“隐私与安全性 › 本地网络”中为 WatchNext 开启“本地网络”。下方的服务器字段对可通过互联网访问的服务器仍然可用。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「設定 › アプリ › WatchNext」または「プライバシーとセキュリティ › ローカルネットワーク」で WatchNext の「ローカルネットワーク」をオンにしてください。下のサーバー欄は、インターネット経由で到達できるサーバーには引き続き使えます。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فعّل «الشبكة المحلية» لـ WatchNext من الإعدادات › التطبيقات › WatchNext، أو الخصوصية والأمن › الشبكة المحلية. تبقى حقول الخوادم أدناه صالحة للخوادم التي يمكن الوصول إليها عبر الإنترنت."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Включите «Локальная сеть» для WatchNext в разделе «Настройки › Приложения › WatchNext» или «Конфиденциальность и безопасность › Локальная сеть». Поля серверов ниже по-прежнему работают для серверов, доступных через интернет."
           }
         }
       }
@@ -2294,6 +5518,30 @@
             "state" : "translated",
             "value" : "L’accès au réseau local est désactivé. Les serveurs de votre réseau domestique sont inaccessibles."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本地网络访问已关闭，因此无法访问您家庭网络中的服务器。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ローカルネットワークへのアクセスがオフのため、自宅ネットワーク上のサーバーに到達できません。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الوصول إلى الشبكة المحلية متوقف، لذا لا يمكن الوصول إلى الخوادم في شبكتك المنزلية."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доступ к локальной сети отключён, поэтому серверы в вашей домашней сети недоступны."
+          }
         }
       }
     },
@@ -2311,6 +5559,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "WatchNext communique avec Sonarr, Radarr et Jellyfin sur votre réseau domestique. iOS demande votre autorisation avant qu’une app puisse accéder au réseau local. Autorisez cet accès, puis ajoutez vos serveurs."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext 会与您家庭网络中的 Sonarr、Radarr 和 Jellyfin 通信。iOS 会在应用访问本地网络设备前询问一次。请允许，然后添加您的服务器。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext は自宅ネットワーク上の Sonarr、Radarr、Jellyfin と通信します。iOS はアプリがローカルネットワーク上のデバイスにアクセスする前に一度確認します。許可してから、サーバーを追加してください。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يتواصل WatchNext مع Sonarr وRadarr وJellyfin في شبكتك المنزلية. يطلب iOS الإذن مرة واحدة قبل أن يصل التطبيق إلى أجهزة الشبكة المحلية. اسمح بذلك، ثم أضِف خوادمك."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext обращается к Sonarr, Radarr и Jellyfin в вашей домашней сети. iOS один раз спрашивает разрешение, прежде чем приложение получит доступ к устройствам локальной сети. Разрешите, затем добавьте серверы."
           }
         }
       }
@@ -2330,6 +5602,30 @@
             "state" : "translated",
             "value" : "Si vous refusez, WatchNext pourra uniquement accéder aux serveurs par Internet. Vous pourrez modifier ce choix dans les réglages d’iOS."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果拒绝，WatchNext 只能通过互联网访问服务器；您之后可在 iOS“设置”应用中更改。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拒否した場合、WatchNext はインターネット経由のサーバーにのみ接続します。あとで iOS の「設定」アプリから変更できます。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إذا رفضت، يصل WatchNext إلى الخوادم عبر الإنترنت فقط، ويمكنك تغيير رأيك لاحقًا من تطبيق إعدادات iOS."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если отказать, WatchNext будет работать только с серверами через интернет; позже это можно изменить в приложении «Настройки» iOS."
+          }
         }
       }
     },
@@ -2347,6 +5643,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ouvrir les réglages"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开设置"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定を開く"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فتح الإعدادات"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть настройки"
           }
         }
       }
@@ -2366,6 +5686,30 @@
             "state" : "translated",
             "value" : "Réseau local"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本地网络"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ローカルネットワーク"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الشبكة المحلية"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Локальная сеть"
+          }
         }
       }
     },
@@ -2384,6 +5728,30 @@
             "state" : "translated",
             "value" : "En attente de l’autorisation…"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在等待授权…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "許可を待っています…"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "في انتظار الإذن…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ожидание разрешения…"
+          }
         }
       }
     },
@@ -2398,6 +5766,30 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radarr"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radarr"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radarr"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radarr"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Radarr"
@@ -2420,6 +5812,30 @@
             "state" : "translated",
             "value" : "Enregistrement des réglages"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在保存设置"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定を保存中"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جارٍ حفظ الإعدادات"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранение настроек"
+          }
         }
       }
     },
@@ -2437,6 +5853,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Enregistrer"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حفظ"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранить"
           }
         }
       }
@@ -2456,6 +5896,30 @@
             "state" : "translated",
             "value" : "Réglages enregistrés en toute sécurité."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置已安全保存。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定を安全に保存しました。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم حفظ الإعدادات بأمان."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки надёжно сохранены."
+          }
         }
       }
     },
@@ -2474,6 +5938,30 @@
             "state" : "translated",
             "value" : "Saisissez une URL HTTP ou HTTPS valide pour %1$(service)@."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请为 %1$(service)@ 输入有效的 HTTP 或 HTTPS 网址。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(service)@ の有効な HTTP または HTTPS の URL を入力してください。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أدخِل عنوان URL صالحًا بـ HTTP أو HTTPS لـ %1$(service)@."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите корректный HTTP- или HTTPS-адрес для %1$(service)@."
+          }
         }
       }
     },
@@ -2491,6 +5979,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "URL du serveur"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "基础网址"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ベース URL"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عنوان URL الأساسي"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Базовый URL"
           }
         }
       }
@@ -2534,6 +6046,102 @@
               }
             }
           }
+        },
+        "zh-Hans" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "已配置 %1$(count)lld 个"
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld 件設定済み"
+                }
+              }
+            }
+          }
+        },
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "لا شيء مُهيّأ"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "واحد مُهيّأ"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "اثنان مُهيّآن"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld مُهيّأة"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld مُهيّأً"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%1$(count)lld مُهيّأ"
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "настроен %1$(count)lld"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "настроено %1$(count)lld"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "настроено %1$(count)lld"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "настроено %1$(count)lld"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -2552,6 +6160,30 @@
             "state" : "translated",
             "value" : "Serveurs"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "服务器"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サーバー"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الخوادم"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Серверы"
+          }
         }
       }
     },
@@ -2566,6 +6198,30 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonarr"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonarr"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonarr"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonarr"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sonarr"
@@ -2588,6 +6244,30 @@
             "state" : "translated",
             "value" : "Réglages"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإعدادات"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки"
+          }
         }
       }
     },
@@ -2605,6 +6285,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Réglez une période sur 0 pour supprimer sa limite."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将时间范围调到 0 即可取消限制。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "期間を 0 まで下げると制限がなくなります。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انزل بالنافذة إلى 0 لإزالة حدّها."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Уменьшите окно до 0, чтобы снять ограничение."
           }
         }
       }
@@ -2644,6 +6348,102 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "Imports récents : %1$(days)lld jours"
+                }
+              }
+            }
+          }
+        },
+        "zh-Hans" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "最近导入：%1$(days)lld 天"
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "最近の取り込み: %1$(days)lld 日"
+                }
+              }
+            }
+          }
+        },
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "الاستيرادات الأخيرة: 0 يوم"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "الاستيرادات الأخيرة: يوم واحد"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "الاستيرادات الأخيرة: يومان"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "الاستيرادات الأخيرة: %1$(days)lld أيام"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "الاستيرادات الأخيرة: %1$(days)lld يومًا"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "الاستيرادات الأخيرة: %1$(days)lld يوم"
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Недавние загрузки: %1$(days)lld день"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Недавние загрузки: %1$(days)lld дня"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Недавние загрузки: %1$(days)lld дней"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Недавние загрузки: %1$(days)lld дня"
                 }
               }
             }
@@ -2690,6 +6490,102 @@
               }
             }
           }
+        },
+        "zh-Hans" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "“可观看”列出 Sonarr 和 Radarr 在最近 %1$(days)lld 天内导入且您尚未在 Jellyfin 中观看的内容。更早的导入即使未观看也会移除。"
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "「視聴可能」には、Sonarr と Radarr が過去 %1$(days)lld 日以内に取り込み、Jellyfin でまだ視聴していないものが表示されます。それより古い取り込みは未視聴でも表示されなくなります。"
+                }
+              }
+            }
+          }
+        },
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تعرض «جاهز للمشاهدة» ما استورده Sonarr وRadarr خلال آخر 0 يوم ولم تشاهده في Jellyfin. الاستيرادات الأقدم تُزال حتى إن لم تُشاهد."
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تعرض «جاهز للمشاهدة» ما استورده Sonarr وRadarr خلال اليوم الأخير ولم تشاهده في Jellyfin. الاستيرادات الأقدم تُزال حتى إن لم تُشاهد."
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تعرض «جاهز للمشاهدة» ما استورده Sonarr وRadarr خلال اليومين الأخيرين ولم تشاهده في Jellyfin. الاستيرادات الأقدم تُزال حتى إن لم تُشاهد."
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تعرض «جاهز للمشاهدة» ما استورده Sonarr وRadarr خلال آخر %1$(days)lld أيام ولم تشاهده في Jellyfin. الاستيرادات الأقدم تُزال حتى إن لم تُشاهد."
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تعرض «جاهز للمشاهدة» ما استورده Sonarr وRadarr خلال آخر %1$(days)lld يومًا ولم تشاهده في Jellyfin. الاستيرادات الأقدم تُزال حتى إن لم تُشاهد."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تعرض «جاهز للمشاهدة» ما استورده Sonarr وRadarr خلال آخر %1$(days)lld يوم ولم تشاهده في Jellyfin. الاستيرادات الأقدم تُزال حتى إن لم تُشاهد."
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "«Готово к просмотру» показывает то, что Sonarr и Radarr загрузили за последний %1$(days)lld день и что вы ещё не смотрели в Jellyfin. Более старые загрузки исчезают, даже если не просмотрены."
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "«Готово к просмотру» показывает то, что Sonarr и Radarr загрузили за последние %1$(days)lld дня и что вы ещё не смотрели в Jellyfin. Более старые загрузки исчезают, даже если не просмотрены."
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "«Готово к просмотру» показывает то, что Sonarr и Radarr загрузили за последние %1$(days)lld дней и что вы ещё не смотрели в Jellyfin. Более старые загрузки исчезают, даже если не просмотрены."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "«Готово к просмотру» показывает то, что Sonarr и Radarr загрузили за последние %1$(days)lld дня и что вы ещё не смотрели в Jellyfin. Более старые загрузки исчезают, даже если не просмотрены."
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -2707,6 +6603,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Imports récents : sans limite"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最近导入：无限制"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最近の取り込み: 制限なし"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الاستيرادات الأخيرة: بلا حد"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Недавние загрузки: без ограничения"
           }
         }
       }
@@ -2726,6 +6646,30 @@
             "state" : "translated",
             "value" : "À regarder affiche les éléments importés par Sonarr et Radarr que vous n’avez pas vus dans Jellyfin, dans la limite des 250 derniers imports par service."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“可观看”列出 Sonarr 和 Radarr 导入且您尚未在 Jellyfin 中观看的所有内容，每个服务最多显示最新的 250 项导入。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「視聴可能」には、Sonarr と Radarr が取り込み、Jellyfin でまだ視聴していないすべてのものが、サービスごとに最新 250 件まで表示されます。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعرض «جاهز للمشاهدة» كل ما استورده Sonarr وRadarr ولم تشاهده في Jellyfin، حتى أحدث 250 استيرادًا لكل خدمة."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "«Готово к просмотру» показывает всё, что Sonarr и Radarr загрузили и что вы ещё не смотрели в Jellyfin, до 250 последних загрузок на сервис."
+          }
         }
       }
     },
@@ -2743,6 +6687,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Périodes du flux"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时间范围"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "フィードの期間"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نوافذ الخلاصة"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Окна ленты"
           }
         }
       }
@@ -2782,6 +6750,102 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "À venir : %1$(days)lld jours"
+                }
+              }
+            }
+          }
+        },
+        "zh-Hans" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "即将推出：%1$(days)lld 天"
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "近日公開: %1$(days)lld 日"
+                }
+              }
+            }
+          }
+        },
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "قريبًا: 0 يوم"
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "قريبًا: يوم واحد"
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "قريبًا: يومان"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "قريبًا: %1$(days)lld أيام"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "قريبًا: %1$(days)lld يومًا"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "قريبًا: %1$(days)lld يوم"
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Скоро: %1$(days)lld день"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Скоро: %1$(days)lld дня"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Скоро: %1$(days)lld дней"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Скоро: %1$(days)lld дня"
                 }
               }
             }
@@ -2828,6 +6892,102 @@
               }
             }
           }
+        },
+        "zh-Hans" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "“即将推出”列出在未来 %1$(days)lld 天内发布的受监控剧集和电影。"
+                }
+              }
+            }
+          }
+        },
+        "ja" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "「近日公開」には、今後 %1$(days)lld 日以内に公開される監視中のエピソードと映画が表示されます。"
+                }
+              }
+            }
+          }
+        },
+        "ar" : {
+          "variations" : {
+            "plural" : {
+              "zero" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تعرض «قريبًا» الحلقات والأفلام المراقبة التي تصدر خلال 0 يوم."
+                }
+              },
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تعرض «قريبًا» الحلقات والأفلام المراقبة التي تصدر خلال اليوم القادم."
+                }
+              },
+              "two" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تعرض «قريبًا» الحلقات والأفلام المراقبة التي تصدر خلال اليومين القادمين."
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تعرض «قريبًا» الحلقات والأفلام المراقبة التي تصدر خلال %1$(days)lld أيام القادمة."
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تعرض «قريبًا» الحلقات والأفلام المراقبة التي تصدر خلال %1$(days)lld يومًا القادمة."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "تعرض «قريبًا» الحلقات والأفلام المراقبة التي تصدر خلال %1$(days)lld يوم القادم."
+                }
+              }
+            }
+          }
+        },
+        "ru" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "«Скоро» показывает отслеживаемые эпизоды и фильмы, которые выходят в ближайший %1$(days)lld день."
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "«Скоро» показывает отслеживаемые эпизоды и фильмы, которые выходят в ближайшие %1$(days)lld дня."
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "«Скоро» показывает отслеживаемые эпизоды и фильмы, которые выходят в ближайшие %1$(days)lld дней."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "«Скоро» показывает отслеживаемые эпизоды и фильмы, которые выходят в ближайшие %1$(days)lld дня."
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -2846,6 +7006,30 @@
             "state" : "translated",
             "value" : "À venir : sans limite"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即将推出：无限制"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "近日公開: 制限なし"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قريبًا: بلا حد"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скоро: без ограничения"
+          }
         }
       }
     },
@@ -2863,6 +7047,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "À venir affiche tous les épisodes et films suivis dont la sortie est prévue au cours de l’année à venir."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“即将推出”列出未来一年内有发布日期的所有受监控剧集和电影。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「近日公開」には、今後 1 年以内に公開日がある監視中のすべてのエピソードと映画が表示されます。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعرض «قريبًا» كل حلقة وفيلم مراقب له تاريخ صدور خلال السنة القادمة."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "«Скоро» показывает все отслеживаемые эпизоды и фильмы с датой выхода в ближайший год."
           }
         }
       }

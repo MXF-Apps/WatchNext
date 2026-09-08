@@ -1,6 +1,10 @@
 # Localization
 
-English is the source language; French is the first additional localization.
+English is the source language. French is the first reviewed localization.
+Simplified Chinese, Japanese, Arabic, and Russian are complete drafts written to
+exercise the layouts (CJK metrics, right-to-left mirroring, Cyrillic widths,
+and the six Arabic and four Russian plural forms); they still need a native
+speaker's review before they are advertised on the App Store.
 The app, widget, and WatchNextCore each own a `Localizable.xcstrings` catalog.
 System permission text lives separately in each target's `InfoPlist.xcstrings`.
 

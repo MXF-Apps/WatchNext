@@ -16,6 +16,30 @@
             "state" : "translated",
             "value" : "WatchNext"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
+          }
         }
       }
     },
@@ -30,6 +54,30 @@
           }
         },
         "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "WatchNext"
@@ -51,6 +99,30 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "WatchNext se connecte à vos serveurs Sonarr, Radarr et Jellyfin sur votre réseau local."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext 会连接您本地网络上的 Sonarr、Radarr 和 Jellyfin 服务器。"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext はローカルネットワーク上の Sonarr、Radarr、Jellyfin サーバーに接続します。"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يتصل WatchNext بخوادم Sonarr وRadarr وJellyfin على شبكتك المحلية."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WatchNext подключается к вашим серверам Sonarr, Radarr и Jellyfin в локальной сети."
           }
         }
       }
