@@ -27,6 +27,7 @@ private struct AppBackgroundModifier: ViewModifier {
                     AppBackground(settings: settings, base: Color(.systemGroupedBackground))
                 }
             }
+            .animation(.easeInOut(duration: 0.35), value: settings)
     }
 }
 

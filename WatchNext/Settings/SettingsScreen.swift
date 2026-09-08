@@ -55,20 +55,19 @@ struct SettingsScreen: View {
                         }
                     }
                     .pickerStyle(.segmented)
-                    Picker(selection: $backgroundTint) {
-                        ForEach(BackgroundTint.allCases) { tint in
-                            Label {
-                                Text(tint.localizedName)
-                            } icon: {
-                                TintSwatch(tint: tint)
-                            }
-                            .tag(tint.rawValue)
+                    // Inline swatches: the Form's own background previews the
+                    // choice live, so no detail screen is needed.
+                    VStack(alignment: .leading, spacing: 10) {
+                        HStack {
+                            Text(String(localized: .settingsAppearanceTintLabel))
+                            Spacer()
+                            Text(selectedTint.localizedName)
+                                .foregroundStyle(.secondary)
                         }
-                    } label: {
-                        Text(String(localized: .settingsAppearanceTintLabel))
+                        TintSwatchRow(selection: $backgroundTint)
                     }
-                    .pickerStyle(.navigationLink)
                     .disabled(backgroundTexture == BackgroundTexture.off.rawValue)
+                    .opacity(backgroundTexture == BackgroundTexture.off.rawValue ? 0.4 : 1)
                 } header: {
                     Text(String(localized: .settingsAppearanceTitle))
                 } footer: {
@@ -130,6 +129,10 @@ struct SettingsScreen: View {
         }
     }
 
+    private var selectedTint: BackgroundTint {
+        BackgroundTint(rawValue: backgroundTint) ?? AppearanceSettings.default.tint
+    }
+
     private var recentImportsDescription: String {
         if model.recentLookbackDays == 0 {
             return String(localized: .settingsWindowsRecentUnlimitedMessage)
@@ -163,13 +166,47 @@ struct SettingsScreen: View {
     }
 }
 
-/// Small gradient disc previewing a tint pair.
-private struct TintSwatch: View {
-    let tint: BackgroundTint
+/// One tappable gradient disc per tint palette; the selected one wears a ring
+/// and a checkmark. Buttons are plain so each disc is its own tap target
+/// inside the Form row.
+private struct TintSwatchRow: View {
+    @Binding var selection: String
 
     var body: some View {
-        Circle()
-            .fill(LinearGradient(colors: [tint.primary, tint.secondary], startPoint: .topLeading, endPoint: .bottomTrailing))
-            .frame(width: 22, height: 22)
+        HStack(spacing: 0) {
+            ForEach(BackgroundTint.allCases) { tint in
+                let isSelected = tint.rawValue == selection
+                Button {
+                    withAnimation(.snappy) { selection = tint.rawValue }
+                } label: {
+                    Circle()
+                        .fill(LinearGradient(colors: [tint.primary, tint.secondary], startPoint: .topLeading, endPoint: .bottomTrailing))
+                        .frame(width: 32, height: 32)
+                        .overlay {
+                            if isSelected {
+                                Image(systemName: "checkmark")
+                                    .font(.caption.weight(.bold))
+                                    .foregroundStyle(.white)
+                                    .shadow(radius: 1)
+                            }
+                        }
+                        .overlay {
+                            Circle()
+                                .strokeBorder(.primary.opacity(isSelected ? 0.55 : 0), lineWidth: 2)
+                                .frame(width: 40, height: 40)
+                        }
+                        .frame(width: 44, height: 44)
+                        .contentShape(.circle)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(tint.localizedName)
+                .accessibilityAddTraits(isSelected ? [.isSelected] : [])
+                if tint != BackgroundTint.allCases.last {
+                    Spacer(minLength: 0)
+                }
+            }
+        }
+        .accessibilityElement(children: .contain)
+        .accessibilityLabel(String(localized: .settingsAppearanceTintLabel))
     }
 }
