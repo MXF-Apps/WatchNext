@@ -32,7 +32,7 @@ struct AppPaletteTests {
         let roles: [(String, Color)] = [
             ("ready", palette.ready), ("upcoming", palette.upcoming), ("released", palette.released),
             ("emphasis", palette.emphasis), ("alert", palette.alert), ("caution", palette.caution),
-            ("muted", palette.muted)
+            ("muted", palette.muted), ("heading", palette.heading)
         ]
         for (name, role) in roles {
             let resolved = role.resolve(in: environment)
@@ -40,6 +40,20 @@ struct AppPaletteTests {
                 let contrast = AppPalette.contrast(resolved, sample.resolve(in: environment))
                 #expect(contrast >= AppPalette.minimumContrast - 0.01, "\(name) over sample \(index): \(contrast)")
             }
+        }
+    }
+
+    @Test("Heading role keeps 4.5:1 and stays below the primary label", arguments: combinations)
+    func headingIsFirmButQuiet(_ texture: BackgroundTexture, _ tint: BackgroundTint, _ scheme: ColorScheme) {
+        let settings = AppearanceSettings(texture: texture, tint: tint)
+        let environment = Self.environment(scheme)
+        let heading = settings.palette(for: scheme).heading.resolve(in: environment)
+        for sample in settings.contrastSamples(for: scheme) {
+            let resolved = sample.resolve(in: environment)
+            let headingContrast = AppPalette.contrast(heading, resolved)
+            let primaryContrast = AppPalette.contrast(SystemLabel.primary(scheme).resolve(in: environment), resolved)
+            #expect(headingContrast >= AppPalette.headingMinimumContrast - 0.01)
+            #expect(headingContrast <= primaryContrast)
         }
     }
 

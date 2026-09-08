@@ -1,8 +1,10 @@
 import SwiftUI
+import WatchNextAppearance
 import WatchNextCore
 
 /// Ready and Coming Soon side by side, text-only, as many rows as fit.
 struct MediumWidgetContent: View {
+    @Environment(\.palette) private var palette
     let entry: WatchNextEntry
 
     private static let pairs: [(ready: Int, coming: Int)] = [(6, 6), (5, 5), (4, 4), (3, 3), (2, 2), (1, 1)]
@@ -28,7 +30,8 @@ struct MediumWidgetContent: View {
                     titleFont: .footnote,
                     secondaryFont: .caption2,
                     accessories: WidgetSectionAccessories(feed: entry.feed),
-                    hintFormat: .short
+                    hintFormat: .short,
+                    sectionColor: palette.ready
                 )
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
@@ -43,7 +46,8 @@ struct MediumWidgetContent: View {
                     titleFont: .footnote,
                     secondaryFont: .caption2,
                     accessories: candidate.ready == 0 ? WidgetSectionAccessories(feed: entry.feed) : nil,
-                    hintFormat: .short
+                    hintFormat: .short,
+                    sectionColor: palette.upcoming
                 )
                 .frame(maxWidth: .infinity, alignment: .leading)
             }

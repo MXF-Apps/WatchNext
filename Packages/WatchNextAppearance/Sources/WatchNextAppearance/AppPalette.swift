@@ -22,6 +22,9 @@ public struct AppPalette: Equatable, Sendable {
     /// drawing attention; replaces the system's disabled dimming, which is
     /// not contrast-checked.
     public var muted: Color
+    /// Small-caps section headers: a mid gray held at `headingMinimumContrast`,
+    /// so it never washes out yet stays quieter than primary titles.
+    public var heading: Color
 
     /// Fill behind a selected row.
     public var selectionFill: Color { emphasis.opacity(0.14) }
@@ -29,6 +32,8 @@ public struct AppPalette: Equatable, Sendable {
     /// Minimum WCAG contrast ratio kept between a role color and the background.
     /// 3:1 is the large-text threshold; 3.5 leaves a margin for the grain.
     public static let minimumContrast = 3.5
+    /// Headers are small text, so they get the body-text threshold.
+    public static let headingMinimumContrast = 4.5
 
     /// Darkens (light scheme) or lightens (dark scheme) `color` in 5 % steps
     /// until it reaches `minimum` contrast over every background sample.
@@ -221,6 +226,11 @@ public extension AppearanceSettings {
         func fit(_ color: Color) -> Color {
             AppPalette.ensuringContrast(color, over: samples, minimum: AppPalette.minimumContrast, scheme: scheme)
         }
+        // Start from the system secondary label as it looks composited on the
+        // base, then push it only as far as the header threshold needs.
+        let secondaryOnBase: Color = scheme == .dark
+            ? Color(red: 141 / 255, green: 141 / 255, blue: 147 / 255)
+            : Color(red: 133 / 255, green: 133 / 255, blue: 139 / 255)
         return AppPalette(
             ready: fit(.green),
             upcoming: fit(.orange),
@@ -228,7 +238,8 @@ public extension AppearanceSettings {
             emphasis: fit(tint.isNeutral ? .indigo : tint.primary),
             alert: fit(.red),
             caution: fit(.orange),
-            muted: fit(.gray)
+            muted: fit(.gray),
+            heading: AppPalette.ensuringContrast(secondaryOnBase, over: samples, minimum: AppPalette.headingMinimumContrast, scheme: scheme)
         )
     }
 }

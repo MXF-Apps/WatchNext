@@ -1,8 +1,10 @@
 import SwiftUI
+import WatchNextAppearance
 import WatchNextCore
 
 /// Ready above Coming Soon, used by the small and large families.
 struct WidgetStackedLayout: View {
+    @Environment(\.palette) private var palette
     let entry: WatchNextEntry
     let candidate: WidgetLayoutCandidate
     let readyTitle: String
@@ -27,7 +29,8 @@ struct WidgetStackedLayout: View {
                     secondaryFont: secondaryFont,
                     accessories: WidgetSectionAccessories(feed: entry.feed),
                     hintFormat: hintFormat,
-                    showsRule: showsSectionRules
+                    showsRule: showsSectionRules,
+                    sectionColor: palette.ready
                 )
             }
             if candidate.coming > 0 {
@@ -42,7 +45,8 @@ struct WidgetStackedLayout: View {
                     secondaryFont: secondaryFont,
                     accessories: candidate.ready == 0 ? WidgetSectionAccessories(feed: entry.feed) : nil,
                     hintFormat: hintFormat,
-                    showsRule: showsSectionRules
+                    showsRule: showsSectionRules,
+                    sectionColor: palette.upcoming
                 )
             }
         }
