@@ -9,9 +9,9 @@ public struct AppPalette: Equatable, Sendable {
     /// Release and air times still in the future, clock glyphs.
     public var upcoming: Color
     /// Already aired or released but not downloaded yet (the magnifier rows).
-    /// Same meaning family as `upcoming`, so the same orange, pushed one step
-    /// further from the background (deeper in light, brighter in dark); views
-    /// pair it with a heavier weight.
+    /// Same orange family as `upcoming`, always the lighter of the two, so
+    /// "closer" reads as "lighter" in both schemes; views pair it with a
+    /// heavier weight.
     public var released: Color
     /// Folded-season counts and other emphasized numbers; the palette's leading hue.
     public var emphasis: Color
@@ -92,7 +92,8 @@ public struct AppPalette: Equatable, Sendable {
         (max(a, b) + 0.05) / (min(a, b) + 0.05)
     }
 
-    private static func luminance(_ c: Color.Resolved) -> Double {
+    /// WCAG relative luminance.
+    static func luminance(_ c: Color.Resolved) -> Double {
         0.2126 * Double(c.linearRed) + 0.7152 * Double(c.linearGreen) + 0.0722 * Double(c.linearBlue)
     }
 
@@ -232,11 +233,16 @@ public extension AppearanceSettings {
         let secondaryOnBase: Color = scheme == .dark
             ? Color(red: 141 / 255, green: 141 / 255, blue: 147 / 255)
             : Color(red: 133 / 255, green: 133 / 255, blue: 139 / 255)
-        let upcoming = fit(.orange)
+        // The fitted orange is the lightest legible shade in light mode, so it
+        // becomes `released` there and `upcoming` steps darker; in dark mode the
+        // fitted orange is `upcoming` and `released` steps lighter.
+        let orange = fit(.orange)
+        let upcoming = scheme == .dark ? orange : orange.mix(with: .black, by: 0.2)
+        let released = scheme == .dark ? orange.mix(with: .white, by: 0.2) : orange
         return AppPalette(
             ready: fit(.green),
             upcoming: upcoming,
-            released: upcoming.mix(with: scheme == .dark ? .white : .black, by: 0.2),
+            released: released,
             emphasis: fit(tint.isNeutral ? .indigo : tint.primary),
             alert: fit(.red),
             caution: fit(.orange),

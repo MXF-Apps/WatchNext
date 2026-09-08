@@ -75,6 +75,15 @@ struct AppPaletteTests {
         }
     }
 
+    @Test("Released is lighter than upcoming: the closer, the lighter", arguments: combinations)
+    func releasedIsLighterThanUpcoming(_ texture: BackgroundTexture, _ tint: BackgroundTint, _ scheme: ColorScheme) {
+        let palette = AppearanceSettings(texture: texture, tint: tint).palette(for: scheme)
+        let environment = Self.environment(scheme)
+        let released = AppPalette.luminance(palette.released.resolve(in: environment))
+        let upcoming = AppPalette.luminance(palette.upcoming.resolve(in: environment))
+        #expect(released > upcoming)
+    }
+
     @Test("The plain base already satisfies the label thresholds")
     func baseIsLegible() {
         for scheme in [ColorScheme.light, .dark] {
