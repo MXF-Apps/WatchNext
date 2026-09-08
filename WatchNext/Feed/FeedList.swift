@@ -6,7 +6,6 @@ struct FeedList: View {
     @AppStorage("WatchNext.Feed.readyExpanded") private var readyExpanded = true
     @AppStorage("WatchNext.Feed.comingSoonExpanded") private var comingSoonExpanded = true
     @State private var selection = Set<String>()
-    @State private var editMode: EditMode = .inactive
 
     var body: some View {
         let visible = model.visibleFeed
@@ -14,9 +13,8 @@ struct FeedList: View {
         let selectedVisible = (visible.ready + visible.comingSoon).filter { selection.contains($0.id) }
         let selectedSeries = selectedVisible.filter { $0.seriesHideKey != nil }
         let selectedHidden = hidden.filter { selection.contains($0.id) }
-        // Only bind the selection while selecting: iPadOS otherwise lets a plain
-        // tap select a row outside edit mode and leaves it highlighted.
-        List(selection: model.isSelectingItems ? $selection : nil) {
+        let selecting: Binding<Set<String>>? = model.isSelectingItems ? $selection : nil
+        List {
             if let issue = model.refreshIssue ?? model.feed.lastRefreshError.map(ActionableIssue.init(cachedRefreshError:)) {
                 Section {
                     IssueRows(
@@ -65,15 +63,15 @@ struct FeedList: View {
                     .listRowBackground(Color.clear)
                 }
             } else {
-                FeedSection(title: String(localized: .feedSectionReadyTitle), items: visible.ready, isExpanded: $readyExpanded) { item in
+                FeedSection(title: String(localized: .feedSectionReadyTitle), items: visible.ready, isExpanded: $readyExpanded, selection: selecting) { item in
                     HideActions(item: item) { scope in hide(item, scope: scope) }
                 }
-                FeedSection(title: String(localized: .feedSectionUpcomingTitle), items: visible.comingSoon, isExpanded: $comingSoonExpanded) { item in
+                FeedSection(title: String(localized: .feedSectionUpcomingTitle), items: visible.comingSoon, isExpanded: $comingSoonExpanded, selection: selecting) { item in
                     HideActions(item: item) { scope in hide(item, scope: scope) }
                 }
             }
             if model.showsHiddenItems || model.isSelectingItems {
-                FeedSection(title: String(localized: .feedSectionHiddenTitle), items: hidden, dimmed: true) { item in
+                FeedSection(title: String(localized: .feedSectionHiddenTitle), items: hidden, dimmed: true, selection: selecting) { item in
                     UnhideAction { unhide(item) }
                 }
             }
@@ -89,9 +87,8 @@ struct FeedList: View {
         }
         .animation(.default, value: model.hiddenItems)
         .animation(.default, value: model.kindFilter)
-        .environment(\.editMode, $editMode)
+        .animation(.default, value: model.isSelectingItems)
         .onChange(of: model.isSelectingItems) { _, selecting in
-            withAnimation { editMode = selecting ? .active : .inactive }
             if selecting == false { selection.removeAll() }
         }
         .toolbar(model.isSelectingItems ? .hidden : .visible, for: .tabBar)
