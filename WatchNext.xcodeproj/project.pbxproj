@@ -206,6 +206,15 @@
 				ja,
 				ar,
 				ru,
+				de,
+				es,
+				"pt-BR",
+				it,
+				nl,
+				ko,
+				"zh-Hant",
+				pl,
+				tr,
 				Base,
 			);
 			mainGroup = A00000000000000000000015;
