@@ -34,8 +34,14 @@ struct WatchNextWidgetView: View {
         }
         .padding(margins)
         .containerBackground(for: .widget) {
-            WidgetBackground()
+            WidgetBackground(settings: appearance)
         }
+        .environment(\.appearance, appearance)
+    }
+
+    /// Read once per render from the App Group, where Settings stores it.
+    private var appearance: AppearanceSettings {
+        AppearanceSettings.load(from: UserDefaults(suiteName: WatchNextConstants.appGroupIdentifier) ?? .standard)
     }
 
     /// The HIG's tighter 11 pt margin where width is scarce; the system's otherwise.
@@ -57,9 +63,7 @@ struct WatchNextWidgetView: View {
 /// `.background` is the system widget surface; the textured variant builds on
 /// the matching elevated color so text contrast is unchanged.
 private struct WidgetBackground: View {
-    private let settings = AppearanceSettings.load(
-        from: UserDefaults(suiteName: WatchNextConstants.appGroupIdentifier) ?? .standard
-    )
+    let settings: AppearanceSettings
 
     var body: some View {
         if settings.texture == .off {

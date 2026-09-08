@@ -1,4 +1,5 @@
 import SwiftUI
+import WatchNextAppearance
 import WatchNextCore
 
 /// How much detail a row's trailing or secondary hint carries.
@@ -11,6 +12,7 @@ enum WidgetHintFormat {
 }
 
 struct WidgetItemRow: View {
+    @Environment(\.appearance) private var appearance
     let item: MediaFeedItem
     let artwork: [String: Data]
     let style: WidgetRowStyle
@@ -141,7 +143,7 @@ struct WidgetItemRow: View {
 
     private func styled(_ text: String?, badge: String?, color: Color) -> Text {
         let base = text.map { Text($0).foregroundStyle(color) }
-        let emphasized = badge.map { Text($0).bold().foregroundStyle(.tint) }
+        let emphasized = badge.map { Text($0).bold().foregroundStyle(appearance.emphasis) }
         switch (base, emphasized) {
         case let (base?, emphasized?): return base + Text(verbatim: " · ").foregroundStyle(color) + emphasized
         case let (base?, nil): return base
