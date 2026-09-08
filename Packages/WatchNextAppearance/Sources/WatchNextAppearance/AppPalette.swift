@@ -150,9 +150,22 @@ public extension AppearanceSettings {
         scheme == .dark ? Color(red: 0, green: 0, blue: 0) : Color(red: 242 / 255, green: 242 / 255, blue: 247 / 255)
     }
 
+    /// The texture whose values to paint with. In dark mode the two are
+    /// swapped: the larger tint amount and grain lift make a lighter, hazier
+    /// wash there, which reads as the weaker one, so Strong takes the deeper
+    /// set and Subtle the lifted one. The colors themselves are unchanged.
+    func paintedTexture(for scheme: ColorScheme) -> BackgroundTexture {
+        guard scheme == .dark else { return texture }
+        switch texture {
+        case .off: return .off
+        case .subtle: return .strong
+        case .strong: return .subtle
+        }
+    }
+
     /// How far the warm and cool ends move away from the base (0 = none).
     func tintAmount(for scheme: ColorScheme) -> Double {
-        switch (texture, scheme) {
+        switch (paintedTexture(for: scheme), scheme) {
         case (.off, _): 0
         case (.strong, .dark): 0.42
         case (.strong, _): 0.30
@@ -166,7 +179,7 @@ public extension AppearanceSettings {
     /// low enough that the plain base under grain still passes
     /// `SystemLabel.secondaryMinimumContrast` (0.18 did not).
     func grainOpacity(for scheme: ColorScheme) -> Double {
-        switch (texture, scheme) {
+        switch (paintedTexture(for: scheme), scheme) {
         case (.off, _): 0
         case (.strong, .dark): 0.20
         case (.strong, _): 0.15

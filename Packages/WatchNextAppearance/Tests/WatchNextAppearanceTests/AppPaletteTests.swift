@@ -123,3 +123,28 @@ struct AppPaletteTests {
         #expect(faint < 1.5)
     }
 }
+
+extension AppPaletteTests {
+    static let tints: [BackgroundTint] = BackgroundTint.allCases
+
+    @Test("In dark mode Strong is the darker wash, Subtle the lighter", arguments: tints)
+    func darkModeStrongIsDarker(_ tint: BackgroundTint) {
+        var environment = EnvironmentValues()
+        environment.colorScheme = .dark
+        let subtle = AppearanceSettings(texture: .subtle, tint: tint)
+        let strong = AppearanceSettings(texture: .strong, tint: tint)
+        for (s, g) in zip(subtle.washColors(for: .dark), strong.washColors(for: .dark)) {
+            let ls = AppPalette.luminance(subtle.grained(s, for: .dark).resolve(in: environment))
+            let lg = AppPalette.luminance(strong.grained(g, for: .dark).resolve(in: environment))
+            #expect(lg <= ls + 0.001)
+        }
+    }
+
+    @Test("Light mode keeps its original values: Strong tints more than Subtle")
+    func lightModeUnchanged() {
+        let subtle = AppearanceSettings(texture: .subtle, tint: .indigo)
+        let strong = AppearanceSettings(texture: .strong, tint: .indigo)
+        #expect(strong.tintAmount(for: .light) > subtle.tintAmount(for: .light))
+        #expect(strong.grainOpacity(for: .light) > subtle.grainOpacity(for: .light))
+    }
+}
