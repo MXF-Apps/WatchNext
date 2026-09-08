@@ -10,12 +10,10 @@ struct SettingsScreen: View {
     @AppStorage(AppearanceSettings.tintKey, store: .appGroup) private var backgroundTint = AppearanceSettings.default.tint.rawValue
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $model.settingsPath) {
             Form {
                 Section {
-                    NavigationLink {
-                        ServersScreen()
-                    } label: {
+                    NavigationLink(value: SettingsRoute.servers(nil)) {
                         HStack(spacing: 8) {
                             Label(String(localized: .settingsServersTitle), systemImage: "server.rack")
                             Spacer()
@@ -98,6 +96,9 @@ struct SettingsScreen: View {
             }
             .appBackground()
             .navigationTitle(String(localized: .settingsTitle))
+            .navigationDestination(for: SettingsRoute.self) { route in
+                ServersScreen(focus: route.service)
+            }
             .onChange(of: backgroundTexture) { reloadWidgets() }
             .onChange(of: backgroundTint) { reloadWidgets() }
             .toolbar {

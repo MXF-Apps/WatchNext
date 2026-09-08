@@ -11,6 +11,21 @@ enum LocalNetworkAccess: String, Equatable, Sendable {
     case denied
 }
 
+/// Why a probe ended without a decision, for user-facing guidance.
+enum LocalNetworkProbeFailure: Equatable, Sendable {
+    /// `kDNSServiceErr_NoAuth`: iOS refused to browse. Happens when the
+    /// Bonjour service type is missing from Info.plist or the permission is off.
+    case notAuthorized
+    case timeout(seconds: Int)
+    case failed(String)
+}
+
+struct LocalNetworkProbeResult: Equatable, Sendable {
+    let access: LocalNetworkAccess
+    /// Set only when `access` is `.unknown`.
+    let failure: LocalNetworkProbeFailure?
+}
+
 /// Triggers the iOS Local Network prompt and reports how it went.
 ///
 /// iOS has no API that returns the local network permission. The workaround
@@ -25,7 +40,7 @@ enum LocalNetworkAccess: String, Equatable, Sendable {
 enum LocalNetworkAuthorization {
     /// Resolves to `.granted` or `.denied`, or `.unknown` after `timeout`
     /// seconds without a decision (for example while the prompt is still up).
-    static func check(timeout: TimeInterval = 30) async -> LocalNetworkAccess {
+    static func check(timeout: TimeInterval = 30) async -> LocalNetworkProbeResult {
         await Probe().run(timeout: timeout)
     }
 }
@@ -36,19 +51,21 @@ private final class Probe: @unchecked Sendable {
     private static let serviceType = "_watchnext._tcp"
     /// `kDNSServiceErr_PolicyDenied` from dns_sd.h: the user refused local network access.
     private static let policyDenied: DNSServiceErrorType = -65570
+    /// `kDNSServiceErr_NoAuth` from dns_sd.h: browsing is not permitted for this app.
+    private static let noAuth: DNSServiceErrorType = -65555
 
     private let queue = DispatchQueue(label: "WatchNext.LocalNetworkAuthorization")
     private var listener: NWListener?
     private var browser: NWBrowser?
-    private var continuation: CheckedContinuation<LocalNetworkAccess, Never>?
+    private var continuation: CheckedContinuation<LocalNetworkProbeResult, Never>?
 
-    func run(timeout: TimeInterval) async -> LocalNetworkAccess {
+    func run(timeout: TimeInterval) async -> LocalNetworkProbeResult {
         await withCheckedContinuation { continuation in
             queue.async {
                 self.continuation = continuation
                 self.start()
                 self.queue.asyncAfter(deadline: .now() + timeout) { [weak self] in
-                    self?.finish(.unknown, reason: "no decision after \(Int(timeout)) s")
+                    self?.finish(.unknown, failure: .timeout(seconds: Int(timeout)), reason: "no decision after \(Int(timeout)) s")
                 }
             }
         }
@@ -59,14 +76,14 @@ private final class Probe: @unchecked Sendable {
         do {
             listener = try NWListener(using: .tcp)
         } catch {
-            finish(.unknown, reason: "listener could not be created: \(error)")
+            finish(.unknown, failure: .failed("\(error)"), reason: "listener could not be created: \(error)")
             return
         }
         listener.service = NWListener.Service(name: "WatchNext", type: Self.serviceType)
         listener.newConnectionHandler = { connection in connection.cancel() }
         listener.stateUpdateHandler = { [weak self] state in
             if case .failed(let error) = state {
-                self?.finish(.unknown, reason: "listener failed: \(error)")
+                self?.finish(.unknown, failure: .failed("\(error)"), reason: "listener failed: \(error)")
             }
         }
 
@@ -76,8 +93,10 @@ private final class Probe: @unchecked Sendable {
             case .waiting(let error), .failed(let error):
                 if case .dns(let code) = error, code == Self.policyDenied {
                     self?.finish(.denied, reason: "browse refused by policy")
+                } else if case .dns(let code) = error, code == Self.noAuth {
+                    self?.finish(.unknown, failure: .notAuthorized, reason: "browse not authorized (NoAuth)")
                 } else if case .failed = state {
-                    self?.finish(.unknown, reason: "browser failed: \(error)")
+                    self?.finish(.unknown, failure: .failed("\(error)"), reason: "browser failed: \(error)")
                 }
             default:
                 break
@@ -95,7 +114,7 @@ private final class Probe: @unchecked Sendable {
         browser.start(queue: queue)
     }
 
-    private func finish(_ outcome: LocalNetworkAccess, reason: String) {
+    private func finish(_ outcome: LocalNetworkAccess, failure: LocalNetworkProbeFailure? = nil, reason: String) {
         guard let continuation else { return }
         self.continuation = nil
         listener?.cancel()
@@ -103,6 +122,6 @@ private final class Probe: @unchecked Sendable {
         listener = nil
         browser = nil
         logger.info("Local network access \(outcome.rawValue): \(reason).", category: "Network")
-        continuation.resume(returning: outcome)
+        continuation.resume(returning: LocalNetworkProbeResult(access: outcome, failure: outcome == .unknown ? failure : nil))
     }
 }

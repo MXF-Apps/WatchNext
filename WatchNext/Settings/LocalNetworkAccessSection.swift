@@ -4,6 +4,8 @@ import SwiftUI
 /// the current state: ask for it, or open Settings after a refusal.
 struct LocalNetworkAccessSection: View {
     let access: LocalNetworkAccess
+    /// Why the last check could not decide, shown under the button.
+    var issue: ActionableIssue? = nil
     let request: () -> Void
     @Environment(\.openURL) private var openURL
 
@@ -35,6 +37,9 @@ struct LocalNetworkAccessSection: View {
                     }
                 }
                 .disabled(access == .checking)
+                if let issue {
+                    IssueRows(issue: issue, symbol: "wifi.exclamationmark", color: .orange)
+                }
             }
         } header: {
             Text(String(localized: .settingsNetworkTitle))

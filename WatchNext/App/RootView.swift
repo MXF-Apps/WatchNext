@@ -2,12 +2,12 @@ import SwiftUI
 import WatchNextAppearance
 
 struct RootView: View {
-    @State private var selection: AppTab = .feed
+    @EnvironmentObject private var model: WatchNextAppModel
     @AppStorage(AppearanceSettings.textureKey, store: .appGroup) private var texture = AppearanceSettings.default.texture.rawValue
     @AppStorage(AppearanceSettings.tintKey, store: .appGroup) private var tint = AppearanceSettings.default.tint.rawValue
 
     var body: some View {
-        TabView(selection: $selection) {
+        TabView(selection: $model.selectedTab) {
             Tab(String(localized: .appName), systemImage: "play.rectangle.on.rectangle", value: .feed) {
                 FeedScreen()
             }

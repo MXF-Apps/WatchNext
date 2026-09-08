@@ -17,12 +17,13 @@ struct FeedList: View {
         // Only bind the selection while selecting: iPadOS otherwise lets a plain
         // tap select a row outside edit mode and leaves it highlighted.
         List(selection: model.isSelectingItems ? $selection : nil) {
-            if let message = model.refreshError ?? model.feed.lastRefreshError {
+            if let issue = model.refreshIssue ?? model.feed.lastRefreshError.map(ActionableIssue.init(cachedRefreshError:)) {
                 Section {
-                    Label(message, systemImage: "wifi.exclamationmark")
-                        .font(.callout)
-                        .foregroundStyle(.red)
-                        .accessibilityLabel(String(localized: .feedRefreshErrorAccessibilityLabel(message: message)))
+                    IssueRows(
+                        issue: issue,
+                        symbol: "wifi.exclamationmark",
+                        messageAccessibilityLabel: String(localized: .feedRefreshErrorAccessibilityLabel(message: issue.message))
+                    )
                 } header: {
                     Text(String(localized: .feedRefreshErrorTitle))
                 }

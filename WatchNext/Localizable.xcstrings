@@ -1145,6 +1145,186 @@
         }
       }
     },
+    "issue.action.openServers.button" : {
+      "comment" : "Button under a refresh error that opens Settings › Servers at the failing server.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fix in Settings"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Corriger dans Réglages"
+          }
+        }
+      }
+    },
+    "issue.advice.missingConfiguration" : {
+      "comment" : "Advice under a refresh error when a server address or credential is missing. Argument: server product name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add the missing %1$(service)@ details under Settings › Servers."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajoutez les informations %1$(service)@ manquantes dans Réglages › Serveurs."
+          }
+        }
+      }
+    },
+    "issue.advice.serverError" : {
+      "comment" : "Advice under a refresh error when a server answered with an error or unexpected data. Argument: server product name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(service)@ answered with an error. Check that the server runs a supported version."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(service)@ a renvoyé une erreur. Vérifiez que le serveur utilise une version prise en charge."
+          }
+        }
+      }
+    },
+    "issue.advice.unauthorized" : {
+      "comment" : "Advice under a refresh error when a server rejected the credentials. Argument: Sonarr, Radarr, or Jellyfin.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(service)@ rejected the saved credentials. Replace the key or sign in again under Settings › Servers."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(service)@ a refusé les identifiants enregistrés. Remplacez la clé ou reconnectez-vous dans Réglages › Serveurs."
+          }
+        }
+      }
+    },
+    "issue.advice.unreachable" : {
+      "comment" : "Advice under a refresh error when a server did not answer. Argument: server product name.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(service)@ did not answer. Check its address under Settings › Servers and that the server is running."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$(service)@ ne répond pas. Vérifiez son adresse dans Réglages › Serveurs et que le serveur est en marche."
+          }
+        }
+      }
+    },
+    "issue.localNetwork.failed.message" : {
+      "comment" : "Shown when the local network check failed for a technical reason. Argument: the raw error text.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The local network check failed (%1$(reason)@)."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La vérification du réseau local a échoué (%1$(reason)@)."
+          }
+        }
+      }
+    },
+    "issue.localNetwork.noAuth.advice" : {
+      "comment" : "Next step after iOS refused local network browsing.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn on Local Network for WatchNext in the Settings app, then try again."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activez Réseau local pour WatchNext dans l’app Réglages, puis réessayez."
+          }
+        }
+      }
+    },
+    "issue.localNetwork.noAuth.message" : {
+      "comment" : "Shown when iOS refuses local network browsing (DNS error NoAuth).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS did not allow WatchNext to look for devices on the local network."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS n’a pas autorisé WatchNext à rechercher des appareils sur le réseau local."
+          }
+        }
+      }
+    },
+    "issue.localNetwork.timeout.advice" : {
+      "comment" : "Next step after the local network check ended without an answer.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Answer the permission prompt if it is showing, or check Local Network for WatchNext in the Settings app, then try again."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Répondez à la demande d’autorisation si elle est affichée, ou vérifiez Réseau local pour WatchNext dans l’app Réglages, puis réessayez."
+          }
+        }
+      }
+    },
+    "issue.localNetwork.timeout.message" : {
+      "comment" : "Shown when the local network check ended without an answer.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Local network access could not be confirmed."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de confirmer l’accès au réseau local."
+          }
+        }
+      }
+    },
     "media.availability.ready.label" : {
       "comment" : "An item is available to watch.",
       "extractionState" : "manual",

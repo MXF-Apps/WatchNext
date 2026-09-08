@@ -12,6 +12,11 @@ final class WatchNextAppModel: ObservableObject {
     @Published private(set) var hasLoadedFeed = false
     @Published var isRefreshing = false
     @Published var refreshError: String?
+    /// The last refresh failure with advice and a fix-it action; nil after success.
+    @Published var refreshIssue: ActionableIssue?
+    /// Selected tab and Settings navigation, published so other screens can deep-link.
+    @Published var selectedTab: AppTab = .feed
+    @Published var settingsPath: [SettingsRoute] = []
     @Published var hiddenItems: Set<HiddenItem> = []
     @Published var showsHiddenItems = false
     /// Multi-select mode in the feed: rows show selection circles and the
@@ -52,6 +57,8 @@ final class WatchNextAppModel: ObservableObject {
     /// Local network permission as last observed. Starts from the persisted
     /// outcome so Settings does not flash the permission gate on every launch.
     @Published private(set) var localNetworkAccess: LocalNetworkAccess = WatchNextAppModel.storedLocalNetworkAccess()
+    /// Why the last explicit Local Network check could not decide, with guidance.
+    @Published private(set) var localNetworkIssue: ActionableIssue?
 
     /// Pending auto-dismissal of a success confirmation.
     private var settingsMessageDismissal: Task<Void, Never>?
@@ -129,9 +136,11 @@ final class WatchNextAppModel: ObservableObject {
     func requestLocalNetworkAccess() async {
         guard localNetworkAccess != .checking else { return }
         localNetworkAccess = .checking
-        let outcome = await LocalNetworkAuthorization.check()
-        localNetworkAccess = outcome
-        UserDefaults.standard.set(outcome.rawValue, forKey: Self.localNetworkAccessKey)
+        localNetworkIssue = nil
+        let result = await LocalNetworkAuthorization.check()
+        localNetworkAccess = result.access
+        localNetworkIssue = result.failure.map(ActionableIssue.init(localNetworkFailure:))
+        UserDefaults.standard.set(result.access.rawValue, forKey: Self.localNetworkAccessKey)
     }
 
     /// Re-checks a permission the user already answered. iOS shows no prompt
@@ -139,10 +148,10 @@ final class WatchNextAppModel: ObservableObject {
     /// granted permission never hides the server fields while checking.
     func refreshLocalNetworkAccess() async {
         guard hasRequestedLocalNetworkAccess, localNetworkAccess != .checking else { return }
-        let outcome = await LocalNetworkAuthorization.check(timeout: 10)
-        guard outcome != .unknown else { return }
-        localNetworkAccess = outcome
-        UserDefaults.standard.set(outcome.rawValue, forKey: Self.localNetworkAccessKey)
+        let result = await LocalNetworkAuthorization.check(timeout: 10)
+        guard result.access != .unknown else { return }
+        localNetworkAccess = result.access
+        UserDefaults.standard.set(result.access.rawValue, forKey: Self.localNetworkAccessKey)
     }
 
     func refresh() async {
@@ -156,13 +165,21 @@ final class WatchNextAppModel: ObservableObject {
             hiddenItems = await dependencies.hiddenItemStore.hidden()
             feed = refreshed
             refreshError = nil
+            refreshIssue = nil
             WidgetCenter.shared.reloadTimelines(ofKind: WatchNextConstants.widgetKind)
         } catch {
             refreshError = error.localizedDescription
+            refreshIssue = ActionableIssue(refreshError: error)
             feed = await dependencies.feedService.cachedFeed()
             logger.error("Manual app refresh failed.", error: error, category: "App")
         }
         await reloadLogs()
+    }
+
+    /// Switches to Settings › Servers, scrolled to `service` when given.
+    func openServers(focusing service: ServiceKind?) {
+        selectedTab = .settings
+        settingsPath = [.servers(service)]
     }
 
     /// True once any server address has been entered.
