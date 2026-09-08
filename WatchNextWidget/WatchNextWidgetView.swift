@@ -60,8 +60,8 @@ struct WatchNextWidgetView: View {
 
 
 /// The widget background follows Settings › Appearance through the App Group.
-/// `.background` is the system widget surface; the textured variant builds on
-/// the matching elevated color so text contrast is unchanged.
+/// `.background` is the system widget surface when the texture is off; the
+/// textured variant mixes into the same fixed base as the app.
 private struct WidgetBackground: View {
     let settings: AppearanceSettings
 
@@ -69,7 +69,7 @@ private struct WidgetBackground: View {
         if settings.texture == .off {
             Rectangle().fill(.background)
         } else {
-            AppBackground(settings: settings, base: Color(.secondarySystemGroupedBackground))
+            AppBackground(settings: settings)
         }
     }
 }

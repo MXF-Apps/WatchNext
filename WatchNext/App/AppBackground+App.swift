@@ -24,7 +24,7 @@ private struct AppBackgroundModifier: ViewModifier {
             .scrollContentBackground(settings.texture == .off ? .automatic : .hidden)
             .background {
                 if settings.texture != .off {
-                    AppBackground(settings: settings, base: Color(.systemGroupedBackground))
+                    AppBackground(settings: settings)
                 }
             }
             .animation(.easeInOut(duration: 0.35), value: settings)

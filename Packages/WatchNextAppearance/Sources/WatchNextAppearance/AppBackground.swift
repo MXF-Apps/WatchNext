@@ -10,17 +10,19 @@ import SwiftUI
 /// cannot run them.
 public struct AppBackground: View {
     private let settings: AppearanceSettings
-    private let base: Color
     @Environment(\.colorScheme) private var colorScheme
 
-    /// - Parameters:
-    ///   - settings: texture strength and tint; `.off` draws the plain base.
-    ///   - base: the surface color the content was designed against, for
-    ///     example `systemGroupedBackground` in the app and the widget's
-    ///     `secondarySystemGroupedBackground`.
-    public init(settings: AppearanceSettings, base: Color) {
+    /// - Parameter settings: texture strength and tint; `.off` draws the plain base.
+    public init(settings: AppearanceSettings) {
         self.settings = settings
-        self.base = base
+    }
+
+    /// The surface the tints are mixed into: the values of the grouped
+    /// background at the base level, fixed rather than read from the system so
+    /// the widget, which renders at the elevated level where dark gray replaces
+    /// black, matches the app exactly.
+    private var base: Color {
+        colorScheme == .dark ? Color(red: 0, green: 0, blue: 0) : Color(red: 242 / 255, green: 242 / 255, blue: 247 / 255)
     }
 
     /// How far the warm and cool ends move away from the base (0 = none).
