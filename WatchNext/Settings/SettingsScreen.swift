@@ -153,12 +153,13 @@ struct SettingsScreen: View {
 
 /// One tappable gradient disc per tint palette; the selected one wears a ring
 /// and a checkmark. Buttons are plain so each disc is its own tap target
-/// inside the Form row.
+/// inside the Form row, and the grid wraps when a row cannot hold them all.
 private struct TintSwatchRow: View {
     @Binding var selection: String
+    @Environment(\.colorScheme) private var colorScheme
 
     var body: some View {
-        HStack(spacing: 0) {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 44, maximum: 56), spacing: 0)], spacing: 4) {
             ForEach(BackgroundTint.allCases) { tint in
                 let isSelected = tint.rawValue == selection
                 Button {
@@ -166,12 +167,16 @@ private struct TintSwatchRow: View {
                 } label: {
                     Circle()
                         .fill(LinearGradient(colors: [tint.primary, tint.secondary], startPoint: .topLeading, endPoint: .bottomTrailing))
+                        .overlay {
+                            // Keeps the white and black discs visible on any card.
+                            Circle().strokeBorder(.primary.opacity(0.18), lineWidth: 1)
+                        }
                         .frame(width: 32, height: 32)
                         .overlay {
                             if isSelected {
                                 Image(systemName: "checkmark")
                                     .font(.caption.weight(.bold))
-                                    .foregroundStyle(.white)
+                                    .foregroundStyle(checkColor(for: tint))
                                     .shadow(radius: 1)
                             }
                         }
@@ -186,12 +191,14 @@ private struct TintSwatchRow: View {
                 .buttonStyle(.plain)
                 .accessibilityLabel(tint.localizedName)
                 .accessibilityAddTraits(isSelected ? [.isSelected] : [])
-                if tint != BackgroundTint.allCases.last {
-                    Spacer(minLength: 0)
-                }
             }
         }
         .accessibilityElement(children: .contain)
         .accessibilityLabel(String(localized: .settingsAppearanceTintLabel))
+    }
+
+    /// White on every hue, except on the white disc where black is needed.
+    private func checkColor(for tint: BackgroundTint) -> Color {
+        tint == .white ? .black : .white
     }
 }

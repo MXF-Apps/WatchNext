@@ -1523,6 +1523,24 @@
         }
       }
     },
+    "settings.appearance.tint.black" : {
+      "comment" : "Background tint palette name (neutral, darker than the base; grain only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Black"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noir"
+          }
+        }
+      }
+    },
     "settings.appearance.tint.ember" : {
       "comment" : "Background tint palette name (red to orange).",
       "extractionState" : "manual",
@@ -1663,6 +1681,24 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coucher de soleil"
+          }
+        }
+      }
+    },
+    "settings.appearance.tint.white" : {
+      "comment" : "Background tint palette name (neutral, brighter than the base; grain only).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "White"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blanc"
           }
         }
       }

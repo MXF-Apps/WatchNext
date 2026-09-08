@@ -59,6 +59,8 @@ extension BackgroundTint {
         case .forest: String(localized: .settingsAppearanceTintForest)
         case .ember: String(localized: .settingsAppearanceTintEmber)
         case .graphite: String(localized: .settingsAppearanceTintGraphite)
+        case .white: String(localized: .settingsAppearanceTintWhite)
+        case .black: String(localized: .settingsAppearanceTintBlack)
         }
     }
 }

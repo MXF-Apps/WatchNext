@@ -11,6 +11,9 @@ public enum BackgroundTint: String, CaseIterable, Identifiable, Sendable {
     case forest
     case ember
     case graphite
+    /// Neutral washes: grain without a hue, brighter or darker than the base.
+    case white
+    case black
 
     public var id: Self { self }
 
@@ -23,6 +26,8 @@ public enum BackgroundTint: String, CaseIterable, Identifiable, Sendable {
         case .forest: .green
         case .ember: .red
         case .graphite: .gray
+        case .white: .white
+        case .black: .black
         }
     }
 
@@ -35,6 +40,8 @@ public enum BackgroundTint: String, CaseIterable, Identifiable, Sendable {
         case .forest: .mint
         case .ember: .orange
         case .graphite: .gray
+        case .white: .white
+        case .black: .black
         }
     }
 }
