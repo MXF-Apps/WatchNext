@@ -16,6 +16,9 @@ struct WidgetSectionView: View {
     /// Only the first section on a widget carries the refresh control and stamps.
     var accessories: WidgetSectionAccessories? = nil
     var hintFormat: WidgetHintFormat = .full
+    /// Draws a hairline across the rest of the title line, so the header reads
+    /// as a divider where the width allows it (large family).
+    var showsRule = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: style == .dense ? 2 : 3) {
@@ -33,7 +36,16 @@ struct WidgetSectionView: View {
                         .foregroundStyle(.tertiary)
                         .lineLimit(1)
                 }
-                Spacer(minLength: 4)
+                if showsRule {
+                    Rectangle()
+                        .fill(.quaternary)
+                        .frame(height: 1)
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal, 2)
+                        .accessibilityHidden(true)
+                } else {
+                    Spacer(minLength: 4)
+                }
                 if let accessories {
                     accessories
                 }

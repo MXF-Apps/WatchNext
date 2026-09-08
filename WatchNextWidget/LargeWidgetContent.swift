@@ -20,7 +20,8 @@ struct LargeWidgetContent: View {
                         readyTitle: String(localized: .widgetSectionReadyToWatchTitle),
                         titleFont: .subheadline,
                         secondaryFont: .caption,
-                        showsArtwork: entry.showsArtwork && candidate.style == .comfortable
+                        showsArtwork: entry.showsArtwork && candidate.style == .comfortable,
+                        showsSectionRules: true
                     )
                 } else {
                     WidgetPlainLayout(
