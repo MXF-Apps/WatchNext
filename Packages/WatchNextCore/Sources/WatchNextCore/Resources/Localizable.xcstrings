@@ -55,24 +55,6 @@
         }
       }
     },
-    "media.kind.movie.label" : {
-      "comment" : "Media kind subtitle for a movie.",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Movie"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Film"
-          }
-        }
-      }
-    },
     "media.season.additionalEpisodes" : {
       "comment" : "Number of additional episodes after the displayed episode.",
       "extractionState" : "manual",

@@ -15,7 +15,7 @@ struct LocalizationTests {
     }
 
     @Test
-    func cachedMovieSubtitleIsResolvedAtDisplayTime() throws {
+    func moviesShowNoSubtitleWhateverTheCacheHolds() throws {
         let original = MediaFeedItem(
             id: "movie:1", kind: .movie, title: "Paper Meridian",
             subtitle: "Movie", availability: .ready
@@ -23,7 +23,7 @@ struct LocalizationTests {
         let data = try JSONEncoder().encode(original)
         let restored = try JSONDecoder().decode(MediaFeedItem.self, from: data)
         #expect(restored.subtitle == "Movie")
-        #expect(restored.localizedSubtitle != nil)
+        #expect(restored.localizedSubtitle == nil)
         #expect(restored.title == "Paper Meridian")
         let encoded = try #require(String(data: data, encoding: .utf8))
         #expect(encoded.contains("localizedSubtitle") == false)

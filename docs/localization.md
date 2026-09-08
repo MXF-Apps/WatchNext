@@ -25,8 +25,9 @@ Xcode compiles the catalogs into localized resources for the shipping app.
 
 Persist identifiers and source data, never translated picker labels. Existing
 widget density identifiers and case-insensitive media-kind values remain valid.
-Movie subtitles and collapsed-season descriptions resolve at display time, so
-cached media does not require a refresh to adopt the selected language.
+Collapsed-season descriptions resolve at display time, so cached media does
+not require a refresh to adopt the selected language. Movies show no subtitle:
+with only two kinds, the missing episode line already says "movie".
 Server-supplied titles and technical log payloads retain their original text;
 diagnostic controls and application-defined errors are localized.
 

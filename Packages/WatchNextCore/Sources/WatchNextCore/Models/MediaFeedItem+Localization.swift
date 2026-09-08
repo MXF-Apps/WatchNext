@@ -1,8 +1,10 @@
 import Foundation
 
 public extension MediaFeedItem {
-    /// Resolve presentation text at display time, not when writing the shared feed cache.
+    /// Subtitle for display. Episodes show their code and title; movies show
+    /// nothing, because with only two kinds the missing episode line already
+    /// says "movie". The cached `subtitle` keeps whatever the builder wrote.
     var localizedSubtitle: String? {
-        kind == .movie ? String(localized: "media.kind.movie.label", defaultValue: "Movie", bundle: .module) : subtitle
+        kind == .movie ? nil : subtitle
     }
 }
