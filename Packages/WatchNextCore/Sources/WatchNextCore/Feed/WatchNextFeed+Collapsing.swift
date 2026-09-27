@@ -1,17 +1,22 @@
 public extension WatchNextFeed {
-    /// Folds ready episodes of the same series and season into their earliest
+    /// Folds episodes of the same series and season into their earliest
     /// episode, so a whole imported season takes one row instead of ten.
     ///
     /// People watch a season in order, so the earliest unwatched episode is the
     /// one to surface; the row keeps the group's place in the list (the position
     /// of its first member, i.e. the newest import) and records how many later
     /// episodes it stands in for. Movies and episodes without season data pass
-    /// through untouched. Coming Soon is left as one row per episode: each has
-    /// its own air date, and a folded count next to a time read as noise.
-    /// Apply after hiding so that hiding the surfaced episode reveals the next.
+    /// through untouched.
+    ///
+    /// Ready folds every season. Coming Soon folds only the episodes that have
+    /// aired and are still awaiting download: a backlog of six old episodes is
+    /// one row with a multiplier, while episodes that have not aired yet keep
+    /// one row each, since each has its own date to show. Apply after hiding so
+    /// that hiding the surfaced episode reveals the next.
     func collapsingSeasons() -> WatchNextFeed {
         var copy = self
         copy.ready = MediaFeedItem.collapsingSeasons(ready)
+        copy.comingSoon = MediaFeedItem.collapsingSeasons(comingSoon, where: \.isAwaitingDownload)
         return copy
     }
 }
@@ -33,7 +38,12 @@ public extension MediaFeedItem {
     }
 
     /// The `collapsingSeasons` algorithm for one section; see `WatchNextFeed`.
-    static func collapsingSeasons(_ items: [MediaFeedItem]) -> [MediaFeedItem] {
+    /// Only items that satisfy `foldable` take part in a group; the others keep
+    /// their own row, in place.
+    static func collapsingSeasons(
+        _ items: [MediaFeedItem],
+        where foldable: (MediaFeedItem) -> Bool = { _ in true }
+    ) -> [MediaFeedItem] {
         struct SeasonKey: Hashable {
             let seriesID: Int
             let season: Int
@@ -48,6 +58,7 @@ public extension MediaFeedItem {
 
         for item in items {
             guard
+                foldable(item),
                 item.kind == .episode,
                 let seriesID = item.sourceIDs.sonarrSeriesID,
                 let season = item.seasonNumber,

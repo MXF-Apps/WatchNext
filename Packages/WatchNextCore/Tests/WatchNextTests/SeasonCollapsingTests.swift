@@ -10,14 +10,17 @@ struct SeasonCollapsingTests {
         season: Int,
         number: Int,
         imported: TimeInterval,
-        progress: Double? = nil
+        progress: Double? = nil,
+        availability: AvailabilityState = .ready,
+        released: TimeInterval? = nil
     ) -> MediaFeedItem {
         MediaFeedItem(
             id: "episode:\(id)",
             kind: .episode,
             title: "Series \(series)",
             subtitle: EpisodeSubtitle.make(season: season, episode: number, title: "Episode \(number)"),
-            availability: .ready,
+            availability: availability,
+            releaseDate: released.map { Date(timeIntervalSinceReferenceDate: $0) },
             importedDate: Date(timeIntervalSinceReferenceDate: imported),
             playbackProgress: progress,
             sourceIDs: .init(sonarrID: id, sonarrSeriesID: series),
@@ -88,11 +91,11 @@ struct SeasonCollapsingTests {
         #expect(visible.ready[0].collapsedEpisodeCount == 1)
     }
 
-    @Test("Coming Soon keeps one row per episode; old caches still decode")
+    @Test("Coming Soon keeps one row per unaired episode; old caches still decode")
     func leavesUpcomingAlone() throws {
         let upcoming = [
-            episode(1, series: 10, season: 4, number: 1, imported: 0),
-            episode(2, series: 10, season: 4, number: 2, imported: 0)
+            episode(1, series: 10, season: 4, number: 1, imported: 0, availability: .comingSoon, released: 100),
+            episode(2, series: 10, season: 4, number: 2, imported: 0, availability: .comingSoon, released: 200)
         ]
         let feed = WatchNextFeed(comingSoon: upcoming).collapsingSeasons()
         #expect(feed.comingSoon.map(\.id) == ["episode:1", "episode:2"])
@@ -105,5 +108,37 @@ struct SeasonCollapsingTests {
         let decoded = try JSONDecoder().decode(MediaFeedItem.self, from: Data(legacyJSON.utf8))
         #expect(decoded.seasonNumber == nil)
         #expect(decoded.collapsedEpisodeCount == nil)
+    }
+
+    @Test("Aired episodes awaiting download fold; unaired ones of the same season stay apart")
+    func foldsAiredBacklog() {
+        // Oldest air date first, as the builder sorts Coming Soon.
+        let comingSoon = [
+            episode(1, series: 10, season: 1, number: 1, imported: 0, availability: .awaitingDownload, released: -300),
+            episode(2, series: 10, season: 1, number: 2, imported: 0, availability: .awaitingDownload, released: -200),
+            episode(3, series: 10, season: 1, number: 3, imported: 0, availability: .awaitingDownload, released: -100),
+            episode(9, series: 20, season: 2, number: 9, imported: 0, availability: .awaitingDownload, released: -50),
+            episode(4, series: 10, season: 1, number: 4, imported: 0, availability: .comingSoon, released: 100),
+            episode(5, series: 10, season: 1, number: 5, imported: 0, availability: .comingSoon, released: 200)
+        ]
+        let feed = WatchNextFeed(comingSoon: comingSoon).collapsingSeasons()
+
+        #expect(feed.comingSoon.map(\.id) == ["episode:1", "episode:9", "episode:4", "episode:5"])
+        #expect(feed.comingSoon[0].collapsedEpisodeCount == 2)
+        #expect(feed.comingSoon[0].collapsedEpisodesBadge == "×3")
+        #expect(feed.comingSoon[0].isAwaitingDownload, "the surfaced row keeps the magnifier and its own air date")
+        #expect(feed.comingSoon[1].collapsedEpisodeCount == nil, "a lone aired episode is not annotated")
+        #expect(feed.comingSoon.dropFirst(2).allSatisfy { $0.collapsedEpisodeCount == nil })
+    }
+
+    @Test("Hiding the surfaced aired episode reveals the next one")
+    func hidingRevealsNextAired() {
+        let feed = WatchNextFeed(comingSoon: [
+            episode(1, series: 10, season: 1, number: 1, imported: 0, availability: .awaitingDownload, released: -300),
+            episode(2, series: 10, season: 1, number: 2, imported: 0, availability: .awaitingDownload, released: -200)
+        ])
+        let visible = feed.hiding([.item(id: "episode:1")]).collapsingSeasons()
+        #expect(visible.comingSoon.map(\.id) == ["episode:2"])
+        #expect(visible.comingSoon[0].collapsedEpisodeCount == nil)
     }
 }

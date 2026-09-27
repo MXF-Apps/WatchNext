@@ -150,7 +150,7 @@ Coming Soon lists monitored releases with a date ahead. Once the date passes and
 
 - **Movies / Shows / All** segmented control at the top narrows the feed. The choice is remembered on this device.
 - **Ready to Watch** and **Coming Soon** headers show how many rows they list under the current filter and collapse when tapped. Each section remembers its state across launches.
-- Ready episodes of the same series and season fold into their earliest episode with an "and N more" suffix, in the app and the widget. A whole imported season is one row; hiding that episode surfaces the next one. Coming Soon stays one row per episode since each has its own date. The cache keeps every episode, so nothing is lost.
+- Ready episodes of the same series and season fold into their earliest episode with an "and N more" suffix, in the app and the widget. A whole imported season is one row; hiding that episode surfaces the next one. In Coming Soon, only episodes that have already aired and are still awaiting download fold the same way, so an old backlog is one row; episodes that have not aired yet stay one row each since each has its own date. The cache keeps every episode, so nothing is lost.
 - Swipe left or long-press a row to **Hide** it. Episodes also offer **Hide Series**, which removes every ready and upcoming episode of that show.
 - **Options → Show Hidden** reveals a Hidden section at the bottom of the feed; swipe or long-press there to **Unhide**.
 - **Options → Select Items** turns on multi-select. Pick any rows, including hidden ones, and use **Hide**, **Hide Series**, or **Unhide** in the bar at the bottom; each shows how many selected rows it applies to.
