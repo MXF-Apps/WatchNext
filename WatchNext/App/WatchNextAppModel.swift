@@ -1,6 +1,7 @@
 import Foundation
 import Combine
 import SwiftUI
+import WatchNextAppearance
 import WatchNextCore
 import WidgetKit
 import WatchNextLogging
@@ -54,6 +55,7 @@ final class WatchNextAppModel: ObservableObject {
     @Published var settingsMessage: String?
     @Published var settingsMessageIsError = false
     @Published var isSavingSettings = false
+    @Published private(set) var isErasingData = false
     /// Local network permission as last observed. Starts from the persisted
     /// outcome so Settings does not flash the permission gate on every launch.
     @Published private(set) var localNetworkAccess: LocalNetworkAccess = WatchNextAppModel.storedLocalNetworkAccess()
@@ -67,8 +69,8 @@ final class WatchNextAppModel: ObservableObject {
     private static let settingsConfirmationDuration: Duration = .seconds(4)
 
     private let dependencies: WatchNextDependencies
-    private static let kindFilterKey = "WatchNext.FeedKindFilter"
-    private static let localNetworkAccessKey = "WatchNext.LocalNetwork.access"
+    private static let kindFilterKey = AppStorageKey.feedKindFilter
+    private static let localNetworkAccessKey = AppStorageKey.localNetworkAccess
 
     init(dependencies: WatchNextDependencies = .live) {
         self.dependencies = dependencies
@@ -373,6 +375,76 @@ final class WatchNextAppModel: ObservableObject {
         } catch {
             logger.error("Could not unhide \(items.count) item(s).", error: error, category: "HiddenItems")
         }
+    }
+
+    /// Removes everything WatchNext stored on this device (Keychain entries,
+    /// caches, hidden items, settings and preferences) and returns the app to
+    /// its first-run state. Servers are untouched.
+    func eraseAllData() async {
+        guard isErasingData == false else { return }
+        isErasingData = true
+        defer { isErasingData = false }
+        var failure: (any Error)?
+        do {
+            try await dependencies.eraseAllData()
+        } catch {
+            failure = error
+        }
+        // In-memory state first: `kindFilter` writes its default back, and the
+        // key removal below takes care of that.
+        resetToFirstRun()
+        for key in AppStorageKey.all {
+            UserDefaults.standard.removeObject(forKey: key)
+        }
+        UserDefaults.appGroup.removeObject(forKey: AppearanceSettings.textureKey)
+        UserDefaults.appGroup.removeObject(forKey: AppearanceSettings.tintKey)
+        await logger.clear()
+        WidgetCenter.shared.reloadTimelines(ofKind: WatchNextConstants.widgetKind)
+        if let failure {
+            logger.error("Erase all data did not complete.", error: failure, category: "Settings")
+            showSettingsMessage(String(localized: .settingsDataEraseError(error: failure.localizedDescription)), isError: true)
+        } else {
+            logger.notice("All app data erased.", category: "Settings")
+            showSettingsMessage(String(localized: .settingsDataErasedMessage), isError: false)
+        }
+        await reloadLogs()
+    }
+
+    private func resetToFirstRun() {
+        let defaults = ServiceConfiguration()
+        var transaction = Transaction()
+        transaction.disablesAnimations = true
+        withTransaction(transaction) {
+            feed = .empty
+            hiddenItems = []
+            showsHiddenItems = false
+            isSelectingItems = false
+            refreshError = nil
+            refreshIssue = nil
+            settingsPath = []
+            kindFilter = .all
+        }
+        sonarrURL = ""
+        sonarrAPIKey = ""
+        hasStoredSonarrKey = false
+        sonarrStatus = .idle
+        radarrURL = ""
+        radarrAPIKey = ""
+        hasStoredRadarrKey = false
+        radarrStatus = .idle
+        jellyfinURL = ""
+        jellyfinToken = ""
+        hasStoredJellyfinToken = false
+        jellyfinUsername = ""
+        jellyfinPassword = ""
+        jellyfinUsers = []
+        selectedJellyfinUserID = ""
+        jellyfinStatus = .idle
+        recentLookbackDays = defaults.recentLookbackDays
+        futureWindowDays = defaults.futureWindowDays
+        demoMode = defaults.demoMode
+        localNetworkAccess = .unknown
+        localNetworkIssue = nil
     }
 
     func reloadLogs() async {

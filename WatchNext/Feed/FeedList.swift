@@ -3,8 +3,8 @@ import WatchNextCore
 
 struct FeedList: View {
     @EnvironmentObject private var model: WatchNextAppModel
-    @AppStorage("WatchNext.Feed.readyExpanded") private var readyExpanded = true
-    @AppStorage("WatchNext.Feed.comingSoonExpanded") private var comingSoonExpanded = true
+    @AppStorage(AppStorageKey.feedReadyExpanded) private var readyExpanded = true
+    @AppStorage(AppStorageKey.feedComingSoonExpanded) private var comingSoonExpanded = true
     @State private var selection = Set<String>()
 
     var body: some View {

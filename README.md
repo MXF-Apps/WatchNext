@@ -35,6 +35,8 @@ Free and open source under the MIT license. No accounts, no analytics, no ads. Y
 
 Turn on **Settings › Demo › Demo mode**, or tap **Try with sample data** on the first-run screen. The app and its widgets then show a fictional library with every state WatchNext knows: a freshly imported season, a half-watched movie, an episode that aired but is still missing, releases days away. Server settings are kept and used again when the switch is off.
 
+To start over, **Settings › Data › Erase All Data** removes server addresses, the Keychain entries, hidden items, the cached feed and posters, and your preferences after a confirmation. Nothing changes on your servers. Key and token fields are masked while you type; the eye button shows them.
+
 For development, `AppStore/DemoServer/demo_server.py` fakes all three services over HTTP with the same catalog and generated posters:
 
 ```sh

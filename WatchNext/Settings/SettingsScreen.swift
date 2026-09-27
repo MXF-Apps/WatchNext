@@ -9,6 +9,7 @@ struct SettingsScreen: View {
     @Environment(\.scenePhase) private var scenePhase
     @AppStorage(AppearanceSettings.textureKey, store: .appGroup) private var backgroundTexture = AppearanceSettings.default.texture.rawValue
     @AppStorage(AppearanceSettings.tintKey, store: .appGroup) private var backgroundTint = AppearanceSettings.default.tint.rawValue
+    @State private var showsEraseConfirmation = false
 
     var body: some View {
         NavigationStack(path: $model.settingsPath) {
@@ -93,6 +94,33 @@ struct SettingsScreen: View {
                             Text(model.logEntries.count, format: .number)
                         }
                     }
+                }
+                Section {
+                    Button(role: .destructive) {
+                        showsEraseConfirmation = true
+                    } label: {
+                        // Explicit red: a Form tints Label icons with the accent
+                        // color, so only the text would read as destructive.
+                        Label(String(localized: .settingsDataEraseButton), systemImage: "trash")
+                            .foregroundStyle(.red)
+                    }
+                    .disabled(model.isErasingData)
+                    // On the button, so the dialog anchors to it.
+                    .confirmationDialog(
+                        String(localized: .settingsDataEraseConfirmTitle),
+                        isPresented: $showsEraseConfirmation,
+                        titleVisibility: .visible
+                    ) {
+                        Button(String(localized: .settingsDataEraseConfirmButton), role: .destructive) {
+                            Task { await model.eraseAllData() }
+                        }
+                    } message: {
+                        Text(String(localized: .settingsDataEraseConfirmMessage))
+                    }
+                } header: {
+                    Text(String(localized: .settingsDataTitle))
+                } footer: {
+                    Text(String(localized: .settingsDataEraseFooter))
                 }
             }
             .appBackground()
