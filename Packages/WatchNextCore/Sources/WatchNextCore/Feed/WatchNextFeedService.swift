@@ -7,6 +7,9 @@ public actor WatchNextFeedService {
     private let cache: any FeedCaching
     private let artworkCache: (any ArtworkCaching)?
     private let hiddenItemStore: (any HiddenItemStoring)?
+    /// The current date, injectable so tests can pin the lookback and
+    /// future windows to their fixture dates.
+    private let now: @Sendable () -> Date
 
     public init(
         configurationStore: any ConfigurationStoring,
@@ -14,7 +17,8 @@ public actor WatchNextFeedService {
         builder: any FeedBuilding = WatchNextFeedBuilder(),
         cache: any FeedCaching,
         artworkCache: (any ArtworkCaching)? = ArtworkCache(),
-        hiddenItemStore: (any HiddenItemStoring)? = nil
+        hiddenItemStore: (any HiddenItemStoring)? = nil,
+        now: @escaping @Sendable () -> Date = { .now }
     ) {
         self.configurationStore = configurationStore
         self.sourceLoader = sourceLoader
@@ -22,6 +26,7 @@ public actor WatchNextFeedService {
         self.cache = cache
         self.artworkCache = artworkCache
         self.hiddenItemStore = hiddenItemStore
+        self.now = now
     }
 
     public func cachedFeed() async -> WatchNextFeed {
@@ -34,8 +39,8 @@ public actor WatchNextFeedService {
         let configuration = await configurationStore.load()
         do {
             let snapshot = try await sourceLoader.load(configuration: configuration)
-            var feed = builder.build(snapshot: snapshot, configuration: configuration, now: .now)
-            let now = Date.now
+            let now = now()
+            var feed = builder.build(snapshot: snapshot, configuration: configuration, now: now)
             feed.lastSuccessfulRefresh = now
             feed.lastRefreshAttempt = now
             try await cache.saveSuccessful(feed)

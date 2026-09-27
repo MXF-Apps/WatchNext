@@ -94,7 +94,8 @@ struct HiddenItemsTests {
             sourceLoader: FixtureSourceLoader(),
             cache: WatchNextCache(fileURL: fileURL),
             artworkCache: nil,
-            hiddenItemStore: store
+            hiddenItemStore: store,
+            now: { [now] in now }
         )
 
         let feed = try await service.refresh()
