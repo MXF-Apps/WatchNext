@@ -41,4 +41,10 @@ public actor AppGroupConfigurationStore: ConfigurationStoring {
         defaults.set(try JSONEncoder().encode(configuration), forKey: key)
         logger.debug("Saved service configuration.", category: "Configuration")
     }
+
+    /// Forgets the saved configuration; `load()` then returns the defaults.
+    public func removeAll() {
+        defaults.removeObject(forKey: key)
+        logger.info("Removed the saved service configuration.", category: "Configuration")
+    }
 }

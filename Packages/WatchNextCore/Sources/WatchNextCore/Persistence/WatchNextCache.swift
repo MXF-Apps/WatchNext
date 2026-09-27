@@ -61,6 +61,17 @@ public actor WatchNextCache: FeedCaching {
         logger.debug("Recorded a failed refresh in the feed cache.", category: "Cache")
     }
 
+    /// Deletes the cache file; `load()` then returns `.empty`. A missing file
+    /// is not an error.
+    public func remove() throws {
+        do {
+            try FileManager.default.removeItem(at: fileURL)
+        } catch CocoaError.fileNoSuchFile {
+            return
+        }
+        logger.info("Removed the feed cache.", category: "Cache")
+    }
+
     private func write(_ feed: WatchNextFeed) throws {
         let data = try encoder.encode(feed)
         try data.write(to: fileURL, options: .atomic)

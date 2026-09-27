@@ -9,6 +9,13 @@ public actor KeychainCredentialStore: CredentialStoring {
         try await vault.read(account: key.rawValue)
     }
 
+    /// Deletes every credential the app can store.
+    public func removeAll() async throws {
+        for key in CredentialKey.allCases {
+            try await vault.delete(account: key.rawValue)
+        }
+    }
+
     public func set(_ value: String?, for key: CredentialKey) async throws {
         guard let value, value.isEmpty == false else {
             try await vault.delete(account: key.rawValue)

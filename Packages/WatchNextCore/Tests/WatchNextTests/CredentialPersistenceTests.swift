@@ -41,6 +41,22 @@ struct CredentialPersistenceTests {
         #expect(token == "fixture-token")
     }
 
+    @Test("Removing all credentials empties every key")
+    func removeAll() async throws {
+        let store = KeychainCredentialStore(vault: InMemorySecretVault())
+        try await store.set("key", for: .sonarrAPIKey)
+        try await store.set("token", for: .jellyfinAccessToken)
+        try await store.set("watcher", for: .jellyfinUsername)
+
+        try await store.removeAll()
+
+        for key in CredentialKey.allCases {
+            #expect(try await store.value(for: key) == nil, "\(key.rawValue) should be gone")
+        }
+        // A second pass on an empty vault is not an error.
+        try await store.removeAll()
+    }
+
     @Test("Credential lookup errors are propagated")
     func lookupErrorsPropagate() async {
         let store = KeychainCredentialStore(vault: InMemorySecretVault(readError: .forced))

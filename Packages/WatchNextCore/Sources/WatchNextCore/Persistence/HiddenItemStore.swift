@@ -74,6 +74,12 @@ public actor HiddenItemStore: HiddenItemStoring {
         return kept
     }
 
+    /// Forgets every hidden entry.
+    public func removeAll() {
+        defaults.removeObject(forKey: key)
+        logger.info("Removed every hidden item.", category: "HiddenItems")
+    }
+
     private func save(_ entries: Set<HiddenItem>) throws {
         defaults.set(try JSONEncoder().encode(entries), forKey: key)
     }
