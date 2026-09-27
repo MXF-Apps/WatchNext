@@ -9,9 +9,10 @@ struct SonarrSettingsSection: View {
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
                 .keyboardType(.URL)
-            SecureField(model.hasStoredSonarrKey ? String(localized: .settingsCredentialsStoredApiKeyPlaceholder) : String(localized: .settingsCredentialsApiKeyPlaceholder), text: $model.sonarrAPIKey)
-                .textInputAutocapitalization(.never)
-                .autocorrectionDisabled()
+            SecretField(
+                placeholder: model.hasStoredSonarrKey ? String(localized: .settingsCredentialsStoredApiKeyPlaceholder) : String(localized: .settingsCredentialsApiKeyPlaceholder),
+                text: $model.sonarrAPIKey
+            )
             Button(String(localized: .settingsConnectionTestButton), systemImage: "network", action: test)
                 .disabled(model.sonarrStatus == .testing)
             ConnectionStatusView(status: model.sonarrStatus)

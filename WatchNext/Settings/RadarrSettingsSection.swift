@@ -9,9 +9,10 @@ struct RadarrSettingsSection: View {
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
                 .keyboardType(.URL)
-            SecureField(model.hasStoredRadarrKey ? String(localized: .settingsCredentialsStoredApiKeyPlaceholder) : String(localized: .settingsCredentialsApiKeyPlaceholder), text: $model.radarrAPIKey)
-                .textInputAutocapitalization(.never)
-                .autocorrectionDisabled()
+            SecretField(
+                placeholder: model.hasStoredRadarrKey ? String(localized: .settingsCredentialsStoredApiKeyPlaceholder) : String(localized: .settingsCredentialsApiKeyPlaceholder),
+                text: $model.radarrAPIKey
+            )
             Button(String(localized: .settingsConnectionTestButton), systemImage: "network", action: test)
                 .disabled(model.radarrStatus == .testing)
             ConnectionStatusView(status: model.radarrStatus)

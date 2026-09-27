@@ -13,16 +13,14 @@ struct JellyfinSettingsSection: View {
             TextField(String(localized: .settingsJellyfinUsernamePlaceholder), text: $model.jellyfinUsername)
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
-            SecureField(String(localized: .settingsJellyfinPasswordPlaceholder), text: $model.jellyfinPassword)
+            SecretField(placeholder: String(localized: .settingsJellyfinPasswordPlaceholder), text: $model.jellyfinPassword, contentType: .password)
             Button(String(localized: .settingsJellyfinSignInButton), systemImage: "person.badge.key", action: login)
                 .disabled(model.jellyfinUsername.isEmpty || model.jellyfinPassword.isEmpty)
 
-            SecureField(
-                model.hasStoredJellyfinToken ? String(localized: .settingsJellyfinStoredTokenPlaceholder) : String(localized: .settingsJellyfinTokenPlaceholder),
+            SecretField(
+                placeholder: model.hasStoredJellyfinToken ? String(localized: .settingsJellyfinStoredTokenPlaceholder) : String(localized: .settingsJellyfinTokenPlaceholder),
                 text: $model.jellyfinToken
             )
-            .textInputAutocapitalization(.never)
-            .autocorrectionDisabled()
             Button(String(localized: .settingsJellyfinTestTokenButton), systemImage: "network", action: testToken)
                 .disabled(model.jellyfinStatus == .testing)
 
