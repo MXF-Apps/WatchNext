@@ -9758,97 +9758,97 @@
       }
     },
     "settings.banner.success.accessibilityLabel" : {
-      "comment" : "VoiceOver announcement of a settings status banner. Message is the detailed result.",
+      "comment" : "VoiceOver label of a success banner: the message alone, which already states the outcome.",
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Settings saved. %1$(message)@"
+            "value" : "%1$(message)@"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Réglages enregistrés. %1$(message)@"
+            "value" : "%1$(message)@"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "设置已保存。%1$(message)@"
+            "value" : "%1$(message)@"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "設定を保存しました。%1$(message)@"
+            "value" : "%1$(message)@"
           }
         },
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تم حفظ الإعدادات. %1$(message)@"
+            "value" : "%1$(message)@"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Настройки сохранены. %1$(message)@"
+            "value" : "%1$(message)@"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Einstellungen gesichert. %1$(message)@"
+            "value" : "%1$(message)@"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ajustes guardados. %1$(message)@"
+            "value" : "%1$(message)@"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ajustes salvos. %1$(message)@"
+            "value" : "%1$(message)@"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Impostazioni salvate. %1$(message)@"
+            "value" : "%1$(message)@"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Instellingen bewaard. %1$(message)@"
+            "value" : "%1$(message)@"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "설정 저장됨. %1$(message)@"
+            "value" : "%1$(message)@"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "設定已儲存。%1$(message)@"
+            "value" : "%1$(message)@"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ustawienia zapisane. %1$(message)@"
+            "value" : "%1$(message)@"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ayarlar kaydedildi. %1$(message)@"
+            "value" : "%1$(message)@"
           }
         }
       }
