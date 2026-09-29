@@ -53,3 +53,10 @@ Known blockers and risks:
 ## Privacy policy (draft)
 
 > WatchNext connects only to the Sonarr, Radarr and Jellyfin servers you configure. Server addresses and display preferences are stored on your device. API keys and the Jellyfin session token are stored in the iOS Keychain. Media titles and artwork fetched from your servers are cached on your device for display in the app and its widgets. WatchNext does not collect, transmit or share any data with the developer or third parties, and contains no analytics, advertising or tracking. Deleting the app removes all stored data.
+
+## Versions, builds and tags
+
+- `MARKETING_VERSION` (semver, e.g. `1.0.0`) follows the version record in App Store Connect and changes only when a new store version is created there.
+- `CURRENT_PROJECT_VERSION` goes up by one before every upload, even for the same version: App Store Connect refuses a build number it has already seen for that version.
+- Right after an upload, run `scripts/tag-upload.sh`. It tags the commit as `<version>+<build>` (semver build metadata, e.g. `1.0.0+2`) from the project settings and pushes the tag. Plain semver tags without `+` (`1.0.1`, `1.1.0`) mark code milestones and are independent of uploads.
+
